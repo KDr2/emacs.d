@@ -1,0 +1,7 @@
+3rdparties/
+desktop/
+eshell/
+url/
+abbrev_defs
+tramp
+*.dat
