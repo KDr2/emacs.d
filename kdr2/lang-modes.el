@@ -105,6 +105,9 @@
 (require 'lua-mode)
 (setq lua-indent-level 4)
 (add-to-list 'auto-mode-alist '("\\.lua?\\'" . lua-mode))
+(add-hook 'lua-mode-hook
+          (lambda ()
+            (modify-syntax-entry ?. "." (syntax-table))))
 
 ;; C/C++ Mode Settings
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
