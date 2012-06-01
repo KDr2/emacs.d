@@ -131,6 +131,9 @@
 (add-to-list 'load-path "~/.emacs.d/3rdparties/org/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(setq org-directory "~/Work/mine/org/")
+(setq org-mobile-inbox-for-pull "~/Work/mine/org/mobile.org")
+(setq org-mobile-directory "~/Resources/Dropbox/MobileOrg")
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (file-expand-wildcards "~/Work/mine/org/*.org"))

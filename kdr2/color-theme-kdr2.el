@@ -33,8 +33,9 @@
      (modeline-mousable-minor-mode ((t (:background "Gray75" :foreground "green4"))))
      ;;IDO
      (ido-only-match ((t (:foreground "green4"))))
-     (ido-subdir ((t (:foreground "blue"))))
+     (ido-subdir ((t (:foreground "yellow"))))
      (ido-first-match ((t (:foreground "green"))))
+     (custom-variable-tag ((t (:foreground "yellow" :bold t))))
      ;;rst
      (rst-level-1-face ((t (:background "#3d3b4f" :foreground "#d7003a" :bold t))))
      (rst-level-2-face ((t (:background "#3d3b4f" :foreground "#b94047" :bold t))))
