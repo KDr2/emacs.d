@@ -2,7 +2,6 @@ ansit.el
 auto-complete
 auto-complete-clang
 bm.el
-color-theme.el
 eim
 emacs-w3m
 erlang
@@ -39,7 +38,6 @@ scala
 slime
 subdirs.el
 systemtap-mode.el
-themes
 trac-wiki.el
 tuareg
 undo-tree.el
