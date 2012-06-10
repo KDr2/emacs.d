@@ -97,9 +97,6 @@
 (autoload 'systemtap-mode "systemtap-mode")
 (add-to-list 'auto-mode-alist '("\\.stp\\'" . systemtap-mode))
 
-(add-to-list 'load-path "~/.emacs.d/3rdparties/scala")
-(require 'scala-mode-auto)
-
 
 ;; Lua Mode Settings
 (require 'lua-mode)
@@ -125,6 +122,7 @@
 ;;(autoload 'js2-mode "js2" nil t)
 ;;(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+;;python mode
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
 
 ;; gas-mode
@@ -132,7 +130,6 @@
 (add-to-list 'auto-mode-alist '("\\.[sS]\\'" . gas-mode))
 
 ;; graphviz-dot
-
 (load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")
 
 
