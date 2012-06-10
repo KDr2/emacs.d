@@ -18,12 +18,10 @@
               (make-local-variable 'ac-sources)
               (setq ac-sources '(
                                  ac-source-symbols
-                                 ;;ac-source-semantic
                                  ;;ac-source-yasnippet
                                  ac-source-abbrev
                                  ac-source-words-in-buffer
                                  ac-source-words-in-all-buffer
-                                 ;;ac-source-imenu
                                  ac-source-files-in-current-dir
                                  ac-source-filename
                                  ))))
@@ -37,4 +35,21 @@
   )
 (global-auto-complete-mode t)
 
+;;clang for c/cc
+
+(setq ac-clang-flags
+      (mapcar (lambda (item) (concat "-I" item))
+              (split-string
+               "/opt/local/include/gcc46/c++/
+                /opt/local/include/gcc46/c++//x86_64-apple-darwin11
+                /opt/local/include/gcc46/c++//backward
+                /opt/local/lib/gcc46/gcc/x86_64-apple-darwin11/4.6.3/include
+                /opt/local/include
+                /opt/local/lib/gcc46/gcc/x86_64-apple-darwin11/4.6.3/include-fixed
+                /usr/include
+                /System/Library/Frameworks
+                /Library/Frameworks")))
+(defun clang-ac-cc-mode-setup ()
+  (setq ac-sources (append '(ac-source-clang) ac-sources)))
+(add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup)
 
