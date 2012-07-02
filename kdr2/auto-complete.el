@@ -51,5 +51,5 @@
                 /Library/Frameworks")))
 (defun clang-ac-cc-mode-setup ()
   (setq ac-sources (append '(ac-source-clang) ac-sources)))
-(add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup)
+;;(add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup)
 

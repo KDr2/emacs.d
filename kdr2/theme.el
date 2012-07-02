@@ -1,12 +1,12 @@
 
 ;;; UI Settings
 (defun color-theme-and-fonts ()
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/kdr2")
   (if window-system
       (progn ;;x window
         (scroll-bar-mode -1)
         (tool-bar-mode -1)
-        (add-to-list 'custom-theme-load-path "~/.emacs.d/kdr2")
-        (load-theme 'r2d2 t)
+        (load-theme 'r2d2t)
         ;;(do-on-os "gnu/linux"
         (progn
           ;;(set-default-font "courier-14")
@@ -26,8 +26,9 @@
            '(term-default-bg-color "#11293b") ;;"#2f4f4f")
            '(term-default-fg-color "#f5deb3"))))
     (progn ;;no x
-      (set-face-background 'vline "white")
-      (set-face-background 'highlight-current-line-face "white")
+      ;;(set-face-background 'vline "white")
+      ;;(set-face-background 'highlight-current-line-face "white")
+      (load-theme 'r2d2t)
       )))
 (color-theme-and-fonts)
 

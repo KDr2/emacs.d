@@ -85,12 +85,13 @@
 
 ;; Ruby Mode Settings
 (require 'ruby-mode)
+;;(require 'ruby-electric)
 (add-to-list 'auto-mode-alist '("\\.rbw?\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rjs\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rhtml?\\'" . html-mode))
-(add-hook 'ruby-mode-hook
-          (lambda()
-            (ruby-electric-mode nil)))
+;;(add-hook 'ruby-mode-hook
+;;          (lambda()
+;;            (ruby-electric-mode nil)))
 
 (require 'yaml-mode)
 ;; Systemtap Mode Settings

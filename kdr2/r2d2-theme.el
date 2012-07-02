@@ -54,12 +54,12 @@
  '(ido-first-match ((t (:foreground "green"))))
  '(custom-variable-tag ((t (:foreground "yellow" :bold t))))
  ;;rst
- '(rst-level-1-face ((t (:background "#3d3b4f" :foreground "#d7003a" :bold t))))
- '(rst-level-2-face ((t (:background "#3d3b4f" :foreground "#b94047" :bold t))))
- '(rst-level-3-face ((t (:background "#3d3b4f" :foreground "#a86965" :bold t))))
- '(rst-level-4-face ((t (:background "#3d3b4f" :foreground "#006e54" :bold t))))
- '(rst-level-5-face ((t (:background "#3d3b4f" :foreground "#00a381" :bold t))))
- '(rst-level-6-face ((t (:background "#3d3b4f" :foreground "#6e7955" :bold t))))
+ '(rst-level-1-face ((t (:background "Gray75" :foreground "#d7003a" :bold t))))
+ '(rst-level-2-face ((t (:background "Gray75" :foreground "#b94047" :bold t))))
+ '(rst-level-3-face ((t (:background "Gray75" :foreground "#a86965" :bold t))))
+ '(rst-level-4-face ((t (:background "Gray75" :foreground "#006e54" :bold t))))
+ '(rst-level-5-face ((t (:background "Gray75" :foreground "#00a381" :bold t))))
+ '(rst-level-6-face ((t (:background "Gray75" :foreground "#6e7955" :bold t))))
  ;;git-emacs
  '(git--mark-blob-face ((t (:foreground "#6e79f0" :bold t))))
  '(git--unknown-face ((t (:foreground "#6e7955" :bold t)))))
