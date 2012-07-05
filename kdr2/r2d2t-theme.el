@@ -16,8 +16,6 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(term-default-bg-color "#11293b")
- '(term-default-fg-color "#f5deb3")
  '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward)))
 

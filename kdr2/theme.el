@@ -6,7 +6,7 @@
       (progn ;;x window
         (scroll-bar-mode -1)
         (tool-bar-mode -1)
-        (load-theme 'r2d2t)
+        (load-theme 'r2d2 t nil)
         ;;(do-on-os "gnu/linux"
         (progn
           ;;(set-default-font "courier-14")
@@ -28,7 +28,6 @@
     (progn ;;no x
       ;;(set-face-background 'vline "white")
       ;;(set-face-background 'highlight-current-line-face "white")
-      (load-theme 'r2d2t)
-      )))
+      (load-theme 'r2d2t t nil))))
 (color-theme-and-fonts)
 

@@ -78,14 +78,11 @@
   "Settings for `term-mode'"
   (make-local-variable 'scroll-margin)
   (setq-default scroll-margin 0)
-  (custom-set-variables
-   '(term-default-bg-color "#101e2e") ;;"#2f4f4f")
-   '(term-default-fg-color "#f5deb3")))
+  (if window-system
+      (custom-set-variables
+       '(term-default-bg-color "#101e2e") ;;"#2f4f4f")
+       '(term-default-fg-color "#f5deb3"))))
 (add-hook 'term-mode-hook 'term-mode-settings)
-
-(custom-set-variables
- '(term-default-bg-color "#101e2e") ;;"#2f4f4f")
- '(term-default-fg-color "#f5deb3"))
 
 ;;; htmlize
 (require 'htmlize)
