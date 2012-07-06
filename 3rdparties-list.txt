@@ -1,6 +1,7 @@
 ansit.el
 auto-complete
 auto-complete-clang
+auto-complete-clang.el
 bm.el
 eim
 emacs-w3m
@@ -11,13 +12,11 @@ gas-mode.el
 git-emacs
 go-mode-load.el
 go-mode.el
-google-weather.el
 graphviz-dot-mode.el
 highlight-current-line.el
 highlight-symbol.el
 highlight-tail.el
 htmlize.el
-ibuffer.el
 javascript.el
 js2.el
 js2.elc
@@ -29,14 +28,12 @@ multi-term.el
 notify.el
 nyan-mode
 objc-c-mode.el
-org
 pde
 php-mode.el
 rotate-windows.el
+ruby-electric.el
 ruby-mode.el
-scala
 slime
-subdirs.el
 systemtap-mode.el
 trac-wiki.el
 tuareg
