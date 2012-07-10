@@ -17,7 +17,8 @@
  '(template-header-regexp nil)
  '(template-query nil)
  '(vline-global-mode nil)
- '(uniquify-buffer-name-style (quote post-forward)))
+ '(uniquify-buffer-name-style (quote post-forward))
+ '(git-state-modeline-decoration (quote git-state-decoration-letter)))
 
 (custom-theme-set-faces
  'r2d2t

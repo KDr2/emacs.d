@@ -38,5 +38,7 @@
   (interactive)
   (message "%s" minor-mode-list))
 
+(if window-system
+    (setenv "LS_COLORS" "di=33;1"))
 
 
