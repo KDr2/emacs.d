@@ -45,9 +45,9 @@
  '(modeline-mousable ((t (:background "Gray75" :foreground "firebrick"))))
  '(modeline-mousable-minor-mode ((t (:background "Gray75" :foreground "green4"))))
  ;;misc-modes:
- '(highlight-symbol-face ((t (:background "#468" :foreground "#00FF00" :underline t))))
- '(highlight-current-line-face ((t (:background "#468"))))
- '(vline ((t (:background "#468"))))
+ '(highlight-symbol-face ((t (:background "#068" :foreground "#0FFFF0" :underline t))))
+ '(highlight-current-line-face ((t (:background "#1c305c"))))
+ '(vline ((t (:background "#1c305c"))))
  ;;IDO
  '(ido-only-match ((t (:foreground "green4"))))
  '(ido-subdir ((t (:foreground "yellow"))))

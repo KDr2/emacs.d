@@ -17,6 +17,7 @@ highlight-current-line.el
 highlight-symbol.el
 highlight-tail.el
 htmlize.el
+ibuffer.el
 javascript.el
 js2.el
 js2.elc
