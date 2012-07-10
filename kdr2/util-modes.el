@@ -108,6 +108,7 @@
   (let ((mod-list '("c-mode"
                     "c++-mode"
                     "lua-mode"
+                    "ruby-mode"
                     "erlang-mode"
                     "lisp-mode"
                     "cperl-mode"

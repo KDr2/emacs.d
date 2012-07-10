@@ -21,7 +21,7 @@
 
 (custom-theme-set-faces
  'r2d2t
- ;;'(highlight-symbol-face ((t (:background "#468" :foreground "#00FF00" :underline t))))
+ '(highlight-symbol-face ((t (:background "white" :foreground "balck" :underline t))))
  '(highlight-current-line-face ((t (:background "white"))))
  '(vline ((t (:background "white")))))
 
