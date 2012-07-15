@@ -49,6 +49,8 @@
  '(highlight-symbol-face ((t (:background "#068" :foreground "#0FFFF0" :underline t))))
  '(highlight-current-line-face ((t (:background "#1c305c"))))
  '(vline ((t (:background "#1c305c"))))
+ ;;linum
+ '(linum ((t (:foreground "green4" :family "courier new"))))
  ;;IDO
  '(ido-only-match ((t (:foreground "green4"))))
  '(ido-subdir ((t (:foreground "yellow"))))

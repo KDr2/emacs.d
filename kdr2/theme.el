@@ -21,13 +21,8 @@
           (set-fontset-font (frame-parameter nil 'font)
                             'bopomofo (font-spec :family "Heiti TC" :size 13))
           (set-fontset-font (frame-parameter nil 'font)
-                            'gb18030 (font-spec :family "Heiti TC" :size 13))
-          (custom-set-variables
-           '(term-default-bg-color "#11293b") ;;"#2f4f4f")
-           '(term-default-fg-color "#f5deb3"))))
+                            'gb18030 (font-spec :family "Heiti TC" :size 13))))
     (progn ;;no x
-      ;;(set-face-background 'vline "white")
-      ;;(set-face-background 'highlight-current-line-face "white")
       (load-theme 'r2d2t t nil))))
 (color-theme-and-fonts)
 
