@@ -10,6 +10,7 @@
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
  '(ibuffer-formats (quote ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename) (mark " " (name 32 -1) " " filename))))
  '(line-spacing 0)
+ '(linum-format "%4d|")
  '(ruby-indent-tabs-mode t)
  '(safe-local-variable-values (quote ((folded-file . t) (encoding . utf-8))))
  '(template-default-alist nil)
