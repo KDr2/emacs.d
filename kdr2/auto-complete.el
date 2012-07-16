@@ -13,18 +13,17 @@
   (setq ac-auto-start 3)
   ;;(setq ac-auto-start nil)
   (define-key ac-mode-map (kbd "M-/") 'auto-complete)
-  (add-hook 'emacs-lisp-mode-hook
-            (lambda ()
-              (make-local-variable 'ac-sources)
-              (setq ac-sources '(
-                                 ac-source-symbols
-                                 ;;ac-source-yasnippet
-                                 ac-source-abbrev
-                                 ac-source-words-in-buffer
-                                 ac-source-words-in-all-buffer
-                                 ac-source-files-in-current-dir
-                                 ac-source-filename
-                                 ))))
+  ;;(add-hook 'emacs-lisp-mode-hook
+  ;;          (lambda ()
+  ;;            (make-local-variable 'ac-sources)
+  ;;            (setq ac-sources '(ac-source-symbols
+  ;;                               ;;ac-source-yasnippet
+  ;;                               ac-source-abbrev
+  ;;                               ac-source-words-in-buffer
+  ;;                               ac-source-words-in-all-buffer
+  ;;                               ac-source-files-in-current-dir
+  ;;                               ac-source-filename
+  ;;                               ))))
   ;;(defvar ac-source-etags
   ;;'((candidates
   ;;    . (lambda () (all-completions ac-target (tags-completion-table))))))

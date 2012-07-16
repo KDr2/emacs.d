@@ -20,8 +20,7 @@
 ;; Theme Settings
 (load-file "~/.emacs.d/kdr2/theme.el")
 
+(load-file "~/.emacs.d/kdr2/_org.el")
 (load-file "~/.emacs.d/kdr2/_eim.el")
-
-
 
 

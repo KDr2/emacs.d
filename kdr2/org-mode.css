@@ -1,82 +1,132 @@
-<style type="text/css">
+<style rel="stylesheet" type="text/css">
 <!--/*--><![CDATA[/*><!--*/
+
 body {
-     font-size: 12pt;
-     margin-top: 5%;
-     margin-bottom: 8%;
-     background: #fff; color: #black;
-     margin-left: 15%; margin-right: 15%;
+    font-size: 12pt;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    background: #fff;
+    color: black;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: Arial, san-serif;
 }
 
 h1 { 
-   font-size: 18pt;
-   font-weight: bold;
-   color: #ea8400; 
-   padding-top: 1em;
-   text-align: left;
-   border-bottom: 2px solid #aaa;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ea8400; 
+    padding-top: 1em;
+    text-align: left;
+    border-bottom: 2px solid #aaa;
 }
 
 h2 {
-   font-size: 16pt;
-   padding-top: 1em;
-   border-bottom: 1px solid #ccc;
+    font-size: 16pt;
+    padding-top: 1em;
+    border-bottom: 1px solid #ccc;
 }
 
 h3 {
-   font-size: 14pt; 
-   padding-top: 0.5em;
-   border-bottom: 1px solid #eee;
+    font-size: 14pt; 
+    padding-top: 0.5em;
+    border-bottom: 1px solid #eee;
 }
 
-.todo, .deadline { color: red; }
-.done { color: green; }
-.tag {text-align: right; color: blue;}
-.timestamp {padding-left: 2px; padding-right: 2px; color: black;}
-background-color: #ccc; border: solid 1px #aaa;}
-.content {background-color: #fff;}
-h1.title { text-align: left; }
-.target { background-color: lavender; }
+.todo, .deadline {
+    color: red;
+}
+.done {
+    color: green;
+}
+
+.tag {
+    text-align: right;
+    color: blue;
+}
+
+.timestamp {
+    padding-left: 2px;
+    padding-right: 2px;
+    color: black;
+    background-color: #ccc;
+    border: solid 1px #aaa;
+}
+
+.content {
+    background-color: #fff;
+}
+
+h1.title {
+    text-align: left;
+}
+
+.target {
+    background-color: lavender;
+}
 
 .menu {
-      color: #666;
+    color: #666;
 }
 
 .menu a:link { 
-      color: #888;
+    color: #888;
 }
 .menu a:active { 
-      color: #888;
+    color: #888;
 }
 .menu a:visited { 
-      color: #888;
+    color: #888;
 }
 
 a:link { 
-      color: #8b6508;
+    color: #8b6508;
 }
 a:active { 
-      color: #8b6508;
+    color: #8b6508;
 }
 a:visited { 
-      color: #8b6508;
+    color: #8b6508;
 }
 
 img { align: center; }
 
 pre {
 	border: 1pt solid #aaaaaa;
-	background-color: #cccccc;
+    color: #fff;
+	background-color: #101e2e;
 	padding: 5pt;
 	font-family: courier, monospace;
 	font-size: 9pt;
 }
 
-table { border: 0px; border-collapse: collapse; }
+table {
+    border: 0px;
+    border-collapse: collapse;
+}
 
-td, th {
+th {
 	vertical-align: top;
 	border: 0px;
 }
+
+td {
+	vertical-align: top;
+	border: 1px dashed #ccc;
+}
+
+#postamble {
+	font-size: 10pt;
+	color: #666;
+	text-align: center;
+	border-top: #ccc solid 1px;
+	margin-top: 2em;
+	padding-top: 1em;
+}
+#postamble p {
+	display: inline;
+	margin: 0 1em;
+}
+
 /*]]>*/-->
 </style>

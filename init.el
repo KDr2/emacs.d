@@ -4,6 +4,7 @@
 
 ;;append  load-path
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/3rdparties")
 (add-to-list 'load-path "~/.emacs.d/kdr2")
 

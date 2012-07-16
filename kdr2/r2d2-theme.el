@@ -10,7 +10,7 @@
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
  '(ibuffer-formats (quote ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename) (mark " " (name 32 -1) " " filename))))
  '(line-spacing 0)
- '(linum-format "%4d|")
+ '(linum-format "%4d ")
  '(ruby-indent-tabs-mode t)
  '(safe-local-variable-values (quote ((folded-file . t) (encoding . utf-8))))
  '(template-default-alist nil)
@@ -50,7 +50,7 @@
  '(highlight-current-line-face ((t (:background "#1c305c"))))
  '(vline ((t (:background "#1c305c"))))
  ;;linum
- '(linum ((t (:foreground "green4" :family "courier new"))))
+ '(linum ((t (:foreground "yellow" :family "courier new"))))
  ;;IDO
  '(ido-only-match ((t (:foreground "green4"))))
  '(ido-subdir ((t (:foreground "yellow"))))

@@ -50,6 +50,14 @@
 (def-slime sbcl-slime "~/Developer/bin/sbcl")
 (def-slime ccl-slime "~/Developer/ccl/dx86cl64")
 
+;; paredit
+(autoload 'paredit-mode "paredit"
+  "Minor mode for pseudo-structurally editing Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
+(add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+(add-hook 'scheme-mode-hook           (lambda () (paredit-mode +1)))
+
 ;; (O)Caml Settings
 
 (add-to-list 'load-path "~/.emacs.d/3rdparties/tuareg")
