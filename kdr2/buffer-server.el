@@ -30,7 +30,7 @@
   (if (get-buffer (concat basename ".org"))
       (progn
         (with-current-buffer (get-buffer (concat basename ".org"))
-        (org-export-as-html 2))
+        (org-export-as-html 3))
         (get-buffer-content-and-kill (get-buffer (concat basename ".html"))))
     (if (get-buffer (concat basename ".html"))
         (progn

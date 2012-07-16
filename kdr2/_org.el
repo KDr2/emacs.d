@@ -29,3 +29,16 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 
+(defun org-dblock-write:graphviz (params)
+  (let ((file (plist-get params :file))
+        (title (or (plist-get params :title) "Image"))
+        (is-inline (plist-get params :inline)))
+    (if (string-match "\\(.+\\)\\.dot" file)
+        (let ((basename (match-string 1 file)))
+          ;;dot -Tpng aw_newar.dot -o outfile.png
+          (shell-command (format "dot -Tpng %s.dot -o %s.png" basename basename))
+          (if is-inline
+              (insert (format "[[%s.png]]" basename))
+            (insert (format "[[%s.png][%s]]" basename title)))))))
+
+
