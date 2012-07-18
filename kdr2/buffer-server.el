@@ -11,8 +11,6 @@
     (setq ret (concat ret "</html>"))
     ret))
 
-(buffer-index-html)
-
 (defun pathinfo-to-buffer (pathinfo)
   (if (string-match "/buffers/\\(.+\\)$" pathinfo)
       (progn 
@@ -49,7 +47,6 @@
        (if (pathinfo-to-buffer path)
            (get-buffer-content-and-kill (htmlize-buffer (pathinfo-to-buffer path)))
          (buffer-index-html))))))
-
 
 
 (elnode-start 'buffers-handler :port 8010 :host "localhost")

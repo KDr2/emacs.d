@@ -18,7 +18,9 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "Tasks")
          "* TODO %?\n  %a\n")
-        ("w" "Work-Log" entry (file+datetree (concat org-directory "/worklog.org"))
+        ("w" "Work-Log" entry (file+headline (concat org-directory "/worklog.org") "Tasks")
+         "* TODO %?\n  %a\n")
+        ("l" "Work-Log" entry (file+datetree (concat org-directory "/worklog.org"))
          "* %?\n  %a\n")
         ("n" "KBuilup" entry (file+headline (concat org-directory "/kbuildup.org") "Notes")
          "* TODO %?\n  %a\n")
@@ -28,6 +30,7 @@
          "* %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
+(setq org-export-publishing-directory "~/Work/tmp/org-export")
 
 (defun org-dblock-write:graphviz (params)
   (let ((file (plist-get params :file))
@@ -40,5 +43,26 @@
           (if is-inline
               (insert (format "[[%s.png]]" basename))
             (insert (format "[[%s.png][%s]]" basename title)))))))
+
+
+(require 'org-publish)
+(setq org-publish-project-alist
+      '(("kb-org"
+        :base-directory "~/Work/mine/org/kbuildup"
+        :base-extension "org"
+        :publishing-directory "~/Work/tmp/kbuildup/"
+        :recursive t
+        :publishing-function org-publish-org-to-html
+        :headline-levels 3             ; Just the default for this project.
+        :auto-preamble t
+        )
+        ("kb-static"
+         :base-directory "~/Work/mine/org/kbuildup"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/Work/tmp/kbuildup/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("kb" :components ("kb-org" "kb-static"))))
 
 
