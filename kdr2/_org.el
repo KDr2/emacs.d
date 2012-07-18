@@ -46,23 +46,33 @@
 
 
 (require 'org-publish)
-(setq org-publish-project-alist
-      '(("kb-org"
-        :base-directory "~/Work/mine/org/kbuildup"
+(let ((kb-output-dir "~/Sites/kbuildup")
+      (kb-source-dir "~/Work/mine/org/kbuildup")) 
+  (setq org-publish-project-alist
+      (list
+       (list
+        "kb-org"
+        :base-directory kb-source-dir
         :base-extension "org"
-        :publishing-directory "~/Work/tmp/kbuildup/"
+        :publishing-directory kb-output-dir
         :recursive t
-        :publishing-function org-publish-org-to-html
-        :headline-levels 3             ; Just the default for this project.
+        :publishing-function 'org-publish-org-to-html
+        :headline-levels 3
         :auto-preamble t
+        :makeindex t
         )
-        ("kb-static"
-         :base-directory "~/Work/mine/org/kbuildup"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+        (list
+         "kb-static"
+         :base-directory kb-source-dir
+         :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
          :publishing-directory "~/Work/tmp/kbuildup/"
          :recursive t
-         :publishing-function org-publish-attachment
+         :publishing-function 'org-publish-attachment
          )
-        ("kb" :components ("kb-org" "kb-static"))))
+        '("kb" :components ("kb-org" "kb-static")))))
 
+(defun kb-pub ()
+  (interactive)
+  ;;(let ((org-export-html-style ""))
+  (org-publish-project "kb" t))
 
