@@ -1,12 +1,22 @@
+;;; _org.el --- org-mode settings for KDr2's Emacs
 
-;;; org-mode settings
-;;(add-to-list 'load-path "~/.emacs.d/3rdparties/org/lisp")
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
+
 (require 'org-install)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(setq org-directory "~/Work/mine/org")
+
+(setq org-directory (vars-get 'org-dir))
+(setq org-mobile-directory (vars-get 'org-mobile-dir))
 (setq org-mobile-inbox-for-pull (concat org-directory "mobile.org"))
-;;(setq org-mobile-directory "~/Resources/Dropbox/MobileOrg")
-(setq org-mobile-directory "/Volumes/webdav/org")
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (file-expand-wildcards (concat org-directory "/*.org")))
@@ -18,7 +28,7 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "Tasks")
          "* TODO %?\n  %a\n")
-        ("w" "Work-Log" entry (file+headline (concat org-directory "/worklog.org") "Tasks")
+        ("w" "Work-Task" entry (file+headline (concat org-directory "/worklog.org") "Tasks")
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/worklog.org"))
          "* %?\n  %a\n")
@@ -30,24 +40,28 @@
          "* %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
-(setq org-export-publishing-directory "~/Work/tmp/org-export")
+(setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
 
 (defun org-dblock-write:graphviz (params)
   (let ((file (plist-get params :file))
         (title (or (plist-get params :title) "Image"))
-        (is-inline (plist-get params :inline)))
+        (is-inline (plist-get params :inline))
+        (is-xinline (plist-get params :xinline)))
     (if (string-match "\\(.+\\)\\.dot" file)
         (let ((basename (match-string 1 file)))
           ;;dot -Tpng aw_newar.dot -o outfile.png
           (shell-command (format "dot -Tpng %s.dot -o %s.png" basename basename))
           (if is-inline
-              (insert (format "[[%s.png]]" basename))
+              (if nil ;;is-xinline
+                  (let ((b64 (shell-command-to-string (format "base64 -b 80 %s.png" basename))))
+                    (insert (format "#+BEGIN_HTML\n<img src=\"data:image/png;base64,%s\"/>\n#+END_HTML" b64)))
+                (insert (format "[[%s.png]]" basename)))
             (insert (format "[[%s.png][%s]]" basename title)))))))
 
 
 (require 'org-publish)
-(let ((kb-output-dir "~/Sites/kbuildup")
-      (kb-source-dir "~/Work/mine/org/kbuildup")) 
+(let ((kb-output-dir (vars-get 'org-publish-dir))
+      (kb-source-dir (concat org-directory "/kbuildup")))
   (setq org-publish-project-alist
       (list
        (list
@@ -65,7 +79,7 @@
          "kb-static"
          :base-directory kb-source-dir
          :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/Work/tmp/kbuildup/"
+         :publishing-directory kb-output-dir
          :recursive t
          :publishing-function 'org-publish-attachment
          )

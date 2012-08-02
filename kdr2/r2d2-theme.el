@@ -1,6 +1,15 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; my color-theme for emacs-24
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; r2d2-theme.el --- Theme R2D2
+
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
+
 
 (deftheme r2d2
   "Theme for KDr2")
@@ -20,7 +29,9 @@
  '(term-default-bg-color "#11293b")
  '(term-default-fg-color "#f5deb3")
  '(vline-global-mode nil)
- '(uniquify-buffer-name-style (quote post-forward)))
+ '(uniquify-buffer-name-style (quote post-forward))
+ '(gdb-many-windows t)
+ '(gdb-use-separate-io-buffer nil))
 
 (custom-theme-set-faces
  'r2d2

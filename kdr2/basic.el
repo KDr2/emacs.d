@@ -1,6 +1,14 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; KDr2's Emacs Settings
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; basic.el --- basic settings for KDr2's emacs
+
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
 
 
 ;;common settings:
@@ -92,16 +100,14 @@
 ;;(global-set-key "\C-xr" 'replace-string)
 
 ;;设置默认工作目录
-(if (file-exists-p "/Volumes/KDr2/Work")
-    (setq default-directory "/Volumes/KDr2/Work"))
+(setq default-directory (vars-get 'work-dir))
 
 ;; 所有的备份文件转移到~/.backup/emacs/目录下
-(setq backup-directory-alist (quote (("." . "~/.backup/emacs/"))))
 (setq version-control t)
 (setq kept-old-versions 2)
 (setq kept-new-versions 5)
 (setq delete-old-versions t)
-(setq backup-directory-alist '(("." . "~/.backup/emacs/")))
+(setq backup-directory-alist (list (cons "."  (vars-get 'backup-dir))))
 (setq backup-by-copying t)
 ;;不产生备份文件
 ;;(setq make-backup-files nil)

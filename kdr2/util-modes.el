@@ -1,6 +1,15 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Util Modes Settings
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; util-modes.el --- util modes settings
+
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
+
 
 ;;; dired settings
 (require 'dired)
@@ -57,7 +66,7 @@
   (if (or (file-exists-p "project.cscope") (file-exists-p "cscope.project"))
       (progn
         (shell-command "find . -type f|grep -E \"\\.(h|c|hpp|cpp|py|erl)$\">cscope.files")
-        (shell-command "/opt/local/bin/cscope -b")
+        (shell-command (vars-get 'cscope-command))
         (message "cscope tags updated!"))
     (message "nothing to do!")))
 (global-set-key "\C-cu" 'update-cscope)
@@ -98,6 +107,8 @@
 
 
 (global-linum-mode t)
+
+(require 'ace-jump-mode)
 
 ;;; hightlight-symbol settings
 (require 'highlight-symbol)

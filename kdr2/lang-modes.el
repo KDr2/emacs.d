@@ -1,17 +1,20 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; KDr2's Emacs Settings
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; lang-modes.el --- languages modes settings for KDr2's emacs
 
+;; Copyright (C) 2012 KDr2 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Language Modes Settings
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
 
 
 ;;;Erlang Mode Settings
 
 (setq load-path (cons  "~/.emacs.d/3rdparties/erlang" load-path))
-(setq erlang-root-dir "~/Developer/otp/R14B02")
+(setq erlang-root-dir (vars-get 'erlang-root-dir))
 (add-hook 'erlang-mode-hook 'my-erlang-hook-function)
 (defun my-erlang-hook-function ()
   (imenu-add-to-menubar "Functions"))
@@ -45,10 +48,11 @@
      (interactive)
      (let ((inferior-lisp-program ,lisp))
        (slime))))
-(def-slime ecl-slime "~/Developer/ecl/bin/ecl")
-(def-slime ecl-dev-slime "/opt/kdr2/Hacking/ecl-dev/bin/ecl")
-(def-slime sbcl-slime "~/Developer/bin/sbcl")
-(def-slime ccl-slime "~/Developer/ccl/dx86cl64")
+
+(def-slime ecl-slime (vars-get 'ecl-path))
+(def-slime ecl-dev-slime (vars-get 'ecl-dev-path))
+(def-slime sbcl-slime (vars-get 'sbcl-path))
+(def-slime ccl-slime (vars-get 'ccl-path))
 
 ;; paredit
 (autoload 'paredit-mode "paredit"
@@ -73,7 +77,7 @@
 (add-to-list 'auto-mode-alist '("\\.[Rr]\\'" . R-mode))
 
 ;;
-(add-to-list 'load-path "~/Work/opensrc/go/misc/emacs" t)
+(add-to-list 'load-path (concat (vars-get 'go-src-path) "/misc/emacs") t)
 (require 'go-mode-load)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 

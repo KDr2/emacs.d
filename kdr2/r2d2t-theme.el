@@ -1,6 +1,14 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; my color-theme for emacs-24
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; r2d2t-theme.el --- Theme R2D2-Terminal
+
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
+;;
 
 (deftheme r2d2t
   "Theme for KDr2 [use under terminal]")

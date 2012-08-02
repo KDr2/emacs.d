@@ -1,6 +1,13 @@
-;;
-;; buffer-server.el
-;; author : KDr2
+;;; buffer-server.el --- elnode server settings for KDr2's emacs
+
+;; Copyright (C) 2012 KDr2 
+
+;; Author   : KDr2 <killy.draw@gmail.com>
+;; URL      : https://github.com/KDr2/k.emacs.d
+;; Version  : 0.7
+;; Keywords : KDr2
+
+;; This file is not part of GNU Emacs.
 ;;
 
 (defun buffer-index-html ()
@@ -49,7 +56,11 @@
          (buffer-index-html))))))
 
 
-(elnode-start 'buffers-handler :port 8010 :host "localhost")
+;;(elnode-start 'buffers-handler :port 8010 :host "localhost")
+(defun start-servers ()
+  (interactive)
+  (elnode-start 'buffers-handler :port 8010 :host "localhost")
+  (server-start))
 
 ;;
 ;;(elnode-stop 8010)
