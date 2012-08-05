@@ -13,7 +13,8 @@
 
 
 (setq vars-macosx
-      '((work-dir . "~/Work")
+      '((xfont "Monaco-13")
+        (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
         (org-mobile-dir . "/Volumes/webdav/org")
@@ -28,7 +29,8 @@
         (os-name . "darwin")))
 
 (setq vars-vm-debian64
-      '((work-dir . "/vmshare/mwork")
+      '((xfont "courier new-14")
+        (work-dir . "/vmshare/mwork")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "/vmshare/mwork/mine/org")
         (org-mobile-dir . "/tmp")
