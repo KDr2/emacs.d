@@ -1,7 +1,1 @@
-Best Wishes
-            ---- yours, Killy Draw
-/***************************************
- *    site   : http://kdr2.net         *
- *    skype  : zhuoql                  *
- *    gtalk  : killy.draw@gmail.com    *
- ***************************************/
+signatures/emacs.txt
