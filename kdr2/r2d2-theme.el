@@ -17,7 +17,10 @@
 (custom-theme-set-variables
  'r2d2
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
- '(ibuffer-formats (quote ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename) (mark " " (name 32 -1) " " filename))))
+ '(ibuffer-formats
+   (quote
+    ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename)
+     (mark " " (name 32 -1) " " filename))))
  '(line-spacing 0)
  '(linum-format "%4d ")
  '(ruby-indent-tabs-mode t)
@@ -26,7 +29,7 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(term-default-bg-color "#11293b")
+ '(term-default-bg-color "#001e26")
  '(term-default-fg-color "#f5deb3")
  '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
@@ -35,15 +38,15 @@
 
 (custom-theme-set-faces
  'r2d2
- '(default ((t (:background "#101e2e" :foreground "wheat3"))))
+ '(default ((t (:background "#001e26" :foreground "#809194"))))
  '(bold ((t (:foreground "#61CE3C" :weight bold))))
  '(border ((t nil)))
  '(cursor ((t (:background "khaki" :foreground "#b7282e"))))
  '(mouse ((t (:foreground "khaki" :background "black"))))
- '(fringe ((t (:background "#555753"))))
+ '(fringe ((t (:background "#829496"))))
  '(region ((t (:background "#0d4519"))))
  '(font-lock-builtin-face ((t (:foreground "#729fcf"))))
- '(font-lock-comment-face ((t (:foreground "#888a85"))))
+ '(font-lock-comment-face ((t (:foreground "#585858"))))
  '(font-lock-function-name-face ((t (:foreground "#edd400"))))
  '(font-lock-keyword-face ((t (:foreground "#729fcf"))))
  '(font-lock-string-face ((t (:foreground "#ad7fa8"))))
@@ -51,8 +54,8 @@
  '(font-lock-variable-name-face ((t (:foreground "#b66d6d"))))
  '(minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
  '(font-lock-warning-face ((t (:foreground "Red" :bold t))))
- '(mode-line ((t (:foreground "Black" :background "#752"))))
- '(mode-line-inactive ((t (:foreground "Black" :background "Gray75"))))
+ '(mode-line ((t (:foreground "Black" :background "#859900"))))
+ '(mode-line-inactive ((t (:foreground "Black" :background "#829496"))))
  '(modeline-buffer-id ((t (:background "Gray75" :foreground "blue4"))))
  '(modeline-mousable ((t (:background "Gray75" :foreground "firebrick"))))
  '(modeline-mousable-minor-mode ((t (:background "Gray75" :foreground "green4"))))

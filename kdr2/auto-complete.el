@@ -53,7 +53,7 @@
           "/opt/local/lib/gcc46/gcc/x86_64-apple-darwin11/4.6.3/include"
           "/opt/local/include"
           "/opt/local/lib/gcc46/gcc/x86_64-apple-darwin11/4.6.3/include-fixed"
-          " /usr/include"
+          "/usr/include"
           "/System/Library/Frameworks"
           "/Library/Frameworks"))))
 
