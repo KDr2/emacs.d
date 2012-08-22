@@ -31,10 +31,13 @@
 
 (custom-theme-set-faces
  'r2d2t
- '(highlight-symbol-face ((t (:background "white" :foreground "black" :underline t))))
- '(highlight-current-line-face ((t (:background "white"))))
+ '(highlight-symbol-face ((t (:background "black" :foreground "blue" :underline t))))
+ '(ido-only-match ((t (:foreground "green"))))
+ '(ido-subdir ((t (:foreground "blue"))))
+ '(ido-first-match ((t (:foreground "green"))))
+ '(highlight-current-line-face ((t (:background "black"))))
  '(org-tag ((t (:foreground "red"))))
- '(vline ((t (:background "white")))))
+ '(vline ((t (:background "gray")))))
 
 (provide-theme 'r2d2t)
 
