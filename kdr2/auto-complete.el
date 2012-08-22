@@ -69,7 +69,8 @@
 (defun clang-ac-cc-mode-setup ()
   (setq ac-sources (append '(ac-source-clang) ac-sources)))
 
-(do-on-os "linux"
-          (add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup))
+(do-on-os
+ "gnu/linux"
+ (add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup))
 
 
