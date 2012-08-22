@@ -49,4 +49,7 @@
 (if window-system
     (setenv "LS_COLORS" "di=33;1"))
 
+(defun show-file-path ()
+  (interactive)
+  (message (buffer-file-name)))
 

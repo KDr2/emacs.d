@@ -18,7 +18,7 @@
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
  '(ibuffer-formats (quote ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename) (mark " " (name 32 -1) " " filename))))
  '(line-spacing 0)
- '(linum-format "%4d|")
+ '(linum-format "%4d| ")
  '(ruby-indent-tabs-mode t)
  '(safe-local-variable-values (quote ((folded-file . t) (encoding . utf-8))))
  '(template-default-alist nil)
@@ -31,8 +31,9 @@
 
 (custom-theme-set-faces
  'r2d2t
- '(highlight-symbol-face ((t (:background "white" :foreground "balck" :underline t))))
+ '(highlight-symbol-face ((t (:background "white" :foreground "black" :underline t))))
  '(highlight-current-line-face ((t (:background "white"))))
+ '(org-tag ((t (:foreground "red"))))
  '(vline ((t (:background "white")))))
 
 (provide-theme 'r2d2t)
