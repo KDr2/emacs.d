@@ -16,7 +16,10 @@
 (custom-theme-set-variables
  'r2d2t
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
- '(ibuffer-formats (quote ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename) (mark " " (name 32 -1) " " filename))))
+ '(ibuffer-formats
+   (quote
+    ((mark modified read-only " " (name 32 -1) " " (size 6 -1 :right) " " (mode 20 16 :right) " " filename)
+     (mark " " (name 32 -1) " " filename))))
  '(line-spacing 0)
  '(linum-format "%4d| ")
  '(ruby-indent-tabs-mode t)
@@ -31,13 +34,17 @@
 
 (custom-theme-set-faces
  'r2d2t
+ '(default ((t (:foreground "white"))))
  '(highlight-symbol-face ((t (:background "black" :foreground "blue" :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "blue"))))
  '(ido-first-match ((t (:foreground "green"))))
  '(highlight-current-line-face ((t (:background "black"))))
  '(org-tag ((t (:foreground "red"))))
- '(vline ((t (:background "gray")))))
+ '(vline ((t (:background "gray"))))
+ '(font-lock-keyword-face ((t (:foreground "blue"))))
+ '(dired-directory ((t (:foreground "green"))))
+ '(font-lock-comment-face ((t (:foreground "cyan")))))
 
 (provide-theme 'r2d2t)
 
