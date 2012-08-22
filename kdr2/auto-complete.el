@@ -58,7 +58,7 @@
           "/Library/Frameworks"))))
 
 (do-on-os
- "linux"
+ "gnu/linux"
  (setq ac-clang-flags
        (mapcar (lambda (item) (concat "-I" item))
                '("/usr/lib/gcc/x86_64-linux-gnu/4.4/include"
