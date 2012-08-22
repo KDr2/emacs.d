@@ -53,3 +53,9 @@
   (interactive)
   (message (buffer-file-name)))
 
+(defun ido-find-opensrc-file (project)
+  (interactive "sproject name: ")
+  (let ((ido-current-directory (concat "~/Work/opensrc/" project)))
+    ;;(ido-find-file)
+    (ido-file-internal ido-default-file-method nil ido-current-directory)))
+(global-set-key (kbd "C-c o") 'ido-find-opensrc-file)
