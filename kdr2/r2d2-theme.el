@@ -30,7 +30,7 @@
  '(template-header-regexp nil)
  '(template-query nil)
  '(term-default-bg-color "#001e26")
- '(term-default-fg-color "#f5deb3")
+ '(term-default-fg-color "#f809194")
  '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
  '(gdb-many-windows t)
