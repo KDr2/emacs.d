@@ -65,7 +65,7 @@
   (interactive)
   (if (or (file-exists-p "project.cscope") (file-exists-p "cscope.project"))
       (progn
-        (shell-command "find . -type f|grep -E \"\\.(h|c|hpp|cpp|py|erl)$\">cscope.files")
+        (shell-command "find . -type f|grep -E \"\\.(s|S|h|c|hpp|cpp|py|erl)$\">cscope.files")
         (shell-command (vars-get 'cscope-command))
         (message "cscope tags updated!"))
     (message "nothing to do!")))

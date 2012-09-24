@@ -137,7 +137,11 @@
 
 ;;python mode
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
-
+;; Python Hook
+(add-hook 'python-mode-hook
+          (function (lambda ()
+                      (setq indent-tabs-mode nil
+                            tab-width 4))))
 ;; gas-mode
 (require 'gas-mode)
 (add-to-list 'auto-mode-alist '("\\.[sS]\\'" . gas-mode))

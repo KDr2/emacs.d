@@ -38,12 +38,12 @@
 
 (custom-theme-set-faces
  'r2d2
- '(default ((t (:background "#001e26" :foreground "#809194"))))
+ '(default ((t (:background "#001e26" :foreground "#9cc2c6"))))
  '(bold ((t (:foreground "#61CE3C" :weight bold))))
  '(border ((t nil)))
  '(cursor ((t (:background "khaki" :foreground "#b7282e"))))
  '(mouse ((t (:foreground "khaki" :background "black"))))
- '(fringe ((t (:background "#829496"))))
+ '(fringe ((t (:background "SteelBlue4"))))
  '(region ((t (:background "#0d4519"))))
  '(font-lock-builtin-face ((t (:foreground "#729fcf"))))
  '(font-lock-comment-face ((t (:foreground "#585858"))))
@@ -54,7 +54,7 @@
  '(font-lock-variable-name-face ((t (:foreground "#b66d6d"))))
  '(minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
  '(font-lock-warning-face ((t (:foreground "Red" :bold t))))
- '(mode-line ((t (:foreground "Black" :background "#859900"))))
+ '(mode-line ((t (:foreground "Black" :background "DarkOliveGreen"))))
  '(mode-line-inactive ((t (:foreground "Black" :background "#829496"))))
  '(modeline-buffer-id ((t (:background "Gray75" :foreground "blue4"))))
  '(modeline-mousable ((t (:background "Gray75" :foreground "firebrick"))))

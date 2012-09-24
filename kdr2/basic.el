@@ -25,7 +25,7 @@
 ;;把title设置为“文件名"
 (setq frame-title-format
       '("[ " (buffer-file-name "%f \]"
-                               (dired-directory dired-directory "%b \]"))))
+                               (dired-directory dired-directory "%f \]"))))
 ;;光标靠近鼠标的时候，让鼠标自动让开，别挡住视线
 (mouse-avoidance-mode 'animate)
 ;;下面的这个设置可以让光标指到某个括号的时候显示与它匹配的括号
