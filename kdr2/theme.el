@@ -23,7 +23,8 @@
         ;;(do-on-os "gnu/linux"
         (progn
           ;;(set-default-font "courier-14")
-          ;;(set-default-font "courier new-14")
+          ;;(set-default-font "courier new-10")
+          ;;(set-default-font "monospace-10")
           ;;(set-default-font "monofur-14")
           ;;(set-default-font "Monaco-13")
           (set-default-font (vars-get 'xfont))

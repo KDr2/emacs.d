@@ -17,16 +17,32 @@
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
-        (org-mobile-dir . "/Volumes/webdav/org")
-        (org-publish-dir . "~/Sites/kbuildup")
+        (org-mobile-dir . "/tmp")
+        (org-publish-dir . "/Volumes/KDr2/Sites/kbuildup")
         (erlang-root-dir . "~/Developer/otp/R14B02")
         (ecl-path . "~/Developer/ecl/bin/ecl")
         (ecl-dev-path . "/opt/kdr2/Hacking/ecl-dev/bin/ecl")
         (sbcl-path . "~/Developer/bin/sbcl")
         (ccl-path . "~/Developer/ccl/dx86cl64")
-        (go-src-path . "~/Work/opensrc/go")
+        (go-src-path . "/Volumes/KDr2/Work/opensrc/go")
         (cscope-command . "/opt/local/bin/cscope -b")
         (os-name . "darwin")))
+
+(setq vars-debian-mbp
+      '((xfont . "courier new-10")
+        (work-dir . "/Volumes/KDr2/Work")
+        (backup-dir . "/Volumes/KDr2/.backup/emacs")
+        (org-dir . "/Volumes/KDr2/Work/mine/org")
+        (org-mobile-dir . "/Volumes/webdav/org")
+        (org-publish-dir . "/Volumes/KDr2/Sites/kbuildup")
+        (erlang-root-dir . "~/Developer/otp/R14B02")
+        (ecl-path . "~/Developer/ecl/bin/ecl")
+        (ecl-dev-path . "/opt/kdr2/Hacking/ecl-dev/bin/ecl")
+        (sbcl-path . "~/Developer/bin/sbcl")
+        (ccl-path . "~/Developer/ccl/dx86cl64")
+        (go-src-path . "/Volumes/KDr2/Work/opensrc/go")
+        (cscope-command . "/usr/bin/cscope -b")
+        (os-name . "linux")))
 
 (setq vars-vm-debian64
       '((xfont . "courier new-14")
@@ -47,6 +63,7 @@
 (setq vars-platforms
       (list
        (cons "KDr2-MacBookPro.local" vars-macosx)
+       (cons "Debian-MBP" vars-debian-mbp)
        (cons "vm-debian64" vars-vm-debian64)))
 
 (defun vars-get (key &optional default)
