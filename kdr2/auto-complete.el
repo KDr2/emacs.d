@@ -62,6 +62,7 @@
  (setq ac-clang-flags
        (mapcar (lambda (item) (concat "-I" item))
                '("/usr/lib/gcc/x86_64-linux-gnu/4.4/include"
+                 "/usr/include/c++/4.4/x86_64-linux-gnu"
                  "/usr/include/c++/4.4"
                  "/usr/include/c++/4.4/backward/"
                  "/usr/include"))))
