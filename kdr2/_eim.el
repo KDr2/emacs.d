@@ -11,7 +11,7 @@
 ;;
 
 
-(add-to-list 'load-path "~/.emacs.d/3rdparties/eim")
+(add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-eim")
 (autoload 'eim-use-package "eim" "Another emacs input method")
 ;; Tooltip
 (setq eim-use-tooltip nil)

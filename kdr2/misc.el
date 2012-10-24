@@ -47,7 +47,7 @@
   (message "%s" minor-mode-list))
 
 (if window-system
-    (setenv "LS_COLORS" "di=33;1"))
+    (setenv "LS_COLORS" "di=32;0"))
 
 (defun show-file-path ()
   (interactive)

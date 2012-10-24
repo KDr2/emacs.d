@@ -1,7 +1,8 @@
-3rdparties/
+3rdparties
 desktop/
 eshell/
 url/
+auto-save-list/
 abbrev_defs
 tramp
 *.dat

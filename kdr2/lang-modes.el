@@ -81,11 +81,9 @@
 (require 'go-mode-load)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
-;; Objective-c Settings
-(require 'objc-c-mode)
 
 ;; Perl and PDE Mode Settings
-(add-to-list 'load-path "~/.emacs.d/3rdparties/pde")
+(add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-pde/lisp")
 (load "pde-load")
 ;;PDE的分号换行，取消之
 (defun orignal-semicolon ()
@@ -96,6 +94,7 @@
              (local-set-key ";" 'orignal-semicolon)))
 
 ;; Ruby Mode Settings
+(add-to-list 'load-path "~/.emacs.d/3rdparties/ruby-mode")
 (require 'ruby-mode)
 ;;(require 'ruby-electric)
 (add-to-list 'auto-mode-alist '("\\.rbw?\\'" . ruby-mode))

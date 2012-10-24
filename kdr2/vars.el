@@ -30,17 +30,17 @@
 
 (setq vars-debian-mbp
       '((xfont . "monospace-9")
-        (work-dir . "/Volumes/KDr2/Work")
-        (backup-dir . "/Volumes/KDr2/.backup/emacs")
-        (org-dir . "/Volumes/KDr2/Work/mine/org")
+        (work-dir . "~/Work")
+        (backup-dir . "~/.backup/emacs")
+        (org-dir . "~/Work/mine/org")
         (org-mobile-dir . "/Volumes/webdav/org")
-        (org-publish-dir . "/Volumes/KDr2/Sites/kbuildup")
-        (erlang-root-dir . "~/Developer/otp/R14B02")
+        (org-publish-dir . "~/Resources/Sites/kbuildup")
+        (erlang-root-dir . "/opt/programs/otp/14b02")
         (ecl-path . "/opt/programs/ecl/bin/ecl")
         (ecl-dev-path . "/opt/programs/ecl/bin/ecl")
         (sbcl-path . "/usr/bin/sbcl")
         (ccl-path . "~/Developer/ccl/dx86cl64")
-        (go-src-path . "/Volumes/KDr2/Work/opensrc/go")
+        (go-src-path . "~/Work/opensrc/go")
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
