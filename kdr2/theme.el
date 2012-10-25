@@ -29,14 +29,10 @@
           ;;(set-default-font "Monaco-13")
           (set-default-font (vars-get 'xfont))
           (setq line-spacing 0)
-          (set-fontset-font (frame-parameter nil 'font)
-                            'han (font-spec :family "Heiti TC" :size 13))
-          (set-fontset-font (frame-parameter nil 'font)
-                            'cjk-misc (font-spec :family "Heiti TC" :size 13))
-          (set-fontset-font (frame-parameter nil 'font)
-                            'bopomofo (font-spec :family "Heiti TC" :size 13))
-          (set-fontset-font (frame-parameter nil 'font)
-                            'gb18030 (font-spec :family "Heiti TC" :size 13))))
+          (dolist (charset '(kana han symbol cjk-misc bopomofo))
+            (set-fontset-font (frame-parameter nil 'font)
+                              charset
+                              (font-spec :family "WenQuanYi Micro Hei")))))
     (progn ;;no x
       (load-theme 'r2d2t t nil))))
 (color-theme-and-fonts)
