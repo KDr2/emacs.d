@@ -33,7 +33,7 @@
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
-        (org-mobile-dir . "/Volumes/webdav/org")
+        (org-mobile-dir . "~/Pool/Dropbox/MobileOrg")
         (org-publish-dir . "~/Resources/Sites/kbuildup")
         (erlang-root-dir . "/opt/programs/otp/14b02")
         (ecl-path . "/opt/programs/ecl/bin/ecl")

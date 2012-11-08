@@ -8,6 +8,7 @@ emacs-pde
 emacs-w3m
 erlang
 ess
+evernote-mode
 find-recursive.el
 gas-mode.el
 git-emacs
@@ -26,6 +27,7 @@ mercurial.el
 multi-term.el
 notify.el
 nyan-mode
+paredit.el
 php-mode.el
 rotate-windows.el
 ruby-mode

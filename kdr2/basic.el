@@ -24,7 +24,7 @@
 (setq visible-bell nil)
 ;;把title设置为“文件名"
 (setq frame-title-format
-      '("[ " (buffer-file-name "%f \]"
+      '("Emacs [ " (buffer-file-name "%f \]"
                                (dired-directory dired-directory "%f \]"))))
 ;;光标靠近鼠标的时候，让鼠标自动让开，别挡住视线
 (mouse-avoidance-mode 'animate)

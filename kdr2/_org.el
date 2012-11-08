@@ -14,7 +14,7 @@
 
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
-(setq org-mobile-inbox-for-pull (concat org-directory "mobile.org"))
+(setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
