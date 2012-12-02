@@ -17,10 +17,13 @@
 ;;(setq gnus-select-method '(nntp "news.cn99.com"))
 ;;(setq gnus-secondary-select-methods '((nnfolder "")))
 
-(setq gnus-select-method '(nnimap "gmail"
-                                  (nnimap-address "imap.gmail.com")
-                                  (nnimap-server-port 993)
-                                  (nnimap-stream ssl)))
+(setq gnus-select-method '(nnimap "Mail"
+                                  (nnimap-address "localhost")
+                                  (nnimap-stream network)
+                                  (nnimap-authenticator login)
+                                  ;;(nnimap-server-port 993)
+                                  ;;(nnimap-stream ssl)
+                                  ))
 
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
@@ -35,7 +38,7 @@
 (setq gnus-permanently-visible-groups ".*INBOX")
 (setq message-kill-buffer-on-exit t)
 ;;(setq gnus-use-cache 'passive)
-(gnus-demon-add-handler 'gnus-group-get-new-news 5 nil)
+;;(gnus-demon-add-handler 'gnus-group-get-new-news 5 nil)
 
 ;; (setq gnus-default-subscribed-newsgroups
 ;;       '("cn.bbs.comp.emacs"

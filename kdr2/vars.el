@@ -34,7 +34,7 @@
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
         (org-mobile-dir . "~/Pool/Dropbox/MobileOrg")
-        (org-publish-dir . "~/Resources/Sites/kbuildup")
+        (org-publish-dir . "~/Pool/Dropbox/Phone/kbuildup")
         (erlang-root-dir . "/opt/programs/otp/14b02")
         (ecl-path . "/opt/programs/ecl/bin/ecl")
         (ecl-dev-path . "/opt/programs/ecl/bin/ecl")
@@ -63,7 +63,7 @@
 (setq vars-platforms
       (list
        (cons "KDr2-MacBookPro.local" vars-macosx)
-       (cons "Debian-MBP" vars-debian-mbp)
+       (cons "Debian-X230" vars-debian-mbp)
        (cons "vm-debian64" vars-vm-debian64)))
 
 (defun vars-get (key &optional default)
