@@ -1,6 +1,6 @@
 ;;; util-modes.el --- util modes settings
 
-;; Copyright (C) 2012 KDr2 
+;; Copyright (C) 2012 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -213,5 +213,3 @@
 (global-set-key "\C-cew" 'evernote-write-note)
 (global-set-key "\C-cep" 'evernote-post-region)
 (global-set-key "\C-ceb" 'evernote-browser)
-
-
