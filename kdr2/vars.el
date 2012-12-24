@@ -28,7 +28,7 @@
         (cscope-command . "/opt/local/bin/cscope -b")
         (os-name . "darwin")))
 
-(setq vars-debian-mbp
+(setq vars-debian-x230
       '((xfont . "monospace-9")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -63,7 +63,7 @@
 (setq vars-platforms
       (list
        (cons "KDr2-MacBookPro.local" vars-macosx)
-       (cons "Debian-X230" vars-debian-mbp)
+       (cons "Debian-X230" vars-debian-x230)
        (cons "vm-debian64" vars-vm-debian64)))
 
 (defun vars-get (key &optional default)

@@ -1,6 +1,6 @@
 ;;; _org.el --- org-mode settings for KDr2's Emacs
 
-;; Copyright (C) 2012 KDr2 
+;; Copyright (C) 2012 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -15,6 +15,7 @@
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
 (setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
+(setq org-archive-location "archives/%s_archive::")
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
@@ -89,4 +90,3 @@
   (interactive)
   ;;(let ((org-export-html-style ""))
   (org-publish-project "kb" t))
-

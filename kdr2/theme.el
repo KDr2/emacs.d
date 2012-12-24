@@ -32,7 +32,10 @@
           (dolist (charset '(kana han symbol cjk-misc bopomofo))
             (set-fontset-font (frame-parameter nil 'font)
                               charset
-                              (font-spec :family "WenQuanYi Micro Hei")))))
+                              (font-spec :family "WenQuanYi Micro Hei")))
+          (custom-set-faces
+           '(mode-line ((t (:font "WenQuanYi Micro Hei Mono-8")))))
+          (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.21)))))
     (progn ;;no x
       (load-theme 'r2d2t t nil))))
 (color-theme-and-fonts)
