@@ -27,18 +27,18 @@
 ;;org-capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "Tasks")
+      '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "TODO'S")
+         "* TODO %?\n  %a\n")
+        ("n" "Note" entry (file+headline (concat org-directory "/task.org") "Notes")
          "* TODO %?\n  %a\n")
         ("w" "Work-Task" entry (file+headline (concat org-directory "/worklog.org") "Tasks")
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/worklog.org"))
          "* %?\n  %a\n")
-        ("n" "KBuilup" entry (file+headline (concat org-directory "/kbuildup.org") "Notes")
-         "* TODO %?\n  %a\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/journal.org"))
          "* %?\n  Entered on %U\n")
         ("c" "Code-View" entry (file+datetree (concat org-directory "/codeview.org"))
-         "* %?\n  Viewed on %U\n  %a\n")))
+         "* TODO %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
