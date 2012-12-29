@@ -82,6 +82,11 @@
 ;;; multi-term settings
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
+(defun term-mode-settings ()
+  "Settings for `term-mode'"
+  (make-local-variable 'scroll-margin)
+  (setq-default scroll-margin 0))
+(add-hook 'term-mode-hook 'term-mode-settings)
 
 ;;; htmlize
 (require 'htmlize)
