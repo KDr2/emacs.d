@@ -6,3 +6,5 @@ auto-save-list/
 abbrev_defs
 tramp
 *.dat
+.org-id-locations
+bookmarks
