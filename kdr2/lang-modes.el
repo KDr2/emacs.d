@@ -1,6 +1,6 @@
 ;;; lang-modes.el --- languages modes settings for KDr2's emacs
 
-;; Copyright (C) 2012 KDr2 
+;; Copyright (C) 2012 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -148,5 +148,10 @@
 ;; graphviz-dot
 (load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")
 
-
-
+;; auctex mode
+(add-to-list 'load-path
+             "~/.emacs.d/3rdparties/auctex")
+(add-to-list 'load-path
+             "~/.emacs.d/3rdparties/auctex/preview")
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)

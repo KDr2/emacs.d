@@ -56,35 +56,35 @@
               (if nil ;;is-xinline
                   (let ((b64 (shell-command-to-string (format "base64 -b 80 %s.png" basename))))
                     (insert (format "#+BEGIN_HTML\n<img src=\"data:image/png;base64,%s\"/>\n#+END_HTML" b64)))
-                (insert (format "[[%s.png]]" basename)))
-            (insert (format "[[%s.png][%s]]" basename title)))))))
+                (insert (format "[[%s.png]]" basename basename)))
+            (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
 
 (require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup")))
   (setq org-publish-project-alist
-      (list
-       (list
-        "kb-org"
-        :base-directory kb-source-dir
-        :base-extension "org"
-        :publishing-directory kb-output-dir
-        :recursive t
-        :publishing-function 'org-publish-org-to-html
-        :headline-levels 3
-        :auto-preamble t
-        :makeindex t
-        )
         (list
-         "kb-static"
-         :base-directory kb-source-dir
-         :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory kb-output-dir
-         :recursive t
-         :publishing-function 'org-publish-attachment
-         )
-        '("kb" :components ("kb-org" "kb-static")))))
+         (list
+          "kb-org"
+          :base-directory kb-source-dir
+          :base-extension "org"
+          :publishing-directory kb-output-dir
+          :recursive t
+          :publishing-function 'org-publish-org-to-html
+          :headline-levels 3
+          :auto-preamble t
+          :makeindex t
+          )
+         (list
+          "kb-static"
+          :base-directory kb-source-dir
+          :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+          :publishing-directory kb-output-dir
+          :recursive t
+          :publishing-function 'org-publish-attachment
+          )
+         '("kb" :components ("kb-org" "kb-static")))))
 
 (defun kb-pub ()
   (interactive)

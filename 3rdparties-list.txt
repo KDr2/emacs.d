@@ -1,5 +1,6 @@
 ace-jump-mode.el
 ansit.el
+auctex
 auto-complete
 auto-complete-clang.el
 bm.el
