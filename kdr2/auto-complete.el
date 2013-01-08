@@ -1,6 +1,6 @@
 ;;; auot-complete.el --- atuo-complete mode settings for KDr2's Emacs
 
-;; Copyright (C) 2012 KDr2 
+;; Copyright (C) 2012 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -47,7 +47,7 @@
  (setq ac-clang-flags
        (mapcar
         (lambda (item) (concat "-I" item))
-        '("/opt/local/include/gcc46/c++/" 
+        '("/opt/local/include/gcc46/c++/"
           "/opt/local/include/gcc46/c++/x86_64-apple-darwin11"
           "/opt/local/include/gcc46/c++/backward"
           "/opt/local/lib/gcc46/gcc/x86_64-apple-darwin11/4.6.3/include"
@@ -61,11 +61,12 @@
  "gnu/linux"
  (setq ac-clang-flags
        (mapcar (lambda (item) (concat "-I" item))
-               '("/usr/lib/gcc/x86_64-linux-gnu/4.4/include"
-                 "/usr/include/c++/4.4/x86_64-linux-gnu"
+               '("/usr/include"
+                 "/usr/include/x86_64-linux-gnu/"
+                 "/usr/lib/gcc/x86_64-linux-gnu/4.4/include"
                  "/usr/include/c++/4.4"
-                 "/usr/include/c++/4.4/backward/"
-                 "/usr/include"))))
+                 "/usr/include/c++/4.4/x86_64-linux-gnu"
+                 "/usr/include/c++/4.4/backward/"))))
 
 (defun clang-ac-cc-mode-setup ()
   (setq ac-sources (append '(ac-source-clang) ac-sources)))
@@ -73,5 +74,3 @@
 (do-on-os
  "gnu/linux"
  (add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup))
-
-
