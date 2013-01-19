@@ -155,3 +155,9 @@
              "~/.emacs.d/3rdparties/auctex/preview")
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
+
+
+;; C/C++ Indent
+(c-set-offset 'arglist-intro '+)
+(c-set-offset 'arglist-cont-nonempty 'c-lineup-math)
+(c-set-offset 'arglist-close 0)
