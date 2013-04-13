@@ -111,6 +111,7 @@
 (defun hl-s-turn-on ()
   (let ((mod-list '("c-mode"
                     "c++-mode"
+                    "julia-mode"
                     "lua-mode"
                     "ruby-mode"
                     "erlang-mode"

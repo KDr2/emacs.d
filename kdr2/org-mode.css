@@ -94,12 +94,12 @@ img { align: center; }
 
 pre {
 	border: 1pt dotted #f08300;
-    color: #fff;
+    color: #000;
 	/*background-color: #101e2e;*/
-    background-color: #192f60;
+    background-color: #f0f0f0;
 	padding: 5pt;
 	font-family: courier, monospace;
-	font-size: 9pt;
+	font-size: 10pt;
 }
 
 table {
