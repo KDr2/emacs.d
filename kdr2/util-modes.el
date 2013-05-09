@@ -205,17 +205,3 @@
 
 (define-key isearch-mode-map (kbd "M-a")
   'sl-isearch-ace-jump)
-
-;;evernote-mode
-
-(add-to-list 'load-path "~/.emacs.d/3rdparties/evernote-mode")
-(require 'evernote-mode)
-(setq evernote-username "KDr2") ; optional: you can use this username as default.
-(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8")) ; option
-(global-set-key "\C-cec" 'evernote-create-note)
-(global-set-key "\C-ceo" 'evernote-open-note)
-(global-set-key "\C-ces" 'evernote-search-notes)
-(global-set-key "\C-ceS" 'evernote-do-saved-search)
-(global-set-key "\C-cew" 'evernote-write-note)
-(global-set-key "\C-cep" 'evernote-post-region)
-(global-set-key "\C-ceb" 'evernote-browser)
