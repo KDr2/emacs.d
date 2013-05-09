@@ -13,7 +13,8 @@
 
 
 (setq vars-macosx
-      '((xfont . "courier new-14")
+      '((lang-extra-modes t)
+        (xfont . "courier new-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
@@ -29,7 +30,8 @@
         (os-name . "darwin")))
 
 (setq vars-debian-x230
-      '((xfont . "monospace-9")
+      '((lang-extra-modes t)
+        (xfont . "monospace-9")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (org-dir . "~/Work/mine/org")
@@ -46,17 +48,9 @@
 
 (setq vars-vm-debian64
       '((xfont . "courier new-14")
-        (work-dir . "/vmshare/mwork")
+        (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
-        (org-dir . "/vmshare/mwork/mine/org")
-        (org-mobile-dir . "/tmp")
-        (org-publish-dir . "/tmp")
         (erlang-root-dir . "~/Developer/otp/R14B02")
-        (ecl-path . "/opt/programs/ecl/bin/ecl")
-        (ecl-dev-path . "/opt/programs/ecl/bin/ecl")
-        (sbcl-path . "~/Developer/bin/sbcl")
-        (ccl-path . "~/Developer/ccl/dx86cl64")
-        (go-src-path . "/vmshare/mwork/opensrc/go")
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
@@ -64,7 +58,7 @@
       (list
        (cons "KDr2-MacBookPro.local" vars-macosx)
        (cons "Debian-X230" vars-debian-x230)
-       (cons "vm-debian64" vars-vm-debian64)))
+       (cons "Debian64-QEMU" vars-vm-debian64)))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"

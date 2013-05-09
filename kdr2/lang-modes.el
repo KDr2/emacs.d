@@ -10,29 +10,42 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+;; C/C++ Mode Settings
+(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.mak$\\'" . makefile-mode))
+(add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-mode))
+
+;; C/C++ Indent
+(c-set-offset 'arglist-intro '+)
+(c-set-offset 'arglist-cont-nonempty 'c-lineup-math)
+(c-set-offset 'arglist-close 0)
 
 ;;;Erlang Mode Settings
 
-(setq load-path (cons  "~/.emacs.d/3rdparties/erlang" load-path))
-(setq erlang-root-dir (vars-get 'erlang-root-dir))
-(add-hook 'erlang-mode-hook 'my-erlang-hook-function)
-(defun my-erlang-hook-function ()
-  (imenu-add-to-menubar "Functions"))
-(require 'erlang-start)
+(let ((v-erlang-root-dir (vars-get 'erlang-root-dir)))
+  (if v-erlang-root-dir
+      (progn
+        (setq load-path (cons  "~/.emacs.d/3rdparties/erlang" load-path))
+        (setq erlang-root-dir v-erlang-root-dir)
+        (add-hook 'erlang-mode-hook 'my-erlang-hook-function)
+        (defun my-erlang-hook-function ()
+          (imenu-add-to-menubar "Functions"))
+        (require 'erlang-start)
 
-(defun erlang-mode-extras ()
-  "extras settings for erlang-mode"
-  (auto-complete-mode 1)
-  (make-local-variable 'ac-sources)
-  (setq ac-sources '(
-                     ac-source-symbols
-                     ac-source-abbrev
-                     ac-source-words-in-buffer
-                     ac-source-words-in-all-buffer
-                     ac-source-files-in-current-dir
-                     ac-source-filename
-                     )))
-(add-hook 'erlang-mode-hook 'erlang-mode-extras)
+        (defun erlang-mode-extras ()
+          "extras settings for erlang-mode"
+          (auto-complete-mode 1)
+          (make-local-variable 'ac-sources)
+          (setq ac-sources '(
+                             ac-source-symbols
+                             ac-source-abbrev
+                             ac-source-words-in-buffer
+                             ac-source-words-in-all-buffer
+                             ac-source-files-in-current-dir
+                             ac-source-filename
+                             )))
+        (add-hook 'erlang-mode-hook 'erlang-mode-extras))))
+
 
 ;; Common-Lisp and SLIME Settings
 (add-to-list 'load-path "~/.emacs.d/3rdparties/slime")
@@ -62,53 +75,12 @@
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'scheme-mode-hook           (lambda () (paredit-mode +1)))
 
-;; (O)Caml Settings
-
-(add-to-list 'load-path "~/.emacs.d/3rdparties/tuareg")
-(add-to-list 'auto-mode-alist '("\\.ml[iylp]?" . tuareg-mode))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-(dolist (ext '(".cmo" ".cmx" ".cma" ".cmxa" ".cmi"))
-  (add-to-list 'completion-ignored-extensions ext))
-
-;; R Settings
-(add-to-list 'load-path "~/.emacs.d/3rdparties/ess/lisp")
-(require 'ess-site)
-(add-to-list 'auto-mode-alist '("\\.[Rr]\\'" . R-mode))
-
-;;
-(add-to-list 'load-path (concat (vars-get 'go-src-path) "/misc/emacs") t)
-(require 'go-mode-load)
-(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
-
-
-;; Perl and PDE Mode Settings
-(add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-pde/lisp")
-(load "pde-load")
-;;PDE的分号换行，取消之
-(defun orignal-semicolon ()
-  (interactive)
-  (insert ";"))
-(add-hook 'cperl-mode-hook
-          '(lambda ()
-             (local-set-key ";" 'orignal-semicolon)))
-
-;; Ruby Mode Settings
-(add-to-list 'load-path "~/.emacs.d/3rdparties/ruby-mode")
-(require 'ruby-mode)
-;;(require 'ruby-electric)
-(add-to-list 'auto-mode-alist '("\\.rbw?\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rjs\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rhtml?\\'" . html-mode))
-;;(add-hook 'ruby-mode-hook
-;;          (lambda()
-;;            (ruby-electric-mode nil)))
 
 (require 'yaml-mode)
+
 ;; Systemtap Mode Settings
 (autoload 'systemtap-mode "systemtap-mode")
 (add-to-list 'auto-mode-alist '("\\.stp\\'" . systemtap-mode))
-
 
 ;; Lua Mode Settings
 (require 'lua-mode)
@@ -117,15 +89,6 @@
 (add-hook 'lua-mode-hook
           (lambda ()
             (modify-syntax-entry ?. "." (syntax-table))))
-
-;; C/C++ Mode Settings
-(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
-(add-to-list 'auto-mode-alist '("\\.mak$\\'" . makefile-mode))
-(add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-mode))
-
-;; PHP Mode Settings
-(require 'php-mode)
-(add-to-list 'auto-mode-alist '("\\.(php|inc).?\\'" . php-mode))
 
 ;; Javascript Settings
 (load-file "~/.emacs.d/3rdparties/javascript.el")
@@ -148,16 +111,5 @@
 ;; graphviz-dot
 (load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")
 
-;; auctex mode
-(add-to-list 'load-path
-             "~/.emacs.d/3rdparties/auctex")
-(add-to-list 'load-path
-             "~/.emacs.d/3rdparties/auctex/preview")
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
-
-
-;; C/C++ Indent
-(c-set-offset 'arglist-intro '+)
-(c-set-offset 'arglist-cont-nonempty 'c-lineup-math)
-(c-set-offset 'arglist-close 0)
+(if (vars-get 'lang-extra-modes)
+    (load-file "~/.emacs.d/kdr2/lang-extra-modes.el"))
