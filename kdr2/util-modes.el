@@ -57,20 +57,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-;;; cscope settings
-(require 'xcscope)
-;;cscope标签更新(有project.cscope的目录下);
-(setq exec-path (cons "/opt/local/bin" exec-path))
-(defun update-cscope ()
-  (interactive)
-  (if (or (file-exists-p "project.cscope") (file-exists-p "cscope.project"))
-      (progn
-        (shell-command "find . -type f|grep -E \"\\.(s|S|h|c|hpp|cpp|py|erl)$\">cscope.files")
-        (shell-command (vars-get 'cscope-command))
-        (message "cscope tags updated!"))
-    (message "nothing to do!")))
-(global-set-key "\C-cu" 'update-cscope)
-
 ;;; uniquify settings
 (require 'uniquify)
 
@@ -100,8 +86,21 @@
         try-complete-file-name
         try-expand-dabbrev))
 
-
 (global-linum-mode t)
+
+;;; cscope settings
+(require 'xcscope)
+;;cscope标签更新(有project.cscope的目录下);
+(setq exec-path (cons "/opt/local/bin" exec-path))
+(defun update-cscope ()
+  (interactive)
+  (if (or (file-exists-p "project.cscope") (file-exists-p "cscope.project"))
+      (progn
+        (shell-command "find . -type f|grep -E \"\\.(s|S|h|c|hpp|cpp|py|erl)$\">cscope.files")
+        (shell-command (vars-get 'cscope-command))
+        (message "cscope tags updated!"))
+    (message "nothing to do!")))
+(global-set-key "\C-cu" 'update-cscope)
 
 (require 'ace-jump-mode)
 
@@ -162,16 +161,6 @@
 (require 'git-emacs-autoloads)
 
 
-;; Trac
-
-;; TODO
-(require 'trac-wiki)
-(autoload 'trac-wiki "trac-wiki"
-  "Trac wiki editing entry-point." t)
-(trac-wiki-define-project "trac-aw"
-                          "http://trac.appwill.com/" t)
-
-
 (load-file "~/.emacs.d/kdr2/_ibuffer.el")
 
 ;;(require 'highlight-tail)
@@ -187,8 +176,8 @@
 (load-file "~/.emacs.d/kdr2/auto-complete.el")
 
 ;;mercurial.el
-(setenv "PATH" (concat (getenv "PATH") ":/Volumes/KDr2/Developer/python27/bin"))
-(setq exec-path (append exec-path '("/Volumes/KDr2/Developer/python27/bin")))
+(setenv "PATH" (concat (getenv "PATH") ":/home/kdr2/programs/python27/bin"))
+(setq exec-path (append exec-path '("/home/kdr2/programs/python27/bin")))
 (require 'mercurial)
 
 

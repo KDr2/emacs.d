@@ -1,6 +1,6 @@
 ;;; r2d2t-theme.el --- Theme R2D2-Terminal
 
-;; Copyright (C) 2012 KDr2 
+;; Copyright (C) 2012 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -35,17 +35,15 @@
 (custom-theme-set-faces
  'r2d2t
  '(default ((t (:foreground "white"))))
- '(highlight-symbol-face ((t (:background "black" :foreground "blue" :underline t))))
+ '(highlight-symbol-face ((t (:background "black" :foreground "red" :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "blue"))))
  '(ido-first-match ((t (:foreground "green"))))
  '(highlight-current-line-face ((t (:background "black"))))
  '(org-tag ((t (:foreground "red"))))
- '(vline ((t (:background "gray"))))
+ '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "blue"))))
  '(dired-directory ((t (:foreground "green"))))
  '(font-lock-comment-face ((t (:foreground "cyan")))))
 
 (provide-theme 'r2d2t)
-
-

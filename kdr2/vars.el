@@ -1,6 +1,6 @@
 ;;; vars.el --- variables for my boxes
 
-;; Copyright (C) 2012 KDr2
+;; Copyright (C) 2010-2013 KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/k.emacs.d
@@ -9,7 +9,6 @@
 
 ;; This file is not part of GNU Emacs.
 ;;
-
 
 
 (setq vars-macosx
@@ -47,10 +46,11 @@
         (os-name . "linux")))
 
 (setq vars-vm-debian64
-      '((xfont . "courier new-14")
+      '((lang-extra-modes nil)
+        (xfont . "courier new-14")
         (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
-        (erlang-root-dir . "~/Developer/otp/R14B02")
+        (erlang-root-dir . "/data0/usr/local/otp/R15B01")
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
