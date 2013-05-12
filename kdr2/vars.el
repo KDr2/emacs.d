@@ -12,7 +12,7 @@
 
 
 (setq vars-macosx
-      '((lang-extra-modes t)
+      '((lang-extra-modes . nil)
         (xfont . "courier new-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -29,7 +29,7 @@
         (os-name . "darwin")))
 
 (setq vars-debian-x230
-      '((lang-extra-modes t)
+      '((lang-extra-modes . (ess auctex pde ruby ocaml go php))
         (xfont . "monospace-9")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -46,7 +46,7 @@
         (os-name . "linux")))
 
 (setq vars-vm-debian64
-      '((lang-extra-modes nil)
+      '((lang-extra-modes . (ess auctex pde ruby))
         (xfont . "courier new-14")
         (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
