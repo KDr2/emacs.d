@@ -10,10 +10,11 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;; C/C++ Mode Settings
+;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.mak$\\'" . makefile-mode))
 (add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-mode))
+(add-to-list 'auto-mode-alist '("\\.[sS]\\'" . asm-mode))
 
 ;; C/C++ Indent
 (c-set-offset 'arglist-intro '+)
@@ -104,10 +105,11 @@
 (add-hook 'python-mode-hook
           (function (lambda ()
                       (setq indent-tabs-mode nil
-                            tab-width 4))))
+                            tab-width 4)
+                      (setq python-indent-offset 4))))
 ;; gas-mode
-(require 'gas-mode)
-(add-to-list 'auto-mode-alist '("\\.[sS]\\'" . gas-mode))
+;;(require 'gas-mode)
+;;(add-to-list 'auto-mode-alist '("\\.[sS]\\'" . gas-mode))
 
 ;; graphviz-dot
 (load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")
