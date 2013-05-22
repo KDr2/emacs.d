@@ -10,26 +10,11 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-
-(setq vars-macosx
-      '((lang-extra-modes . nil)
-        (xfont . "courier new-14")
-        (work-dir . "~/Work")
-        (backup-dir . "~/.backup/emacs")
-        (org-dir . "~/Work/mine/org")
-        (org-mobile-dir . "/tmp")
-        (org-publish-dir . "/Volumes/KDr2/Sites/kbuildup")
-        (erlang-root-dir . "~/Developer/otp/R14B02")
-        (ecl-path . "~/Developer/ecl/bin/ecl")
-        (ecl-dev-path . "/opt/kdr2/Hacking/ecl-dev/bin/ecl")
-        (sbcl-path . "~/Developer/bin/sbcl")
-        (ccl-path . "~/Developer/ccl/dx86cl64")
-        (go-src-path . "/Volumes/KDr2/Work/opensrc/go")
-        (cscope-command . "/opt/local/bin/cscope -b")
-        (os-name . "darwin")))
-
 (setq vars-debian-x230
-      '((lang-extra-modes . (ess auctex pde ruby ocaml go php))
+      '((exec-path . ("/home/kdr2/programs/bin"
+                      "/home/kdr2/programs/luajit/bin"
+                      "/home/kdr2/programs/python27/bin/"))
+        (lang-extra-modes . (ess auctex pde ruby ocaml go php))
         (xfont . "monospace-9")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -46,7 +31,8 @@
         (os-name . "linux")))
 
 (setq vars-vm-debian64
-      '((lang-extra-modes . (ess auctex pde ruby))
+      '((exec-path . ("/data0/usr/bin"))
+        (lang-extra-modes . (ess auctex pde ruby))
         (xfont . "courier new-14")
         (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
@@ -56,7 +42,6 @@
 
 (setq vars-platforms
       (list
-       (cons "KDr2-MacBookPro.local" vars-macosx)
        (cons "Debian-X230" vars-debian-x230)
        (cons "Debian64-QEMU" vars-vm-debian64)))
 

@@ -176,8 +176,6 @@
 (load-file "~/.emacs.d/kdr2/auto-complete.el")
 
 ;;mercurial.el
-(setenv "PATH" (concat (getenv "PATH") ":/home/kdr2/programs/python27/bin"))
-(setq exec-path (append exec-path '("/home/kdr2/programs/python27/bin")))
 (require 'mercurial)
 
 

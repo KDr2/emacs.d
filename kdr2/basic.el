@@ -113,3 +113,10 @@
 ;;(setq make-backup-files nil)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; exec-path
+(setq exec-path (concatenate 'list exec-path (vars-get 'exec-path)))
+(setenv "PATH" (concatenate 'string
+                            (getenv "PATH")
+                            ":"
+                            (mapconcat 'identity (vars-get 'exec-path) ":")))
