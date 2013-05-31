@@ -156,9 +156,9 @@
 
 
 ;; git-emacs
-(add-to-list 'load-path "~/.emacs.d/3rdparties/git-emacs")
-(setq git-state-modeline-decoration 'git-state-decoration-large-dot)
-(require 'git-emacs-autoloads)
+;;(add-to-list 'load-path "~/.emacs.d/3rdparties/git-emacs")
+;;(setq git-state-modeline-decoration 'git-state-decoration-large-dot)
+;;(require 'git-emacs-autoloads)
 
 
 (load-file "~/.emacs.d/kdr2/_ibuffer.el")

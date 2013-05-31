@@ -2,6 +2,9 @@
 ;; Basic Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+(require 'cl)
+
 ;;append  load-path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -35,4 +38,3 @@
  '(pde-perl-version "5.10.0"))
 
 (put 'upcase-region 'disabled nil)
-
