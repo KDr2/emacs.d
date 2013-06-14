@@ -40,10 +40,21 @@
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
+(setq vars-mbp-mc724
+      '((exec-path . ("/data0/usr/bin"))
+        (lang-extra-modes . (ess auctex ruby))
+        (xfont . "monaco-13")
+        (work-dir . "~")
+        (backup-dir . "~/.backup/emacs")
+        (erlang-root-dir . "/data0/usr/local/otp/R15B01")
+        (cscope-command . "/usr/bin/cscope -b")
+        (os-name . "darwin")))
+
 (setq vars-platforms
       (list
        (cons "Debian-X230" vars-debian-x230)
-       (cons "Debian64-QEMU" vars-vm-debian64)))
+       (cons "Debian64-QEMU" vars-vm-debian64)
+       (cons "MBP-MC724" vars-mbp-mc724)))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
