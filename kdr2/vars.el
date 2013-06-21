@@ -56,8 +56,15 @@
        (cons "Debian64-QEMU" vars-vm-debian64)
        (cons "KDr2-MC724.local" vars-mbp-mc724)))
 
+(defun hostname ()
+  (if (string= system-name "localhost")
+      (if (string= system-type "darwin")
+	  "KDr2-MC724.local"
+	system-name)
+    system-name))
+
 (defun vars-get (key &optional default)
   "Get a var value for given key"
-  (let ((platform-vars (cdr (assoc system-name vars-platforms))))
+  (let ((platform-vars (cdr (assoc (hostname) vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
