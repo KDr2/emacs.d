@@ -59,8 +59,8 @@
 (defun hostname ()
   (if (string= system-name "localhost")
       (if (string= system-type "darwin")
-	  "KDr2-MC724.local"
-	system-name)
+          "KDr2-MC724.local"
+        system-name)
     system-name))
 
 (defun vars-get (key &optional default)
