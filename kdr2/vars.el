@@ -54,6 +54,7 @@
       (list
        (cons "Debian-X230" vars-debian-x230)
        (cons "Debian64-QEMU" vars-vm-debian64)
+       (cons "KDr2-MC724" vars-mbp-mc724)
        (cons "KDr2-MC724.local" vars-mbp-mc724)))
 
 (defun hostname ()
