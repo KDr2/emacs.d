@@ -44,7 +44,7 @@
       '((exec-path . ("~/Programs/bin"))
         (lang-extra-modes . (ess auctex ruby))
         (xfont . "monaco-12")
-        (work-dir . "~")
+        (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (erlang-root-dir . "~/Programs/otp/R15B01")
         (cscope-command . "/usr/bin/cscope -b")
