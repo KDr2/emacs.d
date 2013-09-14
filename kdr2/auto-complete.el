@@ -73,4 +73,5 @@
 
 (do-on-os
  "gnu/linux"
- (add-hook 'c-mode-common-hook 'clang-ac-cc-mode-setup))
+ (add-hook 'c-mode-hook 'clang-ac-cc-mode-setup)
+ (add-hook 'c++-mode-hook 'clang-ac-cc-mode-setup))
