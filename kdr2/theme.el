@@ -24,7 +24,7 @@
         (progn
           ;;(set-default-font "courier-14")
           ;;(set-default-font "courier new-10")
-          ;;(set-default-font "monospace-9")
+          ;;(set-default-font "monospace-12")
           ;;(set-default-font "monofur-10")
           ;;(set-default-font "Monaco-13")
           (set-default-font (vars-get 'xfont))
@@ -33,7 +33,7 @@
             (set-fontset-font (frame-parameter nil 'font)
                               charset
                               (font-spec :family "WenQuanYi Micro Hei")))
-          (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.21)))))
+          (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.27)))))
     (progn ;;no x
       (load-theme 'r2d2t t nil))))
 (color-theme-and-fonts)
