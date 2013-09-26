@@ -43,7 +43,7 @@
 (setq vars-mbp-mc724
       '((exec-path . ("~/Programs/bin"))
         (lang-extra-modes . (ess auctex ruby))
-        (xfont . "monaco-12")
+        (xfont . "monaco-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (erlang-root-dir . "~/Programs/otp/R15B01")
