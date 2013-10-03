@@ -119,6 +119,7 @@
                     "javascript-mode"
                     "emacs-lisp-mode"
                     "python-mode"
+                    "php-mode"
                     "tuareg-mode"
                     "graphviz-dot-mode")))
     (if (member (symbol-name major-mode) mod-list)
