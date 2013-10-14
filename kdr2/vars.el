@@ -32,7 +32,7 @@
 
 (setq vars-vm-debian64
       '((exec-path . ("/data0/usr/bin"))
-        (lang-extra-modes . (ess auctex pde ruby))
+        (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "courier new-14")
         (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
@@ -42,7 +42,7 @@
 
 (setq vars-mbp-mc724
       '((exec-path . ("~/Programs/bin"))
-        (lang-extra-modes . (ess auctex ruby))
+        (lang-extra-modes . (ess auctex ruby php))
         (xfont . "monaco-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -50,12 +50,20 @@
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "darwin")))
 
+(setq vars-simple-server
+      '((exec-path . ("~/programs/bin"))
+        (lang-extra-modes . (php))
+        (work-dir . "~/")
+        (backup-dir . "~/.backup/emacs")
+        (os-name . "linux")))
+
 (setq vars-platforms
       (list
        (cons "Debian-X230" vars-debian-x230)
        (cons "Debian64-QEMU" vars-vm-debian64)
        (cons "KDr2-MC724" vars-mbp-mc724)
-       (cons "KDr2-MC724.local" vars-mbp-mc724)))
+       (cons "KDr2-MC724.local" vars-mbp-mc724)
+	   (cons "shop-dev01" vars-simple-server)))
 
 (defun hostname ()
   (let ((default-sysname '(("darwin" . "KDr2-MC724.local")
