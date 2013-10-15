@@ -24,7 +24,7 @@
         (progn
           ;;(set-default-font "courier-14")
           ;;(set-default-font "courier new-10")
-          ;;(set-default-font "monospace-12")
+          ;;(set-default-font "monospace-11")
           ;;(set-default-font "monofur-10")
           ;;(set-default-font "Monaco-13")
           (set-default-font (vars-get 'xfont))

@@ -112,7 +112,13 @@
 ;;不产生备份文件
 ;;(setq make-backup-files nil)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(defun dtw-enable ()
+  (interactive)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace))
+
+(defun dtw-disable ()
+  (interactive)
+  (remove-hook 'before-save-hook 'delete-trailing-whitespace))
 
 ;; exec-path
 (setq exec-path (concatenate 'list exec-path (vars-get 'exec-path)))
