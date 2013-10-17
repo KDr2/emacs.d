@@ -94,6 +94,8 @@
 ;;给出用 M-x foo-bar-COMMAND 输入命令的提示。
 (icomplete-mode 1)
 
+;; for X11 on MacOSX
+(setq x-alt-keysym 'meta)
 
 ;;SET KEY
 (global-set-key "\C-xk" 'kill-this-buffer)

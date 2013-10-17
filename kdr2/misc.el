@@ -32,13 +32,6 @@
 (global-set-key (kbd "s-s") 'desktop-sv)
 ;;(global-set-key (kbd "s-o") 'desktop-cd)
 
-(defun x-new-frame-init (&optional frame)
-  (interactive)
-  (select-frame frame)
-  (color-theme-and-fonts))
-
-(add-hook 'after-make-frame-functions 'x-new-frame-init)
-
 (defun current-major-mode-name ()
   (interactive)
   (message (symbol-name major-mode)))

@@ -45,6 +45,7 @@
  '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "blue"))))
  '(dired-directory ((t (:foreground "green"))))
- '(font-lock-comment-face ((t (:foreground "cyan")))))
+ '(font-lock-comment-face ((t (:foreground "cyan"))))
+ '(ac-selection-face ((t (:background "red")))))
 
 (provide-theme 'r2d2t)
