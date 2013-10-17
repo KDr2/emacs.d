@@ -35,9 +35,10 @@
 (custom-theme-set-faces
  'r2d2t
  '(default ((t (:foreground "white"))))
+ '(minibuffer-prompt ((t (:foreground "cyan"))))
  '(highlight-symbol-face ((t (:background "black" :foreground "red" :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
- '(ido-subdir ((t (:foreground "blue"))))
+ '(ido-subdir ((t (:foreground "cyan"))))
  '(ido-first-match ((t (:foreground "green"))))
  '(highlight-current-line-face ((t (:background "black"))))
  '(org-tag ((t (:foreground "red"))))
