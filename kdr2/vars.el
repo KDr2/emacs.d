@@ -42,7 +42,7 @@
 
 (setq vars-mbp-mc724
       '((exec-path . ("~/Programs/bin"))
-        (lang-extra-modes . (ess auctex ruby php))
+        (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "monaco-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -52,7 +52,7 @@
 
 (setq vars-simple-server
       '((exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (php))
+        (lang-extra-modes . (php pde))
         (work-dir . "~/")
         (backup-dir . "~/.backup/emacs")
 		(erlang-root-dir . "~/Programs/otp/R15B01")
