@@ -23,6 +23,7 @@ htmlize.el
 javascript.el
 js2.el
 lua-mode.el
+markdown-mode.el
 maxframe.el
 mercurial.el
 multi-term.el
