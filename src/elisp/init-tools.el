@@ -12,8 +12,26 @@
 (add-to-list 'load-path
              (concatenate 'string user-emacs-directory "src/elisp/tools"))
 
+;; dired
+(require 'init-dired)
+
+;; ido
+(require 'init-ido)
+
 ;; ibuffer
 (require 'init-ibuffer)
+
+;; highlight-symbol
+(require 'init-hl-s)
+
+;; ace jump
+(require 'init-ace-jump)
+
+;; woman
+(require 'init-woman)
+
+;; multi-term
+(require 'init-multi-term)
 
 ;; org mode
 (require 'init-org)
@@ -24,8 +42,17 @@
 ;; magit mode
 (require 'init-magit)
 
+;; git-emacs
+;;(require 'init-git-emacs)
+
+;; mercurial mode
+(require 'init-mercurial)
+
 ;; auto-complete
 (require 'init-ac)
+
+;; xcscope
+(require 'init-cscope)
 
 ;; utils
 (require 'init-utils)

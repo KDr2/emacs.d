@@ -40,4 +40,10 @@
 ;;(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 ;;(global-set-key "\C-xm" 'browse-url-at-point)
 
+;;; htmlize
+(require-package 'htmlize)
+
+;; linum-mode
+(global-linum-mode t)
+
 (provide 'init-utils)

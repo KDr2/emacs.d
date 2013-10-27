@@ -18,9 +18,6 @@
 ;; Common Libraries
 (load-file "~/.emacs.d/src/elisp/common.el")
 
-;; Util Modes
-(load-file "~/.emacs.d/src/elisp/util-modes.el")
-
 ;; Programming Language Modes
 (require 'init-lang)
 
