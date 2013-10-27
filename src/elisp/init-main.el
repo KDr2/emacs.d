@@ -25,6 +25,7 @@
 
 ;; Programming Language Modes
 (load-file "~/.emacs.d/src/elisp/lang-modes.el")
+(require 'init-lang)
 
 ;; Misc Settings
 (load-file "~/.emacs.d/src/elisp/misc.el")

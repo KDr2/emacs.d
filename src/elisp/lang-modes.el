@@ -10,43 +10,6 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;; auto-mode-alist
-(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
-(add-to-list 'auto-mode-alist '("\\.mak$\\'" . makefile-mode))
-(add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-mode))
-(add-to-list 'auto-mode-alist '("\\.[sS]\\'" . asm-mode))
-
-;; C/C++ Indent
-(c-set-offset 'arglist-intro '+)
-(c-set-offset 'arglist-cont-nonempty 'c-lineup-math)
-(c-set-offset 'arglist-close 0)
-
-;;;Erlang Mode Settings
-
-(let ((v-erlang-root-dir (vars-get 'erlang-root-dir)))
-  (if v-erlang-root-dir
-      (progn
-        (setq load-path (cons  "~/.emacs.d/3rdparties/erlang" load-path))
-        (setq erlang-root-dir v-erlang-root-dir)
-        (add-hook 'erlang-mode-hook 'my-erlang-hook-function)
-        (defun my-erlang-hook-function ()
-          (imenu-add-to-menubar "Functions"))
-        (require 'erlang-start)
-
-        (defun erlang-mode-extras ()
-          "extras settings for erlang-mode"
-          (auto-complete-mode 1)
-          (make-local-variable 'ac-sources)
-          (setq ac-sources '(
-                             ac-source-symbols
-                             ac-source-abbrev
-                             ac-source-words-in-buffer
-                             ac-source-words-in-all-buffer
-                             ac-source-files-in-current-dir
-                             ac-source-filename
-                             )))
-        (add-hook 'erlang-mode-hook 'erlang-mode-extras))))
-
 
 ;; Common-Lisp and SLIME Settings
 (add-to-list 'load-path "~/.emacs.d/3rdparties/slime")
