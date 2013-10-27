@@ -12,6 +12,7 @@
 
 
 (require 'init-vars)
+(require 'init-elpa)
 
 ;; Basic Settings
 (load-file "~/.emacs.d/src/elisp/basic.el")
@@ -31,7 +32,8 @@
 ;; Theme Settings
 (require 'init-theme)
 
-(load-file "~/.emacs.d/src/elisp/_org.el")
+;; Orgmode Settings
+(require 'init-org)
 
 ;; chinese input method
 (require 'init-eim)

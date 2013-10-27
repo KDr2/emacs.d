@@ -10,7 +10,10 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-(require 'org-install)
+(when (< emacs-major-version 24)
+  (require-package 'org))
+(require-package 'org-fstree)
+;;(require 'org-install)
 
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
@@ -91,3 +94,5 @@
   (interactive)
   ;;(let ((org-export-html-style ""))
   (org-publish-project "kb" t))
+
+(provide 'init-org)
