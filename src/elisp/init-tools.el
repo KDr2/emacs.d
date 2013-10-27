@@ -12,6 +12,9 @@
 (add-to-list 'load-path
              (concatenate 'string user-emacs-directory "src/elisp/tools"))
 
+;; ibuffer
+(require 'init-ibuffer)
+
 ;; org mode
 (require 'init-org)
 
@@ -21,5 +24,5 @@
 ;; magit mode
 (require 'init-magit)
 
-
 (provide 'init-tools)
+

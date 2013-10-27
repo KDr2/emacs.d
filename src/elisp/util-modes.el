@@ -163,8 +163,6 @@
 ;;(require 'git-emacs-autoloads)
 
 
-(load-file "~/.emacs.d/src/elisp/_ibuffer.el")
-
 ;;(require 'highlight-tail)
 ;;(setq highlight-tail-colors
 ;;          '(("black" . 0)
@@ -195,6 +193,3 @@
 (define-key isearch-mode-map (kbd "M-a")
   'sl-isearch-ace-jump)
 
-(autoload 'markdown-mode "markdown-mode.el"
-    "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))

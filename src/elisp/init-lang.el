@@ -16,6 +16,9 @@
   `(if (memq ,feature (vars-get 'lang-extra-modes))
        (progn ,@body)))
 
+;; markdown mode
+(require 'init-md)
+
 ;; yaml mode
 (require 'init-yaml)
 
