@@ -1,1 +1,1 @@
-signatures/emacs.txt
+misc/signatures/emacs.txt
