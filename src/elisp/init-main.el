@@ -1,4 +1,4 @@
-;;; main.el --- settings for KDr2's emacs configuration
+;;; init-main.el --- settings for KDr2's emacs configuration
 
 ;; Copyright (C) KDr2
 

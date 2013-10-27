@@ -1,9 +1,9 @@
-;;; basic.el --- basic settings for KDr2's emacs
+;;; init-basic.el --- basic settings for KDr2's emacs
 
 ;; Copyright (C) KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
-;; URL      : https://github.com/KDr2/k.emacs.d
+;; URL      : https://github.com/KDr2/emacs.d
 
 ;; This file is not part of GNU Emacs.
 ;;
@@ -56,9 +56,6 @@
 
 ;; kill-ring length
 (setq kill-ring-max 200)
-
-;; uniquify by prefixing filename
-(setq uniquify-buffer-name-style 'forward)
 
 ;; timestamp
 (setq time-stamp-active t)

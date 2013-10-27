@@ -24,5 +24,11 @@
 ;; magit mode
 (require 'init-magit)
 
+;; auto-complete
+(require 'init-ac)
+
+;; utils
+(require 'init-utils)
+
 (provide 'init-tools)
 

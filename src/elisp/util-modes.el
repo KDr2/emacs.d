@@ -1,11 +1,9 @@
 ;;; util-modes.el --- util modes settings
 
-;; Copyright (C) 2012 KDr2
+;; Copyright (C) KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
-;; URL      : https://github.com/KDr2/k.emacs.d
-;; Version  : 0.7
-;; Keywords : KDr2
+;; URL      : https://github.com/KDr2/emacs.d
 
 ;; This file is not part of GNU Emacs.
 ;;
@@ -41,29 +39,6 @@
 (setq ido-ignore-buffers
       '("\\` " "^\*Mess" "^\*Help" "^\*Back" "^\*Completion" "^\*Ido"))
 
-;;; window-numbering
-(require 'window-numbering)
-(window-numbering-mode t)
-
-;;; highlight-current-line mode settings
-(require 'highlight-current-line)
-(highlight-current-line-on t)
-
-;;; vline mode settings
-(require 'vline)
-(global-set-key "\C-xt" 'vline-global-mode)
-
-;;; undo-tree mode settings
-(require 'undo-tree)
-(global-undo-tree-mode)
-
-;;; uniquify settings
-(require 'uniquify)
-
-;;; thumbs settings
-;;开启图片浏览
-(require 'thumbs)
-(auto-image-file-mode t)
 
 ;;; multi-term settings
 (require 'multi-term)
@@ -130,18 +105,6 @@
   highlight-symbol-mode hl-s-turn-on)
 (global-highlight-symbol-mode)
 
-;;; Gnus Settings
-;;(load-file "~/.emacs.d/kdr2/_gnus.el")
-
-;;; w3m settings
-;;(add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-w3m")
-;;(require 'w3m)
-;;set w3m as the default browser of emacs
-;;(setq browse-url-browser-function 'w3m-browse-url)
-;;(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
-;;(global-set-key "\C-xm" 'browse-url-at-point)
-
-
 ;;; Woman Settings
 (setq woman-use-own-frame nil)
 (setq woman-cache-level 3)
@@ -172,8 +135,6 @@
 ;;      highlight-tail-timer .1)
 ;;(setq highlight-tail-posterior-type 'const)
 ;;(highlight-tail-mode nil)
-
-(load-file "~/.emacs.d/src/elisp/auto-complete.el")
 
 ;;mercurial.el
 (require 'mercurial)
