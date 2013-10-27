@@ -89,3 +89,5 @@
   (let ((platform-vars (cdr (assoc (hostname) vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
+
+(provide 'init-vars)

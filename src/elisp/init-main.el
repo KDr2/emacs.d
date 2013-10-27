@@ -11,7 +11,7 @@
 ;;
 
 
-(load-file "~/.emacs.d/src/elisp/vars.el")
+(require 'init-vars)
 
 ;; Basic Settings
 (load-file "~/.emacs.d/src/elisp/basic.el")
