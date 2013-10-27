@@ -14,7 +14,7 @@
 
 ;;; UI Settings
 (defun color-theme-and-fonts ()
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/kdr2")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/src/elisp/themes")
   (if window-system
       (progn ;;x window
         (scroll-bar-mode -1)

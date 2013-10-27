@@ -112,6 +112,7 @@
                     "c++-mode"
                     "julia-mode"
                     "lua-mode"
+                    "clojure-mode"
                     "ruby-mode"
                     "erlang-mode"
                     "lisp-mode"
@@ -162,7 +163,7 @@
 ;;(require 'git-emacs-autoloads)
 
 
-(load-file "~/.emacs.d/kdr2/_ibuffer.el")
+(load-file "~/.emacs.d/src/elisp/_ibuffer.el")
 
 ;;(require 'highlight-tail)
 ;;(setq highlight-tail-colors
@@ -174,7 +175,7 @@
 ;;(setq highlight-tail-posterior-type 'const)
 ;;(highlight-tail-mode nil)
 
-(load-file "~/.emacs.d/kdr2/auto-complete.el")
+(load-file "~/.emacs.d/src/elisp/auto-complete.el")
 
 ;;mercurial.el
 (require 'mercurial)

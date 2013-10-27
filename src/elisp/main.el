@@ -11,25 +11,25 @@
 ;;
 
 
-(load-file "~/.emacs.d/kdr2/vars.el")
+(load-file "~/.emacs.d/src/elisp/vars.el")
 
 ;; Basic Settings
-(load-file "~/.emacs.d/kdr2/basic.el")
+(load-file "~/.emacs.d/src/elisp/basic.el")
 
 ;; Common Libraries
-(load-file "~/.emacs.d/kdr2/common.el")
+(load-file "~/.emacs.d/src/elisp/common.el")
 
 ;; Util Modes
-(load-file "~/.emacs.d/kdr2/util-modes.el")
+(load-file "~/.emacs.d/src/elisp/util-modes.el")
 
 ;; Programming Language Modes
-(load-file "~/.emacs.d/kdr2/lang-modes.el")
+(load-file "~/.emacs.d/src/elisp/lang-modes.el")
 
 ;; Misc Settings
-(load-file "~/.emacs.d/kdr2/misc.el")
+(load-file "~/.emacs.d/src/elisp/misc.el")
 
 ;; Theme Settings
-(load-file "~/.emacs.d/kdr2/theme.el")
+(load-file "~/.emacs.d/src/elisp/theme.el")
 
-(load-file "~/.emacs.d/kdr2/_org.el")
-(load-file "~/.emacs.d/kdr2/_eim.el")
+(load-file "~/.emacs.d/src/elisp/_org.el")
+(load-file "~/.emacs.d/src/elisp/_eim.el")

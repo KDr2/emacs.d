@@ -115,4 +115,4 @@
 (load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")
 
 (if (vars-get 'lang-extra-modes)
-    (load-file "~/.emacs.d/kdr2/lang-extra-modes.el"))
+    (load-file "~/.emacs.d/src/elisp/lang-extra-modes.el"))
