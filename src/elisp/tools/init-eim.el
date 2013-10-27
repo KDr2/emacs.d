@@ -1,17 +1,13 @@
-;;; _eim.el --- eim settings for KDr2's Emacs
-
-;; Copyright (C) 2012 KDr2 
+;;; init-eim.el --- eim settings for KDr2's Emacs
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
-;; URL      : https://github.com/KDr2/k.emacs.d
-;; Version  : 0.7
-;; Keywords : KDr2
+;; URL      : https://github.com/KDr2/emacs.d
 
 ;; This file is not part of GNU Emacs.
 ;;
 
-
 (add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-eim")
+
 (autoload 'eim-use-package "eim" "Another emacs input method")
 ;; Tooltip
 (setq eim-use-tooltip nil)
