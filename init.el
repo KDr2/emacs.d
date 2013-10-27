@@ -6,15 +6,15 @@
 (require 'cl)
 
 ;;append  load-path
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/elpa")
-(add-to-list 'load-path "~/.emacs.d/3rdparties")
-(add-to-list 'load-path "~/.emacs.d/src/elisp")
+(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path (concatenate 'string user-emacs-directory "elpa"))
+(add-to-list 'load-path (concatenate 'string user-emacs-directory "3rdparties"))
+(add-to-list 'load-path (concatenate 'string user-emacs-directory "src/elisp"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;=======kdr2-ext-settings===
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/.emacs.d/src/elisp/main.el")
+(require 'init-main)
 
 
 (defun file-string (file)

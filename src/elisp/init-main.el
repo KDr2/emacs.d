@@ -33,3 +33,5 @@
 
 (load-file "~/.emacs.d/src/elisp/_org.el")
 (load-file "~/.emacs.d/src/elisp/_eim.el")
+
+(provide 'init-main)
