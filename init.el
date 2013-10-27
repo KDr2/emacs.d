@@ -16,14 +16,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'init-main)
 
-
-(defun file-string (file)
-    "Read the contents of a file and return as a string."
-    (with-temp-buffer
-      (insert-file-contents file)
-      (buffer-string)))
-
-
 ;;custom-settings
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -32,7 +24,7 @@
  ;; If there is more than one, they won't work right.
  '(canlock-password "eea8e2f6e38400fe57a3ad7190f1a31c797398b3")
  '(default-input-method "eim-py")
- (list 'org-export-html-style (file-string "~/.emacs.d/src/resources/org-mode.css"))
+ (list 'org-export-html-style (xhtml-css "~/.emacs.d/src/resources/org-theme-hy.css"))
  '(org-export-html-style-include-default nil)
  '(pde-load-path "~/.emacs.d/3rdparties/pde/")
  '(pde-perl-version "5.10.0"))

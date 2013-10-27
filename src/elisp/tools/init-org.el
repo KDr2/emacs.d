@@ -13,6 +13,24 @@
 (require-package 'org-fstree)
 ;;(require 'org-install)
 
+
+(defun file-string (file)
+    "Read the contents of a file and return as a string."
+    (with-temp-buffer
+      (insert-file-contents file)
+      (buffer-string)))
+
+(defun xhtml-css (file)
+  (concatenate
+   'string
+   "<style rel=\"stylesheet\" type=\"text/css\">
+<!--/*--><![CDATA[/*><!--*/
+"
+   (file-string file)
+   "
+/*]]>*/-->
+</style>"))
+
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
 (setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
