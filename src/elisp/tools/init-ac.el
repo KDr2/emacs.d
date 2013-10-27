@@ -11,7 +11,7 @@
 (require-package 'auto-complete)
 (require-package 'auto-complete-clang)
 
-;;(add-to-list 'load-path "~/.emacs.d/3rdparties/auto-complete")
+;;(add-non-elpa-load-path "/auto-complete")
 
 (when (require 'auto-complete)
   (require 'auto-complete-clang)

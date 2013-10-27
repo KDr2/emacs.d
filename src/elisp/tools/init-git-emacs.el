@@ -9,7 +9,7 @@
 ;;
 
 ;; git-emacs
-(add-to-list 'load-path "~/.emacs.d/3rdparties/git-emacs")
+(add-non-elpa-load-path "/git-emacs")
 (require 'git-emacs-autoloads)
 (setq git-state-modeline-decoration 'git-state-decoration-large-dot)
 

@@ -33,7 +33,7 @@
 (auto-image-file-mode t)
 
 ;;; w3m settings
-;;(add-to-list 'load-path "~/.emacs.d/3rdparties/emacs-w3m")
+;;(add-non-elpa-load-path "/emacs-w3m")
 (require-package 'w3m)
 ;;set w3m as the default browser of emacs
 ;;(setq browse-url-browser-function 'w3m-browse-url)

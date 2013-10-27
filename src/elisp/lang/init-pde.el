@@ -10,7 +10,13 @@
 
 ;; load PDE mode
 
-(require-package 'pde)
+(do-on-os
+ "gnu/linux"
+ (require-package 'pde))
+
+(do-on-os
+ "darwin"
+ (add-non-elpa-load-path "/emacs-pde/lisp"))
 
 (load "pde-load")
 
