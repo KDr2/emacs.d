@@ -27,4 +27,4 @@
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
 
-
+(provide 'init-eim)

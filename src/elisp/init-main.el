@@ -29,9 +29,11 @@
 (load-file "~/.emacs.d/src/elisp/misc.el")
 
 ;; Theme Settings
-(load-file "~/.emacs.d/src/elisp/theme.el")
+(require 'init-theme)
 
 (load-file "~/.emacs.d/src/elisp/_org.el")
-(load-file "~/.emacs.d/src/elisp/_eim.el")
+
+;; chinese input method
+(require 'init-eim)
 
 (provide 'init-main)

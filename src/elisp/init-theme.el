@@ -53,3 +53,6 @@
         ;;(color-theme-and-fonts)
         )))
 (add-hook 'after-make-frame-functions 'x-new-frame-init)
+
+
+(provide 'init-theme)
