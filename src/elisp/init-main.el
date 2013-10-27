@@ -13,7 +13,7 @@
 (require 'init-elpa)
 
 ;; Basic Settings
-(load-file "~/.emacs.d/src/elisp/basic.el")
+(require 'init-basic)
 
 ;; Common Libraries
 (load-file "~/.emacs.d/src/elisp/common.el")
