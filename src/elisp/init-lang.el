@@ -78,8 +78,7 @@
          (require 'init-ess))
 
 ;; Perl and PDE Mode Settings
-(if-lang 'pde
-         (require 'init-pde))
+(if-lang 'pde (require 'init-pde))
 
 ;; Go Settings
 (if-lang 'go
