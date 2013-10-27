@@ -13,7 +13,8 @@
 (require-package 'clojure-mode)
 (require-package 'clojure-test-mode)
 (require-package 'elein)
-(require-package 'nrepl)
+(require-package 'cider)
+(require-package 'slamhound)
 (require-package 'ac-nrepl)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
