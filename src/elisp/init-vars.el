@@ -40,7 +40,7 @@
 
 (setq vars-mbp-mc724
       '((exec-path . ("~/Programs/bin"))
-        (lang-extra-modes . (ess auctex ruby php))
+        (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "courier new-14")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
