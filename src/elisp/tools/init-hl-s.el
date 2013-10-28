@@ -25,6 +25,7 @@
                     "lisp-mode"
                     "cperl-mode"
                     "javascript-mode"
+                    "js2-mode"
                     "emacs-lisp-mode"
                     "python-mode"
                     "php-mode"
