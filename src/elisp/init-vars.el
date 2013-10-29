@@ -48,7 +48,7 @@
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "darwin")))
 
-(setq vars-simple-server
+(setq vars-linux-server
       '((exec-path . ("~/programs/bin"))
         (lang-extra-modes . (php pde))
         (work-dir . "~/")
@@ -59,32 +59,14 @@
 
 (setq vars-platforms
       (list
-       (cons "Debian-X230" vars-debian-x230)
-       (cons "Debian64-QEMU" vars-vm-debian64)
-       (cons "KDr2-MC724" vars-mbp-mc724)
-       (cons "KDr2-MC724.local" vars-mbp-mc724)
-	   (cons "simple-server" vars-simple-server)))
-
-(defun string/starts-with (s arg)
-      "returns non-nil if string S starts with ARG.  Else nil."
-      (cond ((>= (length s) (length arg))
-             (string-equal (substring s 0 (length arg)) arg))
-            (t nil)))
-
-(defun hostname ()
-  (let ((default-sysname '(("darwin" . "KDr2-MC724.local")
-                           ("linux" . "Debian-X230"))))
-    (if (string= system-name "localhost")
-        (if (assoc (default-sysname))
-            (cdr (assoc (default-sysname)))
-          system-name)
-	  (if (string/starts-with system-name "shop-dev")
-		  "simple-server"
-		system-name))))
+       (cons "linux-pc" vars-debian-x230)
+       (cons "linux-vm" vars-vm-debian64)
+       (cons "darwin" vars-mbp-mc724)
+       (cons "linux-server" vars-linux-server)))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
-  (let ((platform-vars (cdr (assoc (hostname) vars-platforms))))
+  (let ((platform-vars (cdr (assoc (box-type) vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
 

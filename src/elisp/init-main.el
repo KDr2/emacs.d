@@ -8,15 +8,17 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+;; Common Libraries
+(load-file "~/.emacs.d/src/elisp/common.el")
 
+;; platform vars
 (require 'init-vars)
+
+;; elpa settings
 (require 'init-elpa)
 
 ;; Basic Settings
 (require 'init-basic)
-
-;; Common Libraries
-(load-file "~/.emacs.d/src/elisp/common.el")
 
 ;; Programming Language Modes
 (require 'init-lang)
