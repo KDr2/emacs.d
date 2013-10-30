@@ -43,6 +43,7 @@
         (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "courier new-14")
         (work-dir . "~/Work")
+        (org-dir . "~/Work/mine/org")
         (backup-dir . "~/.backup/emacs")
         (erlang-root-dir . "~/Programs/otp/R15B01")
         (cscope-command . "/usr/bin/cscope -b")
