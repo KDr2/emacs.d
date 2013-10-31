@@ -23,4 +23,6 @@
 (require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
 
+(setq default-input-method "eim-py")
+
 (provide 'init-eim)

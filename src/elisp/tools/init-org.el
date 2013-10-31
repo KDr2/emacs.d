@@ -11,6 +11,7 @@
 (when (< emacs-major-version 24)
   (require-package 'org))
 (require-package 'org-fstree)
+
 ;;(require 'org-install)
 
 (setq org-directory (vars-get 'org-dir))
@@ -18,6 +19,11 @@
 (setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
 (setq org-archive-location "archives/%s_archive::")
 (setq org-src-fontify-natively t)
+
+;; html export
+(setq org-export-html-validation-link nil)
+;;(setq org-export-html-style "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
+(setq org-export-html-style-include-default nil)
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
@@ -92,5 +98,11 @@
   (interactive)
   ;;(let ((org-export-html-style ""))
   (org-publish-project "kb" t))
+
+(defun org-export-signle-page ()
+  (interactive)
+  (let ((org-export-html-style
+         (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-hy.css")))
+    (kill-buffer (org-export-as-html 3 '() nil))))
 
 (provide 'init-org)
