@@ -8,22 +8,30 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-(when (< emacs-major-version 24)
-  (require-package 'org))
-(require-package 'org-fstree)
+;; (when (< emacs-major-version 24)
+;;   (require-package 'org))
 
-;;(require 'org-install)
+(require-package 'org)
+(require-package 'org-plus-contrib)
+(require-package 'org-fstree)
 
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
 (setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
 (setq org-archive-location "archives/%s_archive::")
 (setq org-src-fontify-natively t)
+(setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
 
-;; html export
-(setq org-export-html-validation-link nil)
+;; html export settings for V7.*
+;;(setq org-export-html-validation-link nil)
 ;;(setq org-export-html-style "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
-(setq org-export-html-style-include-default nil)
+;;(setq org-export-html-style-include-default nil)
+
+;; html export settings for V8.*
+;;(setq org-html-validation-link nil)
+(setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
+(setq org-html-head-include-default-style nil)
+
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
@@ -49,8 +57,6 @@
          "* TODO %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
-(setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
-
 (defun org-dblock-write:graphviz (params)
   (let ((file (plist-get params :file))
         (title (or (plist-get params :title) "Image"))
@@ -67,6 +73,10 @@
                 (insert (format "[[%s.png]]" basename basename)))
             (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
+(defvar mn-html-head-extra
+  "<link rel=\"alternate\" type=\"application/rss+xml\"
+         href=\"http://kdr2.com/site-log.xml\"
+         title=\"RSS feed for KDr2\">")
 
 (require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
@@ -74,47 +84,52 @@
       (mn-output-dir (concat org-directory "/mindniche/output"))
       (mn-source-dir (concat org-directory "/mindniche")))
   (setq org-publish-project-alist
-        (list
-         (list
-          "kb-org"
-          :base-directory kb-source-dir
-          :base-extension "org"
-          :publishing-directory kb-output-dir
-          :recursive t
-          :publishing-function 'org-publish-org-to-html
-          :headline-levels 3
-          :auto-preamble t
-          :makeindex t
-          )
-         (list
-          "kb-static"
-          :base-directory kb-source-dir
-          :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-          :publishing-directory kb-output-dir
-          :recursive t
-          :publishing-function 'org-publish-attachment
-          )
-         '("kb" :components ("kb-org" "kb-static"))
-         (list
-          "mn-org"
-          :base-directory mn-source-dir
-          :base-extension "org"
-          :publishing-directory mn-output-dir
-          :recursive t
-          :publishing-function 'org-publish-org-to-html
-          :headline-levels 3
-          :auto-preamble t
-          :makeindex t
-          )
-         (list
-          "mn-static"
-          :base-directory (concat mn-source-dir "/static")
-          :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-          :publishing-directory mn-output-dir
-          :recursive t
-          :publishing-function 'org-publish-attachment
-          )
-         '("mn" :components ("mn-org" "mn-static")))))
+        `(("kb-org"
+           :base-directory ,kb-source-dir
+           :base-extension "org"
+           :publishing-directory ,kb-output-dir
+           :recursive t
+           :publishing-function (org-html-publish-to-html)
+           :headline-levels 3
+           :auto-preamble t
+           :makeindex t
+           )
+          ("kb-static"
+           :base-directory ,kb-source-dir
+           :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+           :publishing-directory ,kb-output-dir
+           :recursive t
+           :publishing-function (org-publish-attachment)
+           )
+          ("kb" :components ("kb-org" "kb-static"))
+          ("mn-org"
+           :base-directory ,mn-source-dir
+           :base-extension "org"
+           :publishing-directory ,mn-output-dir
+           :recursive t
+           :publishing-function (org-html-publish-to-html)
+           :html-head-extra ,mn-html-head-extra
+           :headline-levels 3
+           :auto-preamble t
+           :makeindex t
+           )
+          ("mn-rss"
+           :base-directory ,mn-source-dir
+           :base-extension "org"
+           :publishing-directory ,mn-output-dir
+           :publishing-function (org-rss-publish-to-rss)
+           :html-link-home "http://mindniche.com/"
+           :html-link-use-abs-url t
+           :exclude ".*"
+           :include ("site-log.org"))
+          ("mn-static"
+           :base-directory ,(concat mn-source-dir "/static")
+           :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+           :publishing-directory ,mn-output-dir
+           :recursive t
+           :publishing-function (org-publish-attachment)
+           )
+          ("mn" :components ("mn-org" "mn-rss" "mn-static")))))
 
 (defun kb-pub ()
   (interactive)
@@ -123,8 +138,9 @@
 
 (defun org-export-signle-page ()
   (interactive)
-  (let ((org-export-html-style
-         (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-hy.css")))
-    (kill-buffer (org-export-as-html 3 '() nil))))
+  (let ((org-html-head
+         (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-hy.css"))
+        (org-export-show-temporary-export-buffer nil))
+    (org-html-export-to-html)))
 
 (provide 'init-org)

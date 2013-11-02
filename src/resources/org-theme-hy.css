@@ -143,6 +143,10 @@ td {
 	border: 1px solid #e2e2e2;
 }
 
+#org-div-home-and-up {
+    float: right;
+}
+
 #postamble {
 	font-size: 12px;
 	color: #666;
