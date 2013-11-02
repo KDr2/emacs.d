@@ -70,7 +70,9 @@
 
 (require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
-      (kb-source-dir (concat org-directory "/kbuildup")))
+      (kb-source-dir (concat org-directory "/kbuildup"))
+      (mn-output-dir (concat org-directory "/mindniche/output"))
+      (mn-source-dir (concat org-directory "/mindniche")))
   (setq org-publish-project-alist
         (list
          (list
@@ -92,7 +94,27 @@
           :recursive t
           :publishing-function 'org-publish-attachment
           )
-         '("kb" :components ("kb-org" "kb-static")))))
+         '("kb" :components ("kb-org" "kb-static"))
+         (list
+          "mn-org"
+          :base-directory mn-source-dir
+          :base-extension "org"
+          :publishing-directory mn-output-dir
+          :recursive t
+          :publishing-function 'org-publish-org-to-html
+          :headline-levels 3
+          :auto-preamble t
+          :makeindex t
+          )
+         (list
+          "mn-static"
+          :base-directory (concat mn-source-dir "/static")
+          :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+          :publishing-directory mn-output-dir
+          :recursive t
+          :publishing-function 'org-publish-attachment
+          )
+         '("mn" :components ("mn-org" "mn-static")))))
 
 (defun kb-pub ()
   (interactive)
