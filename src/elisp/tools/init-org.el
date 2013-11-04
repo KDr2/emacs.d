@@ -74,9 +74,30 @@
             (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
 (defvar mn-html-head-extra
-  "<link rel=\"alternate\" type=\"application/rss+xml\"
-         href=\"http://kdr2.com/site-log.xml\"
-         title=\"RSS feed for KDr2\">")
+  "
+<link rel=\"alternate\" type=\"application/rss+xml\"
+      href=\"http://kdr2.com/site-log.xml\"
+      title=\"RSS feed for KDr2\">
+<script src=\"http://code.jquery.com/jquery-1.10.1.min.js\"></script>
+<script src=\"/script/mn-site.js\"></script>")
+
+(defvar mn-html-preamble
+  "<div class='nav'>
+<ul>
+<li id=\"site-name\"></li>
+<li><a href='/'>Home</a></li>
+<li><a target='_blank' href='http://github.com/KDr2'>GitHub</a></li>
+<li><a target='_blank' href='http://kdr2.net'>Tumblr</a></li>
+<li><a href='/about.html'>About</a></li>
+</ul>
+</div>")
+
+(defvar mn-html-postamble
+  "
+<p>Copyright &copy; %a, <a href=\"http://creativecommons.org/licenses/by-nc-nd/3.0/\">SOME RIGHTS RESERVED</a>. </p>
+<p>Last updated: %C. </p>
+<p>Built with %c. </p>
+")
 
 (require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
@@ -109,6 +130,8 @@
            :recursive t
            :publishing-function (org-html-publish-to-html)
            :html-head-extra ,mn-html-head-extra
+           :html-preamble ,mn-html-preamble
+           :html-postamble ,mn-html-postamble
            :headline-levels 3
            :auto-preamble t
            :makeindex t
