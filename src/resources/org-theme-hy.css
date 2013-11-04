@@ -177,6 +177,7 @@ td {
     font-size: 10pt;
     font-weight: bold;
     padding: 0.05em 0.5em 0.5em;
+    border-bottom: none;
 }
 
 #table-of-contents ul {
@@ -204,4 +205,12 @@ td {
     display: block;
     padding: 0.5em;
     margin-top: -1.5em;
+}
+
+code {
+    display: inline-block;
+    background-color: #cce;
+    padding: 2px 5px;
+    border-radius: 2px;x
+    line-height: normal;
 }
