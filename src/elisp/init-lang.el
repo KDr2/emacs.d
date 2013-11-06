@@ -37,6 +37,9 @@
 ;; PHP mode
 (require 'init-php)
 
+;; mmm mode
+;; (require 'init-mmm)
+
 ;; asm/gas mode
 (require 'init-as)
 
