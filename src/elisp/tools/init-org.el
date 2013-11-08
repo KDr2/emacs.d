@@ -89,6 +89,13 @@
 <li><a target='_blank' href='http://github.com/KDr2'>GitHub</a></li>
 <li><a target='_blank' href='http://kdr2.net'>Tumblr</a></li>
 <li><a href='/about.html'>About</a></li>
+<li class=\"search\">
+<form method=\"get\" action=\"http://www.google.com/search\">
+  <input type=\"text\" name=\"q\" size=\"31\" maxlength=\"255\" value=\"\" />
+  <input type=\"hidden\" id=\"sitesearch\" name=\"sitesearch\" value=\"kdr2.com\" />
+  <input type=\"submit\" value=\"Search\" class=\"button\" />
+</form>
+</li>
 </ul>
 </div>")
 
