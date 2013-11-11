@@ -1,8 +1,0 @@
-There should be a file called `box-type' with one of
-the below items as its content in this directory:
-
-* linux-pc
-* linux-vm
-* linux-server
-* darwin
-

@@ -120,7 +120,6 @@
            :publishing-function (org-html-publish-to-html)
            :headline-levels 3
            :auto-preamble t
-           :makeindex t
            )
           ("kb-static"
            :base-directory ,kb-source-dir
@@ -141,14 +140,13 @@
            :html-postamble ,mn-html-postamble
            :headline-levels 3
            :auto-preamble t
-           :makeindex t
            )
           ("mn-rss"
            :base-directory ,mn-source-dir
            :base-extension "org"
            :publishing-directory ,mn-output-dir
            :publishing-function (org-rss-publish-to-rss)
-           :html-link-home "http://mindniche.com/"
+           :html-link-home "http://kdr2.com/"
            :html-link-use-abs-url t
            :exclude ".*"
            :include ("site-log.org"))
