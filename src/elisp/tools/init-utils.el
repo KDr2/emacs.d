@@ -24,6 +24,9 @@
 (require-package 'undo-tree)
 (global-undo-tree-mode)
 
+;; bm.el
+(require-package 'bm)
+
 ;;; uniquify settings
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)

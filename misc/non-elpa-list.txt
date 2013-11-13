@@ -1,5 +1,4 @@
 ansit.el
-bm.el
 emacs-eim
 emacs-pde
 find-recursive.el
