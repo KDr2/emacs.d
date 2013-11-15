@@ -38,7 +38,11 @@
 (add-hook 'text-mode-hook
           '(lambda ()
              (setq require-final-newline nil)))
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+;; auto-fill
+;;(setq default-fill-column 70)
+(auto-fill-mode -1)
+(remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; set tab = 4 spaces
 ;;(setq default-tab-width 4)
@@ -64,9 +68,6 @@
 
 ;; column number
 (setq column-number-mode t)
-
-;; auto-fill
-;;(setq default-fill-column 70)
 
 ;;'y' for 'yes', 'n' for 'no'
 (fset 'yes-or-no-p 'y-or-n-p)
