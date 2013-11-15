@@ -27,8 +27,8 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(term-default-bg-color "#001e26")
- '(term-default-fg-color "#f809194")
+ '(term-default-bg-color "#00282E")
+ '(term-default-fg-color "#wheat3")
  '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
  '(gdb-many-windows t)
@@ -36,7 +36,7 @@
 
 (custom-theme-set-faces
  'r2d2
- '(default ((t (:background "#001e26" :foreground "#9cc2c6"))))
+ '(default ((t (:background "#00282E" :foreground "wheat3"))))
  '(bold ((t (:foreground "#61CE3C" :weight bold))))
  '(border ((t nil)))
  '(cursor ((t (:background "khaki" :foreground "#b7282e"))))
@@ -44,7 +44,7 @@
  '(fringe ((t (:background "SteelBlue4"))))
  '(region ((t (:background "#0d4519"))))
  '(font-lock-builtin-face ((t (:foreground "#729fcf"))))
- '(font-lock-comment-face ((t (:foreground "#585858"))))
+ '(font-lock-comment-face ((t (:foreground "azure4"))))
  '(font-lock-function-name-face ((t (:foreground "#edd400"))))
  '(font-lock-keyword-face ((t (:foreground "#729fcf"))))
  '(font-lock-string-face ((t (:foreground "#ad7fa8"))))
@@ -59,7 +59,7 @@
  '(modeline-mousable-minor-mode ((t (:background "Gray75" :foreground "green4"))))
  ;;misc-modes:
  '(highlight-symbol-face ((t (:background "#068" :foreground "#0FFFF0" :underline t))))
- '(highlight-current-line-face ((t (:background "#1c305c"))))
+ '(hl-line ((t (:background "#3E4E6E"))))
  '(vline ((t (:background "#1c305c"))))
  ;;linum
  '(linum ((t (:foreground "yellow"))));; :family "courier new"

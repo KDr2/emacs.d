@@ -12,9 +12,8 @@
 (require-package 'window-numbering)
 (window-numbering-mode t)
 
-;;; highlight-current-line mode settings
-(require-package 'highlight-current-line)
-;;(highlight-current-line-on t)
+;;; hl-line
+(global-hl-line-mode)
 
 ;;; vline mode settings
 (require-package 'vline)

@@ -38,7 +38,7 @@
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "cyan"))))
  '(ido-first-match ((t (:foreground "green"))))
- '(highlight-current-line-face ((t (:background "black"))))
+ '(hl-line ((t (:background "black"))))
  '(org-tag ((t (:foreground "red"))))
  '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "blue"))))

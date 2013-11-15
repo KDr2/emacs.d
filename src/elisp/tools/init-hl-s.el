@@ -15,7 +15,8 @@
 (highlight-symbol-mode)
 
 (defun hl-s-turn-on ()
-  (let ((mod-list '("c-mode"
+  (let ((mod-list '("sh-mode"
+                    "c-mode"
                     "c++-mode"
                     "julia-mode"
                     "lua-mode"
