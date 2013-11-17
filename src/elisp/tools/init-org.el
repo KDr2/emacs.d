@@ -109,8 +109,8 @@
 (require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup"))
-      (mn-output-dir (concat org-directory "/mindniche/output"))
-      (mn-source-dir (concat org-directory "/mindniche")))
+      (mn-output-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web/output"))
+      (mn-source-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web")))
   (setq org-publish-project-alist
         `(("kb-org"
            :base-directory ,kb-source-dir
@@ -140,6 +140,7 @@
            :html-postamble ,mn-html-postamble
            :headline-levels 3
            :auto-preamble t
+           :exclude "README.org"
            )
           ("mn-rss"
            :base-directory ,mn-source-dir

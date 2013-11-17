@@ -42,7 +42,8 @@
  '(cursor ((t (:background "khaki" :foreground "#b7282e"))))
  '(mouse ((t (:foreground "khaki" :background "black"))))
  '(fringe ((t (:background "SteelBlue4"))))
- '(region ((t (:background "#0d4519"))))
+ '(region ((t (:background "SteelBlue4"))))
+ '(trailing-whitespace ((t (:background "SteelBlue4"))))
  '(font-lock-builtin-face ((t (:foreground "#729fcf"))))
  '(font-lock-comment-face ((t (:foreground "azure4"))))
  '(font-lock-function-name-face ((t (:foreground "#edd400"))))
@@ -59,8 +60,8 @@
  '(modeline-mousable-minor-mode ((t (:background "Gray75" :foreground "green4"))))
  ;;misc-modes:
  '(highlight-symbol-face ((t (:background "#068" :foreground "#0FFFF0" :underline t))))
- '(hl-line ((t (:background "#3E4E6E"))))
- '(vline ((t (:background "#1c305c"))))
+ '(hl-line ((t (:background "#11392E"))))
+ '(vline ((t (:background "#11392E"))))
  ;;linum
  '(linum ((t (:foreground "yellow"))));; :family "courier new"
  ;;IDO

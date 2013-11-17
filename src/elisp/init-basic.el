@@ -22,6 +22,9 @@
 ;; no visible-bell
 (setq visible-bell nil)
 
+;; show trailing white spaces
+(setq show-trailing-whitespace t)
+
 ;; set title
 (setq frame-title-format
       '("Emacs [ " (buffer-file-name "%f \]"
