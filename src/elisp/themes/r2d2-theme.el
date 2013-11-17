@@ -27,7 +27,7 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(term-default-bg-color "#00282E")
+ '(term-default-bg-color "#101E2E")
  '(term-default-fg-color "#wheat3")
  '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
@@ -36,7 +36,7 @@
 
 (custom-theme-set-faces
  'r2d2
- '(default ((t (:background "#00282E" :foreground "wheat3"))))
+ '(default ((t (:background "#101E2E" :foreground "wheat3"))))
  '(bold ((t (:foreground "#61CE3C" :weight bold))))
  '(border ((t nil)))
  '(cursor ((t (:background "khaki" :foreground "#b7282e"))))
