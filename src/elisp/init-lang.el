@@ -55,6 +55,9 @@
 ;; clojure mode
 (require 'init-clojure)
 
+;; scala mode
+(require 'init-scala)
+
 ;; slime mode
 (require 'init-slime)
 

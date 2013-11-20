@@ -21,6 +21,7 @@
                     "julia-mode"
                     "lua-mode"
                     "clojure-mode"
+                    "scala-mode"
                     "ruby-mode"
                     "erlang-mode"
                     "lisp-mode"
