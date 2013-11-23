@@ -122,9 +122,9 @@
            :auto-preamble t
            )
           ("kb-static"
-           :base-directory ,kb-source-dir
+           :base-directory ,(concat kb-source-dir "/static")
            :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-           :publishing-directory ,kb-output-dir
+           :publishing-directory ,(concat kb-output-dir "/static")
            :recursive t
            :publishing-function (org-publish-attachment)
            )
@@ -170,6 +170,6 @@
   (let ((org-html-head
          (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-hy.css"))
         (org-export-show-temporary-export-buffer nil))
-    (org-html-export-to-html)))
+    (org-html-export-to-html nil nil nil nil '(:publishing-directory "~"))))
 
 (provide 'init-org)

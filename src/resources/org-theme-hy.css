@@ -210,7 +210,17 @@ td {
 code {
     display: inline-block;
     background-color: #cce;
-    padding: 2px 5px;
-    border-radius: 2px;x
+    padding: 1px 5px;
+    border-radius: 3px;
     line-height: normal;
+}
+
+.footdef sup {
+    vertical-align: baseline;
+    font-size: inherit;
+}
+
+.footpara {
+    margin: 7px;
+    display: inline;
 }
