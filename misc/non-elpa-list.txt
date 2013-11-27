@@ -4,6 +4,7 @@ emacs-pde
 find-recursive.el
 gas-mode.el
 git-emacs
+julia-mode.el
 maxframe.el
 mercurial.el
 notify.el

@@ -83,6 +83,11 @@
 (if-lang 'ess
          (require 'init-ess))
 
+;; julia-mode
+(if-lang 'julia
+         (require 'init-julia))
+
+
 ;; Perl and PDE Mode Settings
 (if-lang 'pde (require 'init-pde))
 

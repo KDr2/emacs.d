@@ -12,7 +12,8 @@
       '((exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/programs/luajit/bin"
                       "/home/kdr2/programs/python27/bin/"))
-        (lang-extra-modes . (ess auctex pde ruby ocaml go php))
+        (lang-extra-modes . (julia ess auctex
+                                   pde ruby ocaml go php))
         (xfont . "monospace-11")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
