@@ -69,6 +69,8 @@
  '(ido-subdir ((t (:foreground "yellow"))))
  '(ido-first-match ((t (:foreground "green"))))
  '(custom-variable-tag ((t (:foreground "yellow" :bold t))))
+ ;;web-mode
+ '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
  ;;rst
  '(rst-level-1-face ((t (:background "#101e2e" :foreground "#d7003a" :bold t))))
  '(rst-level-2-face ((t (:background "#101e2e" :foreground "#b94047" :bold t))))

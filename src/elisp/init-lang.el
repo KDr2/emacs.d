@@ -37,7 +37,7 @@
 ;; PHP mode
 (require 'init-php)
 
-;; mmm mode
+;; mmm mode ;; I use web-mode now
 ;; (require 'init-mmm)
 
 ;; asm/gas mode
@@ -64,6 +64,8 @@
 ;; graphviz
 (require 'init-graphviz)
 
+;; web-mode
+(require 'init-web)
 
 ;;; extra modes
 
