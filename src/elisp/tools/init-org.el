@@ -75,9 +75,7 @@
 
 (defvar mn-html-head-extra
   "
-<link rel=\"alternate\" type=\"application/rss+xml\"
-      href=\"http://kdr2.com/site-log.xml\"
-      title=\"RSS feed for KDr2\">
+<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS feed for KDr2\" href=\"http://kdr2.com/site-log.xml\">
 <script src=\"http://code.jquery.com/jquery-1.10.1.min.js\"></script>
 <script src=\"/script/mn-site.js\"></script>")
 
@@ -153,7 +151,7 @@
            :include ("site-log.org"))
           ("mn-static"
            :base-directory ,(concat mn-source-dir "/static")
-           :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+           :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|html"
            :publishing-directory ,mn-output-dir
            :recursive t
            :publishing-function (org-publish-attachment)

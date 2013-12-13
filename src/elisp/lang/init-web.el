@@ -24,5 +24,7 @@
 
 
 (setq web-mode-markup-indent-offset 4)
+(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-part-face t)
 
 (provide 'init-web)
