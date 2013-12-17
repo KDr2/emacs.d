@@ -70,7 +70,8 @@
                  "/usr/include/c++/4.4/backward/"))))
 
 (defun clang-ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-clang) ac-sources)))
+  (if (not (member (file-name-extension (buffer-file-name)) '("php" "inc")))
+      (setq ac-sources (append '(ac-source-clang) ac-sources))))
 
 (do-on-os
  "gnu/linux"
