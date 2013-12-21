@@ -42,6 +42,9 @@
 ;; magit mode
 (require 'init-magit)
 
+;; yasnippet
+(require 'init-yas)
+
 ;; git-emacs
 ;;(require 'init-git-emacs)
 
