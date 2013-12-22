@@ -11,4 +11,6 @@
 (require-package 'yasnippet)
 (require-package 'yasnippet-bundle)
 
+(global-set-key "\C-xx" 'yas/expand)
+
 (provide 'init-yas)
