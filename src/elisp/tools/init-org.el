@@ -14,6 +14,8 @@
 (require-package 'org)
 (require-package 'org-plus-contrib)
 (require-package 'org-fstree)
+(require 'ox)
+;;(require 'ox-publish)
 
 (setq org-directory (vars-get 'org-dir))
 (setq org-mobile-directory (vars-get 'org-mobile-dir))
@@ -104,7 +106,6 @@
 <p>Built with %c. </p>
 ")
 
-(require 'org-publish)
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup"))
       (mn-output-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web/output"))

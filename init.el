@@ -12,7 +12,7 @@
 (defun add-non-elpa-load-path (path)
   (add-to-list 'load-path (concatenate 'string non-elpa-load-path path)))
 
-(add-to-list 'load-path user-emacs-directory)
+;;(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path non-elpa-load-path)
 (add-to-list 'load-path (concatenate 'string user-emacs-directory "elpa"))
 (add-to-list 'load-path (concatenate 'string user-emacs-directory "src/elisp"))
