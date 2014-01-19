@@ -24,8 +24,9 @@
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (set-language-environment "UTF-8")
 (setq slime-net-coding-system 'utf-8-unix)
+;;(slime-setup)
 ;;(slime-setup '(slime-fancy))
-(slime-setup)
+(slime-setup '(slime-repl))
 (defmacro def-slime (func-name lisp)
   `(if ,lisp
        (defun ,func-name ()
@@ -37,5 +38,6 @@
 (def-slime ecl-dev-slime (vars-get 'ecl-dev-path))
 (def-slime sbcl-slime (vars-get 'sbcl-path))
 (def-slime ccl-slime (vars-get 'ccl-path))
+(def-slime clisp-slime (vars-get 'clisp-path))
 
 (provide 'init-slime)
