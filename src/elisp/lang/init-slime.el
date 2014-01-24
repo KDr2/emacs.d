@@ -24,9 +24,11 @@
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (set-language-environment "UTF-8")
 (setq slime-net-coding-system 'utf-8-unix)
-;;(slime-setup)
-;;(slime-setup '(slime-fancy))
-(slime-setup '(slime-repl))
+
+(unless (ignore-errors (slime-setup '(slime-fancy)))
+  (unless (ignore-errors (slime-setup '(slime-repl)))
+    (slime-setup)))
+
 (defmacro def-slime (func-name lisp)
   `(if ,lisp
        (defun ,func-name ()
