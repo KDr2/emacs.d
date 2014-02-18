@@ -34,6 +34,9 @@
 ;; Python mode
 (require 'init-python)
 
+;; Hy mode
+(require 'init-hy)
+
 ;; PHP mode
 (require 'init-php)
 
