@@ -75,13 +75,13 @@
                 (insert (format "[[%s.png]]" basename basename)))
             (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
-(defvar mn-html-head-extra
+(defvar kdr2-com-html-head-extra
   "
 <link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS feed for KDr2\" href=\"http://kdr2.com/site-log.xml\">
 <script src=\"http://code.jquery.com/jquery-1.10.1.min.js\"></script>
-<script src=\"/script/mn-site.js\"></script>")
+<script src=\"/script/site.js\"></script>")
 
-(defvar mn-html-preamble
+(defvar kdr2-com-html-preamble
   "<div class='nav'>
 <ul>
 <li id=\"site-name\"></li>
@@ -99,7 +99,7 @@
 </ul>
 </div>")
 
-(defvar mn-html-postamble
+(defvar kdr2-com-html-postamble
   "
 <p>Copyright &copy; %a, <a href=\"http://creativecommons.org/licenses/by-nc-nd/3.0/\">SOME RIGHTS RESERVED</a>. </p>
 <p>Last updated: %C. </p>
@@ -108,8 +108,8 @@
 
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup"))
-      (mn-output-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web/output"))
-      (mn-source-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web")))
+      (kdr2-com-output-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web/output"))
+      (kdr2-com-source-dir (concat (vars-get 'work-dir) "/mine/kdr2-on-web")))
   (setq org-publish-project-alist
         `(("kb-org"
            :base-directory ,kb-source-dir
@@ -128,36 +128,36 @@
            :publishing-function (org-publish-attachment)
            )
           ("kb" :components ("kb-org" "kb-static"))
-          ("mn-org"
-           :base-directory ,mn-source-dir
+          ("kdr2-com-org"
+           :base-directory ,kdr2-com-source-dir
            :base-extension "org"
-           :publishing-directory ,mn-output-dir
+           :publishing-directory ,kdr2-com-output-dir
            :recursive t
            :publishing-function (org-html-publish-to-html)
-           :html-head-extra ,mn-html-head-extra
-           :html-preamble ,mn-html-preamble
-           :html-postamble ,mn-html-postamble
+           :html-head-extra ,kdr2-com-html-head-extra
+           :html-preamble ,kdr2-com-html-preamble
+           :html-postamble ,kdr2-com-html-postamble
            :headline-levels 3
            :auto-preamble t
            :exclude "README.org"
            )
-          ("mn-rss"
-           :base-directory ,mn-source-dir
+          ("kdr2-com-rss"
+           :base-directory ,kdr2-com-source-dir
            :base-extension "org"
-           :publishing-directory ,mn-output-dir
+           :publishing-directory ,kdr2-com-output-dir
            :publishing-function (org-rss-publish-to-rss)
            :html-link-home "http://kdr2.com/"
            :html-link-use-abs-url t
            :exclude ".*"
            :include ("site-log.org"))
-          ("mn-static"
-           :base-directory ,(concat mn-source-dir "/static")
+          ("kdr2-com-static"
+           :base-directory ,(concat kdr2-com-source-dir "/static")
            :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|html"
-           :publishing-directory ,mn-output-dir
+           :publishing-directory ,kdr2-com-output-dir
            :recursive t
            :publishing-function (org-publish-attachment)
            )
-          ("mn" :components ("mn-org" "mn-rss" "mn-static")))))
+          ("kdr2-com" :components ("kdr2-com-org" "kdr2-com-rss" "kdr2-com-static")))))
 
 (defun kb-pub ()
   (interactive)
