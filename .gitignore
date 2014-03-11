@@ -8,5 +8,6 @@ auto-save-list/
 abbrev_defs
 tramp
 *.dat
+*.elc
 .org-id-locations
 bookmarks
