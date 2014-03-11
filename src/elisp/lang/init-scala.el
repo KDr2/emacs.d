@@ -10,6 +10,8 @@
 
 ;; Scala Mode2 Settings
 
+(require 'init-elpa)
+
 (require-package 'scala-mode2)
 
 (provide 'init-scala)

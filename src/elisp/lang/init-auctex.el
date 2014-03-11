@@ -9,6 +9,9 @@
 ;;
 
 ;; load auctex mode
+
+(require 'init-elpa)
+
 (require-package 'auctex)
 
 ;;(load "auctex.el" nil t t)

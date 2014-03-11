@@ -9,6 +9,9 @@
 ;;
 
 ;; load mmm mode
+
+(require 'init-elpa)
+
 (require-package 'mmm-mode)
 
 (require 'mmm-auto)

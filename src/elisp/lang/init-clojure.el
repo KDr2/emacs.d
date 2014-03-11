@@ -10,6 +10,8 @@
 
 ;; load modes about clojure
 
+(require 'init-elpa)
+
 (require-package 'clojure-mode)
 (require-package 'clojure-test-mode)
 (require-package 'elein)

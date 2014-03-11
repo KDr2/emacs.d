@@ -10,6 +10,8 @@
 
 ;; load PDE mode
 
+(require 'init-elpa)
+
 (do-on-os
  "gnu/linux"
  (require-package 'pde))

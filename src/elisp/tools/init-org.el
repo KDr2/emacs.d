@@ -11,6 +11,8 @@
 ;; (when (< emacs-major-version 24)
 ;;   (require-package 'org))
 
+(require 'init-elpa)
+
 (require-package 'org)
 (require-package 'org-plus-contrib)
 (require-package 'org-fstree)

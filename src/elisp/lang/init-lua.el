@@ -10,6 +10,8 @@
 
 ;; Lua Mode Settings
 
+(require 'init-elpa)
+
 (require-package 'lua-mode)
 
 (setq lua-indent-level 4)

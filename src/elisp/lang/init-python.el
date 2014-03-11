@@ -10,6 +10,8 @@
 
 ;; load python mode
 
+(require 'init-elpa)
+
 (unless (package-installed-p 'python)
   (require-package 'python))
 

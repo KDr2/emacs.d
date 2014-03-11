@@ -10,6 +10,8 @@
 
 ;; load ESS mode
 
+(require 'init-elpa)
+
 (require-package 'ess)
 
 (require 'ess-site)

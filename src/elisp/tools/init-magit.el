@@ -6,6 +6,8 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+(require 'init-elpa)
+
 (require-package 'magit)
 
 (provide 'init-magit)

@@ -10,6 +10,8 @@
 
 ;; Systemtap Mode Settings
 
+(require 'init-elpa)
+
 (require-package 'systemtap-mode)
 
 (autoload 'systemtap-mode "systemtap-mode")

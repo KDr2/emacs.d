@@ -10,6 +10,8 @@
 
 ;; Common-Lisp and SLIME Settings
 
+(require 'init-elpa)
+
 (require-package 'slime)
 ;; package.el compiles the contrib subdir, but the compilation order
 ;; causes problems, so we remove the .elc files there. See

@@ -10,6 +10,8 @@
 
 ;; load paredit mode
 
+(require 'init-elpa)
+
 (require-package 'paredit)
 
 ;; paredit

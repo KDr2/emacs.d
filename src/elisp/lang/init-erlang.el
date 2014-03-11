@@ -10,6 +10,8 @@
 
 ;;;Erlang Mode Settings
 
+(require 'init-elpa)
+
 (ignore-errors
   (require-package 'erlang))
 

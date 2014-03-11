@@ -10,6 +10,8 @@
 
 ;; load Javascript/JS2 mode
 
+(require 'init-elpa)
+
 ;;(require-package 'javascript-mode)
 
 ;;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))

@@ -10,6 +10,8 @@
 
 ;; load Ruby Mode
 
+(require 'init-elpa)
+
 (require-package 'ruby-mode)
 ;;(when (package-installed-p 'ruby-mode)
 ;;  (require 'ruby-electric))

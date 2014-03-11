@@ -8,7 +8,7 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;; Markdown Mode Settings
+(require 'init-elpa)
 
 (require-package 'hy-mode)
 

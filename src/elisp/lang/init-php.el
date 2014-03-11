@@ -10,6 +10,8 @@
 
 ;; load PHP modes
 
+(require 'init-elpa)
+
 (require-package 'php-mode)
 (require-package 'smarty-mode)
 

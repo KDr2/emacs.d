@@ -10,6 +10,8 @@
 
 ;; load modes about graphvi
 
+(require 'init-elpa)
+
 ;; graphviz-dot-mode
 
 ;;(load-file "~/.emacs.d/3rdparties/graphviz-dot-mode.el")

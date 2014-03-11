@@ -10,6 +10,7 @@
 
 ;; Web Mode Settings
 
+(require 'init-elpa)
 
 (require-package 'web-mode)
 

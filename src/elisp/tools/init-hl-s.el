@@ -8,7 +8,10 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;;; hightlight-symbol settings
+;; hightlight-symbol settings
+
+(require 'init-elpa)
+
 (require-package 'highlight-symbol)
 
 (setq highlight-symbol-idle-delay 0.5)

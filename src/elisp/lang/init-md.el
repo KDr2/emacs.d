@@ -10,6 +10,8 @@
 
 ;; Markdown Mode Settings
 
+(require 'init-elpa)
+
 (require-package 'markdown-mode)
 
 (autoload 'markdown-mode "markdown-mode.el"

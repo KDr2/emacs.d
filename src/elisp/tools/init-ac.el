@@ -8,6 +8,8 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+(require 'init-elpa)
+
 (require-package 'auto-complete)
 (require-package 'auto-complete-clang)
 

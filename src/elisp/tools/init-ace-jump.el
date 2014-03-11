@@ -8,6 +8,8 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+(require 'init-elpa)
+
 (require-package 'ace-jump-mode)
 
 (defun sl-isearch-ace-jump ()

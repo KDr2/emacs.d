@@ -10,6 +10,8 @@
 
 ;; load yaml mode
 
+(require 'init-elpa)
+
 (require-package 'yaml-mode)
 
 (provide 'init-yaml)

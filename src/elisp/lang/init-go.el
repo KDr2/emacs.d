@@ -10,6 +10,8 @@
 
 ;; load Go-Lang mode
 
+(require 'init-elpa)
+
 (require-package 'go-mode)
 
 ;;(require 'go-mode-load)

@@ -14,9 +14,6 @@
 ;; platform vars
 (require 'init-vars)
 
-;; elpa settings
-(require 'init-elpa)
-
 ;; Basic Settings
 (require 'init-basic)
 

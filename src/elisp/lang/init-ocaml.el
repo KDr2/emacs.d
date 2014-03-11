@@ -10,6 +10,8 @@
 
 ;; Tuareg/(O)Caml Settings
 
+(require 'init-elpa)
+
 (require-package 'tuareg)
 
 (add-to-list 'auto-mode-alist '("\\.ml[iylp]?" . tuareg-mode))
