@@ -43,6 +43,8 @@
  '(ido-first-match ((t (:foreground "green"))))
  '(hl-line ((t (:background "balck"))))
  '(org-tag ((t (:foreground "red"))))
+ '(org-document-title ((t (:foreground "brightyellow"))))
+ '(org-document-info ((t (:foreground "green"))))
  '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "yellow"))))
  '(dired-directory ((t (:foreground "green"))))
