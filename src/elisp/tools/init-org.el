@@ -77,6 +77,26 @@
                 (insert (format "[[%s.png]]" basename basename)))
             (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((awk . t)
+   (ditaa . t)
+   (dot . t)
+   (emacs-lisp . t)
+   (java . t)
+   (js . t)
+   (julia . t)
+   (lisp . t)
+   (ocaml . t)
+   (octave . t)
+   (org . t)
+   (perl . t)
+   (R . t)
+   (ruby . t)
+   (scheme . t)
+   (latex . t)
+   (python . t)))
+
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup")))
   (setq org-publish-project-alist

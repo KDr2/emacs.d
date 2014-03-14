@@ -57,6 +57,9 @@
 ;; xcscope
 (require 'init-cscope)
 
+;; cut/paste
+(require 'init-xsel)
+
 ;; utils
 (require 'init-utils)
 
