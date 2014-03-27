@@ -81,7 +81,7 @@
 ;;(server-start)
 
 ;;calendar settings
-(setq calendar-week-start-day 1) ;; first weebday
+(setq calendar-week-start-day 1) ;; first weekday
 
 ;; syntax highlight
 (global-font-lock-mode t)

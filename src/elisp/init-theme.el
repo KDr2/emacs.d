@@ -33,7 +33,9 @@
                               (font-spec :family "WenQuanYi Micro Hei")))
           (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23)))))
     (progn ;;no x
-      (load-theme 'r2d2t t nil))))
+      (load-theme 'wombat t nil)
+      (load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el"))))
+
 (color-theme-and-fonts)
 
 (defun x-new-frame-init (&optional frame)

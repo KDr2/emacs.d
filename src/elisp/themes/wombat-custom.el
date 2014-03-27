@@ -1,4 +1,4 @@
-;;; r2d2t-theme.el --- Theme R2D2-Terminal
+;;; Wombat Theme Customization
 
 ;; Copyright (C) KDr2
 
@@ -8,11 +8,9 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-(deftheme r2d2t
-  "Theme for KDr2 [use under terminal]")
 
 (custom-theme-set-variables
- 'r2d2t
+ 'wombat
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.\\|\\.o$")
  '(ibuffer-formats
    (quote
@@ -31,17 +29,13 @@
  '(git-state-modeline-decoration (quote git-state-decoration-letter)))
 
 (custom-theme-set-faces
- 'r2d2t
- '(default ((t (:foreground "white"))))
- '(region ((t (:background "cyan"))))
- '(font-lock-variable-name-face ((t (:foreground "yellow"))))
- '(font-lock-builtin-face ((t (:foreground "brightyellow"))))
- '(minibuffer-prompt ((t (:foreground "cyan"))))
- '(highlight-symbol-face ((t (:background "brightred" :foreground "red" :underline t))))
+ 'wombat
+ ;;'(default ((t (:foreground "gray"))))
+ '(highlight ((t ())))
+ '(highlight-symbol-face ((t (:background "wheat4" :foreground "red" :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "cyan"))))
  '(ido-first-match ((t (:foreground "green"))))
- '(hl-line ((t (:background "balck"))))
  '(org-tag ((t (:foreground "red"))))
  '(org-document-title ((t (:foreground "brightyellow"))))
  '(org-document-info ((t (:foreground "green"))))
@@ -49,10 +43,9 @@
  '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
  '(web-mode-html-attr-name-face ((t (:foreground "wheat4"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "wheat4"))))
+ '(hl-line ((t (:background "gray25"))))
  '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "yellow"))))
  '(dired-directory ((t (:foreground "green"))))
  '(font-lock-comment-face ((t (:foreground "cyan"))))
  '(ac-selection-face ((t (:background "red")))))
-
-(provide-theme 'r2d2t)
