@@ -4,6 +4,7 @@
 ;;; Find and load the correct package.el
 
 ;; When switching between Emacs 23 and 24, we always use the bundled package.el in Emacs 24
+
 (let ((package-el-site-lisp-dir
        (expand-file-name "site-lisp/package" user-emacs-directory)))
   (when (and (file-directory-p package-el-site-lisp-dir)
@@ -12,8 +13,6 @@
     (setq load-path (remove package-el-site-lisp-dir load-path))))
 
 (require 'package)
-
-
 
 ;;; Add support to package.el for pre-filtering available packages
 
@@ -78,9 +77,7 @@ re-downloaded in order to locate PACKAGE."
 
 
 ;;; Fire up package.el
-
 (package-initialize)
 
 
 (provide 'init-elpa)
-

@@ -32,6 +32,7 @@
  'wombat
  ;;'(default ((t (:foreground "gray"))))
  '(highlight ((t ())))
+ '(region ((t (:background "wheat4"))))
  '(highlight-symbol-face ((t (:background "wheat4" :foreground "red" :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "cyan"))))

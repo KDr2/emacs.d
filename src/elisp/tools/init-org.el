@@ -26,11 +26,6 @@
 (setq org-src-fontify-natively t)
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
 
-;; html export settings for V7.*
-;;(setq org-export-html-validation-link nil)
-;;(setq org-export-html-style "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
-;;(setq org-export-html-style-include-default nil)
-
 ;; html export settings for V8.*
 ;;(setq org-html-validation-link nil)
 (setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
@@ -77,30 +72,24 @@
                 (insert (format "[[%s.png]]" basename basename)))
             (insert (format "[[%s.png][%s]]" basename title basename)))))))
 
+;; load basic languages support
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((awk . t)
-   (C . t)
-   (clojure . t)
-   (ditaa . t)
    (dot . t)
    (emacs-lisp . t)
-   (java . t)
-   (js . t)
-   (julia . t)
-   (latex . t)
-   (lisp . t)
    (makefile . t)
-   (ocaml . t)
-   (octave . t)
    (org . t)
    (perl . t)
    (python . t)
    (R . t)
-   (ruby . t)
-   (scala . t)
-   (scheme . t)
    (sh . t)))
+
+;; load extra languages support
+(if (vars-get 'org-babel-lang-extra)
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     (vars-get 'org-babel-lang-extra)))
 
 (let ((kb-output-dir (vars-get 'org-publish-dir))
       (kb-source-dir (concat org-directory "/kbuildup")))
