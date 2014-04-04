@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'cl)
-
+(setq debug-on-error t)
 ;; load-path settings
 (defvar non-elpa-load-path
   (concatenate 'string user-emacs-directory "non-elpa")

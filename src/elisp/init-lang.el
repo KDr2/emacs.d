@@ -64,6 +64,8 @@
 ;; slime mode
 (require 'init-slime)
 
+;; geiser mode
+(require 'init-geiser)
 ;; graphviz
 (require 'init-graphviz)
 
