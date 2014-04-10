@@ -56,6 +56,18 @@
          "* TODO %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
+(defadvice org-html-paragraph (before org-html-paragraph-advice
+                                      (paragraph contents info) activate)
+  "Join consecutive Chinese lines into a single long line without
+unwanted space when exporting org-mode to html."
+  (let* ((orig-contents (ad-get-arg 1))
+         (reg-mb "[[:multibyte:]]")
+         (fixed-contents (replace-regexp-in-string
+                          (concat "\\(" reg-mb
+                                  "\\) *\n *\\(" reg-mb "\\)")
+                          "\\1\\2" orig-contents)))
+    (ad-set-arg 1 fixed-contents)))
+
 (defun org-dblock-write:graphviz (params)
   (let ((file (plist-get params :file))
         (title (or (plist-get params :title) "Image"))
