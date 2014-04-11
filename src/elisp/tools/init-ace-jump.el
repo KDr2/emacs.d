@@ -12,18 +12,4 @@
 
 (require-package 'ace-jump-mode)
 
-(defun sl-isearch-ace-jump ()
-  "use ace-jump within isearch."
-  (interactive)
-  (let ((string isearch-string)
-        (result isearch-success))
-    (flet ((signal (x y) nil))
-      (isearch-cancel))
-    (and result
-         (> (length string) 0)
-         (ace-jump-do string))))
-
-(define-key isearch-mode-map (kbd "M-a")
-  'sl-isearch-ace-jump)
-
 (provide 'init-ace-jump)
