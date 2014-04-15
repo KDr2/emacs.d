@@ -11,11 +11,16 @@
 ;; (when (< emacs-major-version 24)
 ;;   (require-package 'org))
 
-(require 'init-elpa)
+(if (vars-get 'org-use-bleeding-edge)
+    (progn
+      (add-to-list 'load-path "~/Work/opensrc/org-mode/lisp")
+      (require 'org))
+    (progn
+      (require 'init-elpa)
+      (require-package 'org)
+      (require-package 'org-plus-contrib)
+      (require-package 'org-fstree)))
 
-(require-package 'org)
-(require-package 'org-plus-contrib)
-(require-package 'org-fstree)
 (require 'ox)
 ;;(require 'ox-publish)
 

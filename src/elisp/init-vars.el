@@ -17,6 +17,7 @@
         (xfont . "monospace-11")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
+        (org-use-bleeding-edge . t)
         (org-dir . "~/Work/mine/org")
         (org-mobile-dir . "~/Pool/Dropbox/MobileOrg")
         (org-publish-dir . "~/Pool/Dropbox/Phone/kbuildup")
