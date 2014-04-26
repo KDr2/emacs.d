@@ -46,6 +46,8 @@
 ;;(setq default-fill-column 70)
 (auto-fill-mode -1)
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook '(lambda ()
+                             (auto-fill-mode -1)))
 
 ;; set tab = 4 spaces
 ;;(setq default-tab-width 4)

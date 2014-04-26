@@ -11,9 +11,9 @@
 ;; (when (< emacs-major-version 24)
 ;;   (require-package 'org))
 
-(if (vars-get 'org-use-bleeding-edge)
+(if (vars-get 'orgmode-src-dir)
     (progn
-      (add-to-list 'load-path "~/Work/opensrc/org-mode/lisp")
+      (add-to-list 'load-path (vars-get 'orgmode-src-dir))
       (require 'org))
     (progn
       (require 'init-elpa)
