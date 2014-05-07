@@ -34,7 +34,8 @@
 
 ;; show paren pair
 (show-paren-mode t)
-(setq show-paren-style 'parentheses)
+;; (setq show-paren-style 'parentheses)
+(setq show-paren-style 'expression)
 
 ;; use text-mode as default mode
 (setq default-major-mode 'text-mode)

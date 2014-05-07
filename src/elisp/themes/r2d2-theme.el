@@ -80,6 +80,15 @@
  '(rst-level-6-face ((t (:background "#101e2e" :foreground "#6e7955" :bold t))))
  ;;git-emacs
  '(git--mark-blob-face ((t (:foreground "#6e79f0" :bold t))))
- '(git--unknown-face ((t (:foreground "#6e7955" :bold t)))))
+ '(git--unknown-face ((t (:foreground "#6e7955" :bold t))))
+ '(show-paren-match-face ((t (:background "#204080"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "wheat"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "blue"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "magenta"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "orange"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "cyan"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "purple"))))
+ '(rainbow-delimiters-unmatched-face ((t (:foreground "red")))))
 
 (provide-theme 'r2d2)
