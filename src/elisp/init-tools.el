@@ -60,6 +60,12 @@
 ;; cut/paste
 (require 'init-xsel)
 
+;; rainbow-delimiters
+(require 'init-rainbow-delimiters)
+
+;; helm
+(require 'init-helm)
+
 ;; utils
 (require 'init-utils)
 
