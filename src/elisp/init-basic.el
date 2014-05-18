@@ -103,6 +103,7 @@
 
 ;;SET KEY
 (global-set-key "\C-xk" 'kill-this-buffer)
+(global-set-key (kbd "M-RET") 'toggle-fullscreen)
 ;;(global-set-key "\C-xr" 'replace-string)
 
 ;; work dir
