@@ -124,6 +124,13 @@
   (interactive)
   (remove-hook 'before-save-hook 'delete-trailing-whitespace))
 
+(defun toggle-fullscreen ()
+  "Toggle full screen"
+  (interactive)
+  (when window-system
+    (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)) ))
 ;; exec-path
 (setq exec-path (concatenate 'list exec-path (vars-get 'exec-path)))
 (setenv "PATH" (concatenate 'string
