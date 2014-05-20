@@ -64,7 +64,7 @@
 (require 'init-rainbow-delimiters)
 
 ;; helm
-(require 'init-helm)
+;; (require 'init-helm)
 
 ;; utils
 (require 'init-utils)

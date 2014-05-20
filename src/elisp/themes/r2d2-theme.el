@@ -81,9 +81,9 @@
  ;;git-emacs
  '(git--mark-blob-face ((t (:foreground "#6e79f0" :bold t))))
  '(git--unknown-face ((t (:foreground "#6e7955" :bold t))))
- '(show-paren-match-face ((t (:background "#204080"))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "wheat"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "blue"))))
+ '(show-paren-match-face ((t (:background "#303B2B"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "gray"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "SteelBlue2"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "magenta"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "orange"))))

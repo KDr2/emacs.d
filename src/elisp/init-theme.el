@@ -17,7 +17,8 @@
       (progn ;;x window
         (scroll-bar-mode -1)
         (tool-bar-mode -1)
-        (load-theme 'r2d2 t nil)
+        (load-theme 'adwaita t nil)
+        (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el")
         ;;(do-on-os "gnu/linux"
         (progn
           ;;(set-default-font "courier-14")
@@ -33,8 +34,10 @@
                               (font-spec :family "WenQuanYi Micro Hei")))
           (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23)))))
     (progn ;;no x
-      (load-theme 'wombat t nil)
-      (load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el"))))
+      ;;(load-theme 'wombat t nil)
+      ;;(load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el")
+      (load-theme 'adwaita t nil)
+      (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el"))))
 
 (color-theme-and-fonts)
 
