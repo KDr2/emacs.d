@@ -66,6 +66,9 @@
 ;; helm
 ;; (require 'init-helm)
 
+;; minimap
+(require 'init-minimap)
+
 ;; utils
 (require 'init-utils)
 
