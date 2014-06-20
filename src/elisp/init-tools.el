@@ -69,6 +69,10 @@
 ;; minimap
 (require 'init-minimap)
 
+;; sdcv
+(do-on-os "gnu/linux"
+          (require 'init-sdcv))
+
 ;; utils
 (require 'init-utils)
 
