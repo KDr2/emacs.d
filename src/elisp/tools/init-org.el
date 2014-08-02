@@ -73,22 +73,6 @@ unwanted space when exporting org-mode to html."
                           "\\1\\2" orig-contents)))
     (ad-set-arg 1 fixed-contents)))
 
-(defun org-dblock-write:graphviz (params)
-  (let ((file (plist-get params :file))
-        (title (or (plist-get params :title) "Image"))
-        (is-inline (plist-get params :inline))
-        (is-xinline (plist-get params :xinline)))
-    (if (string-match "\\(.+\\)\\.dot" file)
-        (let ((basename (match-string 1 file)))
-          ;;dot -Tpng aw_newar.dot -o outfile.png
-          (shell-command (format "dot -Tpng %s.dot -o %s.png" basename basename))
-          (if is-inline
-              (if nil ;;is-xinline
-                  (let ((b64 (shell-command-to-string (format "base64 -b 80 %s.png" basename))))
-                    (insert (format "#+BEGIN_HTML\n<img src=\"data:image/png;base64,%s\"/>\n#+END_HTML" b64)))
-                (insert (format "[[%s.png]]" basename basename)))
-            (insert (format "[[%s.png][%s]]" basename title basename)))))))
-
 ;; load basic languages support
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -107,32 +91,6 @@ unwanted space when exporting org-mode to html."
     (org-babel-do-load-languages
      'org-babel-load-languages
      (vars-get 'org-babel-lang-extra)))
-
-(let ((kb-output-dir (vars-get 'org-publish-dir))
-      (kb-source-dir (concat org-directory "/kbuildup")))
-  (setq org-publish-project-alist
-        `(("kb-org"
-           :base-directory ,kb-source-dir
-           :base-extension "org"
-           :publishing-directory ,kb-output-dir
-           :recursive t
-           :publishing-function (org-html-publish-to-html)
-           :headline-levels 3
-           :auto-preamble t
-           )
-          ("kb-static"
-           :base-directory ,(concat kb-source-dir "/static")
-           :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-           :publishing-directory ,(concat kb-output-dir "/static")
-           :recursive t
-           :publishing-function (org-publish-attachment)
-           )
-          ("kb" :components ("kb-org" "kb-static")))))
-
-(defun kb-pub ()
-  (interactive)
-  ;;(let ((org-export-html-style ""))
-  (org-publish-project "kb" t))
 
 (defun org-export-signle-page ()
   (interactive)
