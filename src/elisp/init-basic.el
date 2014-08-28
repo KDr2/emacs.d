@@ -59,6 +59,8 @@
 ;;narrow
 (put 'narrow-to-region 'disabled nil)
 
+(scroll-bar-mode -1)
+(horizontal-scroll-bar-mode -1)
 ;; scroll margin
 (setq scroll-step 1
       scroll-margin 3
