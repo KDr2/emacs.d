@@ -31,6 +31,9 @@
 ;; Javascript mode
 (require 'init-javascript)
 
+;; Coffee mode
+(require 'init-coffee)
+
 ;; Python mode
 (require 'init-python)
 
