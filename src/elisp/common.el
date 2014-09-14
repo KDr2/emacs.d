@@ -41,8 +41,9 @@
       (insert-file-contents file)
       (buffer-string)))
 
-(defun box-type ()
-  (string/trim (file-string (concatenate 'string user-emacs-directory "box-type"))))
+(defvar box-name
+  (string/trim (file-string (concatenate 'string user-emacs-directory "box-name")))
+  "box name for getting customized variables")
 
 (defun xhtml-css-from-file (file)
   (concatenate

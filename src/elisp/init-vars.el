@@ -74,16 +74,28 @@
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
+(setq vars-mbp-work
+      '((exec-path . ("~/Programs/bin"))
+        (lang-extra-modes . (ess auctex pde ruby php))
+        (xfont . "monaco-14")
+        (work-dir . "~/Work")
+        (org-dir . "~/Work/KDr2/org")
+        (backup-dir . "~/.backup/emacs")
+        (erlang-root-dir . "~/Programs/otp/R15B01")
+        (cscope-command . "/usr/bin/cscope -b")
+        (os-name . "darwin")))
+
 (setq vars-platforms
       (list
        (cons "linux-pc" vars-debian-x230)
        (cons "linux-vm" vars-vm-debian64)
-       (cons "darwin" vars-mbp-mc724)
+       (cons "mbp-mc724" vars-mbp-mc724)
+       (cons "mbp-work" vars-mbp-work)
        (cons "linux-server" vars-linux-server)))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
-  (let ((platform-vars (cdr (assoc (box-type) vars-platforms))))
+  (let ((platform-vars (cdr (assoc box-name vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
 
