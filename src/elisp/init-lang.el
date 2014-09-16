@@ -59,7 +59,8 @@
 (require 'init-paredit)
 
 ;; clojure mode
-(require 'init-clojure)
+(if-lang 'clojure
+		 (require 'init-clojure))
 
 ;; scala mode
 (require 'init-scala)
