@@ -47,7 +47,8 @@
 ;; (require 'init-mmm)
 
 ;; asm/gas mode
-(require 'init-as)
+(if-lang 'gas
+         (require 'init-as))
 
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)
