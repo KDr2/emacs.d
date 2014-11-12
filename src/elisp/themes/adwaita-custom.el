@@ -41,7 +41,7 @@
  '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
  '(web-mode-html-attr-name-face ((t (:foreground "wheat4"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "wheat4"))))
- '( web-mode-current-element-highlight-face ((t (:background "gray80"))))
+ '(web-mode-current-element-highlight-face ((t (:background "gray80"))))
  '(dired-directory ((t (:foreground "purple"))))
  '(ac-selection-face ((t (:background "red"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "SaddleBrown"))))

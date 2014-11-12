@@ -13,8 +13,10 @@
 
 (if (vars-get 'orgmode-src-dir)
     (progn
-      (add-to-list 'load-path (vars-get 'orgmode-src-dir))
-      (require 'org))
+      (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "lisp"))
+      (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "contrib/lisp"))
+      (require 'org)
+      (require 'ox-rss))
     (progn
       (require 'init-elpa)
       (require-package 'org)
