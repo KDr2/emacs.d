@@ -1,5 +1,5 @@
 /*******************************************************************************
- * @author: Hsiaw-yih
+ * @author: Hsiaw-yih, KDr2
  * @version: 1.0
  * Licence: CC
  * About:
@@ -7,30 +7,48 @@
  *
  ******************************************************************************/
 body {
-    background: #fff;
-    color: #333;
+    color: #111; /*#557575;*/
+    /*
     font: 14px/1.7 sans-serif;
+    font: 14px/1.7 "Open Sans", Helvetica, Arial, sans;
+    */
+    font: 13px/1.6 Consolas, monaco, monospace, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", sans-serif;
+    line-height: 1.6em;
     margin: 5% 15% 8%;
     min-width: 600px;
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+
+#org-div-home-and-up {
+    float: right;
+}
+
+.button_to_link {
+    padding: 0;
+    border: none;
+    text-decoration: underline;
+    cursor:pointer;
+    background-color: #fff;
+    color: #3D648A;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
-    /*color: #ea8400;*/
+    color: #3D648A;
     padding: 1em 0 15px;
     text-align: left;
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid #3D648A;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1em 0 10px;
     border-bottom: 1px solid #e5e5e5;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.5em 0 10px;
     border-bottom: 1px solid #eee;
 }
@@ -39,23 +57,44 @@ h1, h2, h3 {
 }
 
 h2 span, h3 span, h4 span {
-    color: #ccc;
-    font-weight: normal;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+h3 span {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+h4 span {
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.center{
+    text-align: center;
 }
 
 .todo, .deadline {
     color: red;
 }
-.todo, .done,
-.tag span {
+
+.todo, .done, .tag span {
     display: inline-block;
-    padding: 2px 5px;
+    padding: 0 5px 0 5px;
     border-radius: 3px;
     color: #fff;
     font-weight: bold;
     font-size: 12px;
-    line-height: normal;
 }
+
 .todo {
     background-color: #e14344;
 }
@@ -68,19 +107,30 @@ h3 .todo, h3 .done {
 
 .tag {
     float: right;
+    border: 0;
+    width: auto;
 }
+
 .tag span {
+    padding: 0 5px;
     background-color: #ccc;
     color: #000;
-    margin-left: 0.3em;
+    width: auto;
+    height: auto;
 }
 
 .timestamp {
     padding-left: 2px;
     padding-right: 2px;
-    color: black;
-    background-color: #ccc;
-    border: solid 1px #aaa;
+    color: #ccc;
+    font-style: oblique;
+    font-size: large;
+}
+
+.timestamp:before{
+    font-style: normal;
+    content: "\f133  ";
+    /* content: "\23f0  "; */
 }
 
 .content {
@@ -110,17 +160,18 @@ h1.title {
 }
 
 a:link, a:visited {
-    color: #4e93d6;
+    color: #3D648A;
 }
 a:active {
-    color: #4e93d6;
+    color: #3D648A;
 }
 
 img { align: center; }
 
 pre {
-    background-color: #333;
-    border: #ddd solid 2px;
+    background-color: rgb(57, 63, 73);
+    border: #ddd solid 1px;
+    border-radius: 10px;
     color: #fff;
     font: 14px/1.5 monospace;
     padding: 10px;
@@ -134,46 +185,44 @@ table {
 }
 
 th {
-	vertical-align: top;
-	border: 1px solid #e2e2e2;
+    vertical-align: top;
+    border: 1px solid #e2e2e2;
 }
 
 td {
-	vertical-align: top;
-	border: 1px solid #e2e2e2;
-}
-
-#org-div-home-and-up {
-    float: right;
+    vertical-align: top;
+    border: 1px solid #e2e2e2;
 }
 
 #postamble {
-	font-size: 12px;
-	color: #666;
-	text-align: right;
-	border-top: #ccc solid 1px;
-	margin-top: 2em;
-	padding-top: 1em;
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    border-top: #ccc solid 1px;
+    margin-top: 2em;
+    padding-top: 1em;
 }
 #postamble p {
-	margin: 0 1em;
+    margin: 0 1em;
 }
 
 #table-of-contents {
     font-size: 9pt;
     position: fixed;
     right: 0em;
-    top: 0em;
-    background: white;
+    top: 0;
+    background: #303030;
     border: #ccc solid;
     border-width: 0 0 1px 1px;
     /* ensure doesn't flow off the screen when expanded */
     max-height: 80%;
-    overflow: auto;
+    overflow-y: auto;
     z-index: 200;
+    white-space: nowrap;
 }
 
 #table-of-contents h2 {
+    color: #FFFFFF;
     font-size: 10pt;
     font-weight: bold;
     padding: 0.05em 0.5em 0.5em;
@@ -182,7 +231,7 @@ td {
 
 #table-of-contents ul {
     margin-left: 14pt;
-    margin-bottom: 10pt;
+    margin-bottom: 2pt;
     padding: 0
 }
 
@@ -190,6 +239,10 @@ td {
     padding: 0;
     margin: 1px;
     list-style: none;
+}
+
+#table-of-contents a {
+    color: #FFFFFF;
 }
 
 #table-of-contents ul>:first-child {
@@ -206,21 +259,41 @@ td {
     padding: 0.5em;
     margin-top: -1.5em;
 }
+#table-of-contents .tag, #table-of-contents .todo, #table-of-contents .done {
+    display: none;
+}
+
 
 code {
     display: inline-block;
-    background-color: #cce;
+    background-color: #BEB7B7;
     padding: 1px 5px;
     border-radius: 3px;
     line-height: normal;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .footdef sup {
+    float: left;
     vertical-align: baseline;
     font-size: inherit;
 }
 
-.footpara {
+.footdef p {
     margin: 7px;
     display: inline;
+}
+
+blockquote {
+    background: rgb(203, 219, 243);
+    padding: 3px 13px;
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+center.image-container {
+    margin: 16px 0;
 }
