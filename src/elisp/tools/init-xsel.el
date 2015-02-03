@@ -24,14 +24,16 @@
        ;; (that uses mouse-select/middle-button-click)
        (call-process-region (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
    ;; Call back for when user pastes
-   (defun xsel-paste-function()
+   (defun xsel-paste-function ()
      ;; Find out what is current selection by xsel. If it is different
      ;; from the top of the kill-ring (car kill-ring), then return
      ;; it. Else, nil is returned, so whatever is in the top of the
      ;; kill-ring will be used.
-     (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
-       (unless (string= (car kill-ring) xsel-output)
-         xsel-output)))
+     (with-temp-buffer
+       (let* ((status (call-process "xsel" nil t nil "--clipboard" "--output"))
+              (text (buffer-string)))
+         (if (and (= status 0) (not (string= (car kill-ring) text)))
+             text))))
    ;; Attach callbacks to hooks
    (setq interprogram-cut-function 'xsel-cut-function)
    (setq interprogram-paste-function 'xsel-paste-function)))
