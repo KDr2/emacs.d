@@ -87,6 +87,8 @@
 (if-lang 'ruby
          (require 'init-ruby))
 
+(require 'init-rust)
+
 ;; Auctex mode
 (if-lang 'auctex
          (require 'init-auctex))
