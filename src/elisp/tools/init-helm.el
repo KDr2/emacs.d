@@ -12,9 +12,20 @@
 (require-package 'helm)
 
 (require 'helm-config)
+
 (global-set-key (kbd "C-c h") 'helm-mini)
-;;(global-set-key (kbd "M-x") 'helm-M-x)
-(helm-mode 1)
+(global-set-key (kbd "C-c M-x") 'helm-M-x)
+
+(setq
+ helm-M-x-fuzzy-match t
+ helm-recentf-fuzzy-match t
+ helm-buffers-fuzzy-matching t
+ helm-locate-fuzzy-match t
+ helm-semantic-fuzzy-match t
+ helm-imenu-fuzzy-match t
+ helm-apropos-fuzzy-match t
+ helm-lisp-fuzzy-completion t)
+
 ;;(helm-mode t)
 
 (provide 'init-helm)

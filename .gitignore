@@ -11,4 +11,5 @@ tramp
 *.dat
 *.elc
 .org-id-locations
+ido.last
 bookmarks
