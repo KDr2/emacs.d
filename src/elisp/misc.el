@@ -45,7 +45,7 @@
   (message (buffer-file-name)))
 
 (defun ido-find-opensrc-file (project)
-  (interactive "sproject name: ")
+  (interactive "project name: ")
   (let ((ido-current-directory (concat "~/Work/opensrc/" project)))
     ;;(ido-find-file)
     (ido-file-internal ido-default-file-method nil ido-current-directory)))

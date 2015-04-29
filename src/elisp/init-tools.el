@@ -1,4 +1,4 @@
-;;; init-lang.el --- load tool modes 
+;;; init-lang.el --- load tool modes
 
 ;; Copyright (C) KDr2
 
@@ -37,7 +37,8 @@
 (require 'init-org)
 
 ;; chinese input method
-(require 'init-eim)
+;;(require 'init-eim)
+(require 'init-pyim)
 
 ;; magit mode
 (require 'init-magit)
@@ -77,4 +78,3 @@
 (require 'init-utils)
 
 (provide 'init-tools)
-
