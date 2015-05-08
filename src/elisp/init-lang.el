@@ -9,9 +9,6 @@
 ;;
 
 
-(add-to-list 'load-path
-             (concatenate 'string user-emacs-directory "src/elisp/lang"))
-
 ;; markdown mode
 (require 'init-md)
 

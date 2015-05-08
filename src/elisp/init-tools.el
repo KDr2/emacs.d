@@ -8,10 +8,6 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-
-(add-to-list 'load-path
-             (concatenate 'string user-emacs-directory "src/elisp/tools"))
-
 ;; dired
 (require 'init-dired)
 

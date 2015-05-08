@@ -11,6 +11,10 @@
 ;; Common Libraries
 (load-file "~/.emacs.d/src/elisp/common.el")
 
+(dolist (path '("src/elisp/lang" "src/elisp/tools"))
+  (add-to-list 'load-path
+               (concatenate 'string user-emacs-directory path)))
+
 ;; platform vars
 (require 'init-vars)
 

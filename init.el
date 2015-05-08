@@ -23,9 +23,10 @@
 (require 'init-main)
 
 ;; debug code, to find to enables my auto-fill-mode
-(if (not noninteractive)
-    (defadvice auto-fill-mode (around backtrace-fill-mode activate)
-      (message "------BEFORE-------")
-      (backtrace)
-      ad-do-it
-      (message "------AFTER--------")))
+;;
+;; (if (not noninteractive)
+;;     (defadvice auto-fill-mode (around backtrace-fill-mode activate)
+;;       (message "------BEFORE-------")
+;;       (backtrace)
+;;       ad-do-it
+;;       (message "------AFTER--------")))

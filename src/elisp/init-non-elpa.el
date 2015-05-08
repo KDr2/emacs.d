@@ -9,7 +9,6 @@
 ;; package not on elpa
 
 ;; asm/gas mode
-(if-lang 'gas
-         (require 'init-as))
+(require 'init-as)
 
 (provide 'init-non-elpa)
