@@ -1,15 +1,6 @@
 ansit.el
-emacs-eim
 emacs-pde
 find-recursive.el
 gas-mode.el
-git-emacs
-julia-mode.el
-maxframe.el
-mercurial.el
-notify.el
+pyim-dicts
 rotate-windows.el
-xcscope.el
-xcscope+.el
-xml-rpc.el
-sdcv-mode.el

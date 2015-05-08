@@ -15,7 +15,10 @@
 ;;(require-package 'julia-mode)
 ;;
 
-(require 'julia-mode)
+(require 'init-elpa)
+
+(require-package 'julia-mode)
+
 (add-to-list 'auto-mode-alist '("\\.jl\\'" . julia-mode))
 
 ;; should init after ESS
