@@ -17,6 +17,10 @@
 ;; Basic Settings
 (require 'init-basic)
 
+;; init packages not on elpa
+(if (vars-get 'non-elpa)
+    (require 'init-non-elpa))
+
 ;; Programming Language Modes
 (require 'init-lang)
 

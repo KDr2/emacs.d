@@ -1,6 +1,6 @@
 ;;; notification.el --- notification settings
 
-;; Copyright (C)2 KDr2 
+;; Copyright (C) KDr2
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/emacs.d
@@ -13,7 +13,7 @@
           (defvar notifications ())
           (defvar notifications-on t)
           (defun setup-notify ()
-            (require 'notify)
+            (require 'init-notify)
             (run-with-timer 1 600 (lambda ()
                                     (if (and  window-system notifications-on)
                                         (notify "Go Back to Emacs Please!!!"
@@ -22,5 +22,3 @@
             (interactive)
             (setq notifications-on (not notifications-on)))
           (setup-notify))
-
-

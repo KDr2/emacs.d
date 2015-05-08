@@ -12,10 +12,6 @@
 (add-to-list 'load-path
              (concatenate 'string user-emacs-directory "src/elisp/lang"))
 
-(defmacro if-lang (feature &rest body)
-  `(if (memq ,feature (vars-get 'lang-extra-modes))
-       (progn ,@body)))
-
 ;; markdown mode
 (require 'init-md)
 
@@ -45,10 +41,6 @@
 
 ;; mmm mode ;; I use web-mode now
 ;; (require 'init-mmm)
-
-;; asm/gas mode
-(if-lang 'gas
-         (require 'init-as))
 
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)

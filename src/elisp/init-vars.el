@@ -12,6 +12,7 @@
       '((exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/programs/luajit/bin"
                       "/home/kdr2/programs/python27/bin/"))
+        (non-elpa . t)
         (lang-extra-modes . (julia ess auctex
                                    pde ruby ocaml go php))
         (xfont . "monospace-11")
@@ -46,6 +47,7 @@
 
 (setq vars-vm-debian64
       '((exec-path . ("/data0/usr/bin"))
+        (non-elpa . t)
         (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "courier new-14")
         (work-dir . "/data0/source")
@@ -56,6 +58,7 @@
 
 (setq vars-mbp-mc724
       '((exec-path . ("~/Programs/bin"))
+        (non-elpa . t)
         (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "monaco-14")
         (work-dir . "~/Work")
@@ -76,10 +79,12 @@
 
 (setq vars-mbp-work
       '((exec-path . ("~/Programs/bin"))
+        (non-elpa . t)
         (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "monaco-14")
         (work-dir . "~/Work")
         (org-dir . "~/Work/KDr2/org")
+        (orgmode-src-dir . "~/Work/opensrc/org-mode/")
         (backup-dir . "~/.backup/emacs")
         (erlang-root-dir . "~/Programs/otp/R15B01")
         (cscope-command . "/usr/bin/cscope -b")
@@ -98,5 +103,9 @@
   (let ((platform-vars (cdr (assoc box-name vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
+
+(defmacro if-lang (feature &rest body)
+  `(if (memq ,feature (vars-get 'lang-extra-modes))
+       (progn ,@body)))
 
 (provide 'init-vars)

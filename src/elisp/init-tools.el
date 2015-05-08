@@ -46,12 +46,6 @@
 ;; yasnippet
 (require 'init-yas)
 
-;; git-emacs
-;;(require 'init-git-emacs)
-
-;; mercurial mode
-(require 'init-mercurial)
-
 ;; auto-complete
 (require 'init-ac)
 

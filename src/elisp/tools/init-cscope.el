@@ -9,7 +9,10 @@
 ;;
 
 ;;; cscope settings
-(require 'xcscope)
+
+(require 'init-elpa)
+
+(require-package 'xcscope)
 
 ;;cscope标签更新(有project.cscope的目录下);
 (setq exec-path (cons "/opt/local/bin" exec-path))

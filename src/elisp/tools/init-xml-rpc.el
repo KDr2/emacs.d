@@ -1,6 +1,4 @@
-;;; init-mercurial.el
-
-;; Copyright (C) KDr2
+;;; init-xml-rpc.el --- xml-rpc settings for KDr2's Emacs
 
 ;; Author   : KDr2 <killy.draw@gmail.com>
 ;; URL      : https://github.com/KDr2/emacs.d
@@ -8,7 +6,8 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;;mercurial settings
-(require 'mercurial)
+(require 'init-elpa)
 
-(provide 'init-mercurial)
+(require-package 'xml-rpc)
+
+(provide 'init-xml-rpc)
