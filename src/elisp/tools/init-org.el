@@ -59,6 +59,8 @@
          "* %?\n  %a\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/journal.org"))
          "* %?\n  Entered on %U\n")
+        ("d" "Draft for writting" entry (file+headline (concat org-directory "/drafts.org") "Drafts")
+         "* TODO %?\n  Entered on %U\n")
         ("c" "Code-View" entry (file+datetree (concat org-directory "/codeview.org"))
          "* TODO %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
