@@ -83,7 +83,7 @@
         (lang-extra-modes . (ess auctex pde ruby php))
         (xfont . "monaco-14")
         (work-dir . "~/Work")
-        (org-dir . "~/Work/KDr2/org")
+        (org-dir . "~/Work/mine/org")
         (orgmode-src-dir . "~/Work/opensrc/org-mode/")
         (backup-dir . "~/.backup/emacs")
         (erlang-root-dir . "~/Programs/otp/R15B01")

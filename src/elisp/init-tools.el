@@ -20,6 +20,9 @@
 ;; highlight-symbol
 (require 'init-hl-s)
 
+;; color-identifiers-mode
+(require 'init-color-ident)
+
 ;; ace jump
 (require 'init-ace-jump)
 
