@@ -36,6 +36,7 @@
  '(ido-only-match ((t (:foreground "purple"))))
  '(ido-first-match ((t (:foreground "purple"))))
  '(font-lock-comment-face ((t (:foreground "gray54"))))
+ '(font-lock-function-name-face ((t (:foreground "DeepSkyBlue3"))))
  '(org-tag ((t (:foreground "red"))))
  '(org-verbatim ((t (:foreground "wheat4"))))
  '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
