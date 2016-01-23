@@ -8,6 +8,9 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+;; patches
+(unless (fboundp 'outline-hide-sublevels)
+  (defmacro outline-hide-sublevels (&rest body) `(hide-sublevels ,@body)))
 
 ;;common settings:
 (setq-default transient-mark-mode t)
