@@ -9,8 +9,11 @@
 ;;
 
 ;; patches
-(unless (fboundp 'outline-hide-sublevels)
-  (defmacro outline-hide-sublevels (&rest body) `(hide-sublevels ,@body)))
+(dolist (fname '("hide-sublevels" "show-all"))
+  (let ((short-func-name (make-symbol fname))
+        (long-func-name (make-symbol (concat "outline-" fname))))
+    (unless (fboundp long-func-name)
+      (fset long-func-name (symbol-function short-func-name)))))
 
 ;;common settings:
 (setq-default transient-mark-mode t)
