@@ -1,4 +1,4 @@
-;;; init-ess.el 
+;;; init-ess.el
 
 ;; Copyright (C) KDr2
 
@@ -16,5 +16,7 @@
 
 (require 'ess-site)
 (add-to-list 'auto-mode-alist '("\\.[Rr]\\'" . R-mode))
+(add-hook 'ess-mode-hook
+          (lambda () (setq ess-indent-level 2)))
 
 (provide 'init-ess)
