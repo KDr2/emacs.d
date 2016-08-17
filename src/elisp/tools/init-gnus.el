@@ -2,7 +2,7 @@
 
 ;; Copyright (C) KDr2 
 
-;; Author   : KDr2 <killy.draw@gmail.com>
+;; Author   : KDr2 <zhuo.dev@gmail.com>
 ;; URL      : https://github.com/KDr2/emacs.d
 
 ;; This file is not part of GNU Emacs.
@@ -11,7 +11,7 @@
 
 
 (setq user-full-name "KDr2")
-(setq user-mail-address (concat "killy.draw" "@" "gmail.com"))
+(setq user-mail-address (concat "zhuo.dev" "@" "gmail.com"))
 ;;(setq gnus-select-method '(nntp "news.cn99.com"))
 ;;(setq gnus-secondary-select-methods '((nnfolder "")))
 

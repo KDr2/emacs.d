@@ -1,7 +1,6 @@
 Best Wishes
             ---- yours, KDr2
 /***************************************
- *    site   : http://kdr2.net         *
+ *    site   : http://kdr2.com         *
  *    skype  : zhuoql                  *
- *    gtalk  : killy.draw@gmail.com    *
- ***************************************/
+  ***************************************/
