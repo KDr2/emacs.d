@@ -37,5 +37,7 @@
 ;; Theme Settings
 (require 'init-theme)
 
+;; patches
+(require 'init-patches)
 
 (provide 'init-main)
