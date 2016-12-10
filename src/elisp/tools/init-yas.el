@@ -13,6 +13,8 @@
 (require-package 'yasnippet)
 (require-package 'yasnippet-bundle)
 
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+
 (global-set-key "\C-xx" 'yas/expand)
 
 (provide 'init-yas)

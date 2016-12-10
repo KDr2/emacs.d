@@ -30,7 +30,8 @@
 
 (custom-theme-set-faces
  'adwaita
- ;;'(default ((t (:foreground "gray"))))
+ ;;'(default ((t (:foreground "gray")))) ;;#B6C5B6
+ '(default ((t (:background "#CFDFCF"))))
  '(highlight ((t ())))
  '(highlight-symbol-face ((t (:background "gray"))))
  '(ido-only-match ((t (:foreground "purple"))))

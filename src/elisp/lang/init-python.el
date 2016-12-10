@@ -1,4 +1,4 @@
-;;; init-python.el 
+;;; init-python.el
 
 ;; Copyright (C) KDr2
 
@@ -12,10 +12,15 @@
 
 (require 'init-elpa)
 
-(unless (package-installed-p 'python)
-  (require-package 'python))
+(require 'init-yas)
 
-(add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
+(unless (package-installed-p 'python-mode)
+  (progn
+    (require-package 'python-mode)
+    ;;(require-package 'elpy)
+    (require-package 'cython-mode)))
+
+(add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 ;; Python Hook
 (add-hook 'python-mode-hook
           (function (lambda ()
@@ -23,5 +28,6 @@
                             tab-width 4)
                       (setq python-indent-offset 4))))
 
+;;(elpy-enable)
 
 (provide 'init-python)
