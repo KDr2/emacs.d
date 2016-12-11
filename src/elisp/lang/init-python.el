@@ -11,13 +11,12 @@
 ;; load python mode
 
 (require 'init-elpa)
-
 (require 'init-yas)
 
 (unless (package-installed-p 'python-mode)
   (progn
     (require-package 'python-mode)
-    ;;(require-package 'elpy)
+    (require-package 'elpy)
     (require-package 'cython-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
@@ -28,6 +27,6 @@
                             tab-width 4)
                       (setq python-indent-offset 4))))
 
-;;(elpy-enable)
+(elpy-enable)
 
 (provide 'init-python)

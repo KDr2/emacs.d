@@ -17,4 +17,6 @@
 
 (global-set-key "\C-xx" 'yas/expand)
 
+(ignore-errors (yas-global-mode 1))
+
 (provide 'init-yas)
