@@ -13,11 +13,9 @@
 (require 'init-elpa)
 (require 'init-yas)
 
-(unless (package-installed-p 'python-mode)
-  (progn
-    (require-package 'python-mode)
-    (require-package 'elpy)
-    (require-package 'cython-mode)))
+(require-package 'python-mode)
+(require-package 'elpy)
+(require-package 'cython-mode)
 
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 ;; Python Hook
@@ -27,6 +25,10 @@
                             tab-width 4)
                       (setq python-indent-offset 4))))
 
+
+;; pip install rope jedi flake8 importmagic autopep8 yapf
+
 (elpy-enable)
+;; (elpy-clean-modeline)
 
 (provide 'init-python)

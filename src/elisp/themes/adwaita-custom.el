@@ -32,12 +32,14 @@
  'adwaita
  ;;'(default ((t (:foreground "gray")))) ;;#B6C5B6
  '(default ((t (:background "#CFDFCF"))))
+ '(fringe ((t (:background "#CFCFCF"))))
  '(highlight ((t ())))
  '(highlight-symbol-face ((t (:background "gray"))))
  '(ido-only-match ((t (:foreground "purple"))))
  '(ido-first-match ((t (:foreground "purple"))))
  '(font-lock-comment-face ((t (:foreground "gray54"))))
  '(font-lock-function-name-face ((t (:foreground "DeepSkyBlue3"))))
+ '(highlight-indentation-face ((t (:background "SkyBlue"))))
  '(org-tag ((t (:foreground "red"))))
  '(org-verbatim ((t (:foreground "wheat4"))))
  '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
