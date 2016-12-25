@@ -27,8 +27,6 @@
 ;;(require 'ox-publish)
 
 (setq org-directory (vars-get 'org-dir))
-(setq org-mobile-directory (vars-get 'org-mobile-dir))
-(setq org-mobile-inbox-for-pull (concat org-directory "/mobile.org"))
 (setq org-archive-location "archives/%s_archive::")
 (setq org-src-fontify-natively t)
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
@@ -49,17 +47,15 @@
 ;;org-capture
 (setq org-default-notes-file (concat org-directory "/task.org"))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "TODO'S")
+      '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "TODOS")
          "* TODO %?\n  %a\n")
-        ("n" "Note" entry (file+headline (concat org-directory "/task.org") "Notes")
+        ("n" "Note" entry (file+headline (concat org-directory "/task.org") "NOTES")
          "* TODO %?\n  %a\n")
-        ("w" "Work-Task" entry (file+headline (concat org-directory "content/work/worklog.org") "Tasks")
-         "* TODO %?\n  %a\n")
-        ("l" "Work-Log" entry (file+datetree (concat org-directory "content/work/worklog.org"))
+        ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n  %a\n")
-        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "content/im11st/journal.org"))
+        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/im11st/journal.org"))
          "* %?\n  Entered on %U\n")
-        ("c" "Code-View" entry (file+datetree (concat org-directory "content/work/codeview.org"))
+        ("c" "Code-View" entry (file+datetree (concat org-directory "/content/work/codeview.org"))
          "* TODO %?\n  Viewed on %U\n  %a\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
