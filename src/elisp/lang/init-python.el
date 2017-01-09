@@ -28,7 +28,8 @@
 
 ;; pip install rope jedi flake8 importmagic autopep8 yapf
 
-(elpy-enable)
+(unless noninteractive
+  (elpy-enable))
 ;; (elpy-clean-modeline)
 
 (provide 'init-python)
