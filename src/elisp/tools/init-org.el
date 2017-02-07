@@ -52,7 +52,7 @@
         ("n" "Note" entry (file+headline (concat org-directory "/task.org") "NOTES")
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
-         "* %?\n  %a\n")
+         "* %?\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/im11st/journal.org"))
          "* %?\n  Entered on %U\n")
         ("c" "Code-View" entry (file+datetree (concat org-directory "/content/work/codeview.org"))
