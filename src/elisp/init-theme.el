@@ -34,10 +34,11 @@
                               (font-spec :family "WenQuanYi Micro Hei")))
           (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23)))))
     (progn ;;no x
-      ;;(load-theme 'wombat t nil)
-      ;;(load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el")
-      (load-theme 'adwaita t nil)
-      (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el"))))
+      (load-theme 'wombat t nil)
+      (load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el")
+      ;; (load-theme 'adwaita t nil)
+      ;; (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el")
+      )))
 
 (color-theme-and-fonts)
 
