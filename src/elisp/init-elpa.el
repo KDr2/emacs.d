@@ -1,4 +1,4 @@
-;;; packages.el --- elpa settings
+;;; init-elpa.el --- elpa settings
 ;;; copied from https://github.com/purcell/emacs.d/blob/master/init-elpa.el
 
 ;;; Find and load the correct package.el
@@ -50,7 +50,12 @@ ARCHIVE is the string name of the package archive.")
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+          '("popkit" . "http://elpa.popkit.org/packages/"))
 
 ;; But don't take Melpa versions of certain packages
 (setq package-filter-function

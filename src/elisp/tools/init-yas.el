@@ -1,4 +1,4 @@
-;;; init-org.el --- yasnippet settings for KDr2's Emacs
+;;; init-yas.el --- yasnippet settings for KDr2's Emacs
 
 ;; Copyright (C) KDr2
 
@@ -11,7 +11,7 @@
 (require 'init-elpa)
 
 (require-package 'yasnippet)
-(require-package 'yasnippet-bundle)
+;; (require-package 'yasnippet-bundle)
 
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 

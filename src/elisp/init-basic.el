@@ -58,7 +58,10 @@
 ;;narrow
 (put 'narrow-to-region 'disabled nil)
 
-(scroll-bar-mode -1)
+
+(if (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+
 (if (fboundp 'horizontal-scroll-bar-mode)
     (horizontal-scroll-bar-mode -1))
 ;; scroll margin
