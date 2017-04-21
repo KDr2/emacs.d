@@ -40,7 +40,7 @@
 (require 'init-pyim)
 
 ;; magit mode
-(require 'init-magit)
+;; (require 'init-magit)
 
 ;; yasnippet
 (require 'init-yas)
@@ -58,10 +58,7 @@
 (require 'init-rainbow-delimiters)
 
 ;; helm
-(require 'init-helm)
-
-;; minimap
-(require 'init-minimap)
+;; (require 'init-helm)
 
 ;; sdcv
 (do-on-os "gnu/linux"
