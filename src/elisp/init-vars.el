@@ -66,7 +66,7 @@
 
 (setq vars-linux-server
       '((exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (php pde))
+        (lang-extra-modes . (php pde go))
         (work-dir . "~/")
         (backup-dir . "~/.backup/emacs")
         (cscope-command . "/usr/bin/cscope -b")
