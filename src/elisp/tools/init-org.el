@@ -40,7 +40,9 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
-(setq org-agenda-files (file-expand-wildcards (concat org-directory "/*.org")))
+(setq org-agenda-files (concatenate 'list
+                                    (file-expand-wildcards (concat org-directory "/*.org"))
+                                    (file-expand-wildcards (concat org-directory "/content/work/*.org"))))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
@@ -53,7 +55,7 @@
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n")
-        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/im11st/journal.org"))
+        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/wirting/journal.org"))
          "* %?\n  Entered on %U\n")
         ("c" "Code-View" entry (file+datetree (concat org-directory "/content/work/codeview.org"))
          "* TODO %?\n  Viewed on %U\n  %a\n")))

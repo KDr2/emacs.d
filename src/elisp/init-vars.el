@@ -72,25 +72,24 @@
         (cscope-command . "/usr/bin/cscope -b")
         (os-name . "linux")))
 
-(setq vars-mbp-work
-      '((exec-path . ("~/Programs/bin"))
-        (non-elpa . t)
-        (lang-extra-modes . (ess auctex pde ruby php))
-        (xfont . "monaco-14")
-        (work-dir . "~/Work")
-        (org-dir . "~/Work/mine/sanctum")
-        (orgmode-src-dir . "~/Work/opensrc/org-mode/")
+
+(setq vars-wsl-ubuntu
+      '((exec-path . ("~/programs/bin"))
+        (lang-extra-modes . (php pde))
+        (work-dir . "/mnt/d/work")
         (backup-dir . "~/.backup/emacs")
         (cscope-command . "/usr/bin/cscope -b")
-        (os-name . "darwin")))
+        (org-dir . "/mnt/d/work/mine/sanctum")
+        (os-name . "linux")))
+
 
 (setq vars-platforms
       (list
        (cons "linux-pc" vars-debian-x230)
        (cons "linux-vm" vars-vm-debian64)
        (cons "mbp-mc724" vars-mbp-mc724)
-       (cons "mbp-work" vars-mbp-work)
-       (cons "linux-server" vars-linux-server)))
+       (cons "linux-server" vars-linux-server)
+       (cons "wsl-ubuntu" vars-wsl-ubuntu)))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
