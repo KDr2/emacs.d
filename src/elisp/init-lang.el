@@ -27,6 +27,9 @@
 ;; Coffee mode
 (require 'init-coffee)
 
+;; CUDA mode
+(require 'init-cuda)
+
 ;; Python mode
 (require 'init-python)
 
