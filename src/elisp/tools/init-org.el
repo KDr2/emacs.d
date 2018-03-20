@@ -49,16 +49,14 @@
 ;;org-capture
 (setq org-default-notes-file (concat org-directory "/task.org"))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline (concat org-directory "/task.org") "TODOS")
+      '(("i" "Issue" entry (file+headline (concat org-directory "/task.org") "Issues")
          "* TODO %?\n  %a\n")
-        ("n" "Note" entry (file+headline (concat org-directory "/task.org") "NOTES")
+        ("n" "Note" entry (file+headline (concat org-directory "/task.org") "Notes")
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/wirting/journal.org"))
-         "* %?\n  Entered on %U\n")
-        ("c" "Code-View" entry (file+datetree (concat org-directory "/content/work/codeview.org"))
-         "* TODO %?\n  Viewed on %U\n  %a\n")))
+         "* %?\n  Entered on %U\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice
