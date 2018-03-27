@@ -55,7 +55,7 @@
          "* TODO %?\n  %a\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n")
-        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/wirting/journal.org"))
+        ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/writing/journal.org"))
          "* %?\n  Entered on %U\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
