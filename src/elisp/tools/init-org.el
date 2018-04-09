@@ -56,7 +56,9 @@
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/writing/journal.org"))
-         "* %?\n  Entered on %U\n")))
+         "* %?\n  Entered on %U\n")
+        ("h" "Health-Note" entry (file+datetree (concat org-directory "/content/writing/health.org"))
+         "* %?\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice
