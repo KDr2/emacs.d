@@ -51,8 +51,8 @@
 (setq org-capture-templates
       '(("i" "Issue" entry (file+headline (concat org-directory "/content/main.org") "Issues")
          "* TODO %?\n  %a\n")
-        ("n" "Note" entry (file+headline (concat org-directory "/content/main.org") "Notes")
-         "* TODO %?\n  %a\n")
+        ("r" "Reading Note" entry (file+datetree (concat org-directory "/content/reading/daily-notes.org"))
+         "* %?\n")
         ("l" "Work-Log" entry (file+datetree (concat org-directory "/content/work/worklog.org"))
          "* %?\n")
         ("j" "Journal" entry (file+datetree+prompt (concat org-directory "/content/writing/journal.org"))
