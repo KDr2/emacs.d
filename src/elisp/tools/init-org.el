@@ -24,6 +24,7 @@
       (require-package 'org-fstree)))
 
 (require 'ox)
+(require 'org-tempo)
 ;;(require 'ox-publish)
 
 (setq org-directory (vars-get 'org-dir))
@@ -31,6 +32,8 @@
 (setq org-src-fontify-natively t)
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
 
+;; babel library
+(org-babel-lob-ingest (expand-file-name "~/.emacs.d/src/resources/org-babel-lib.org"))
 ;; html export settings for V8.*
 ;;(setq org-html-validation-link nil)
 (setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")

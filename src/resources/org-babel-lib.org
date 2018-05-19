@@ -1,0 +1,12 @@
+
+#+name: get-named-text
+#+BEGIN_SRC elisp :var name="doc"
+  (let* ((named-element (org-element-map (org-element-parse-buffer) org-element-all-elements
+                          (lambda (element)
+                            (when (string= (org-element-property :name element) name)
+                              element))
+                          nil t))
+         (result (buffer-substring (org-element-property :contents-begin named-element)
+                                   (org-element-property :contents-end named-element))))
+    (replace-regexp-in-string "\\\"" "\\\\\"" result)) ;; escape quote
+#+END_SRC
