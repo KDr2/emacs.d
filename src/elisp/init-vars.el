@@ -10,8 +10,7 @@
 
 (setq vars-debian-x230
       '((exec-path . ("/home/kdr2/programs/bin"
-                      "/home/kdr2/programs/luajit/bin"
-                      "/home/kdr2/programs/python27/bin/"))
+                      "/home/kdr2/programs/luajit/bin"))
         (non-elpa . t)
         (lang-extra-modes . (julia ess auctex
                                    pde ruby ocaml go php))
@@ -33,13 +32,10 @@
                                  (C . t)
                                  (ditaa . t)
                                  (clojure . t)
-                                 (java . t)
                                  (js . t)
                                  (julia . t)
                                  (latex . t)
                                  (lisp . t)
-                                 (octave . t)
-                                 (scala . t)
                                  (scheme . t)))
         (os-name . "linux")))
 

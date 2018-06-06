@@ -21,12 +21,12 @@
         (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el")
         ;;(do-on-os "gnu/linux"
         (progn
-          ;;(set-default-font "courier-14")
-          ;;(set-default-font "courier new-12")
-          ;;(set-default-font "monospace-11")
-          ;;(set-default-font "monofur-10")
-          ;;(set-default-font "Monaco-13")
-          (set-default-font (vars-get 'xfont))
+          ;;(set-frame-font "courier-14")
+          ;;(set-frame-font "courier new-12")
+          ;;(set-frame-font "monospace-11")
+          ;;(set-frame-font "monofur-10")
+          ;;(set-frame-font "Monaco-13")
+          (set-frame-font (vars-get 'xfont))
           (setq line-spacing 0)
           (dolist (charset '(kana han symbol cjk-misc bopomofo))
             (set-fontset-font (frame-parameter nil 'font)
@@ -47,7 +47,7 @@
   (select-frame frame)
   (if window-system
       (progn
-        (set-default-font (vars-get 'xfont))
+        (set-frame-font (vars-get 'xfont))
         (setq line-spacing 0)
         (dolist (charset '(kana han symbol cjk-misc bopomofo))
           (set-fontset-font (frame-parameter nil 'font)

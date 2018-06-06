@@ -18,17 +18,7 @@
 
 ;;保存当前会话
 (load "desktop")
-(desktop-load-default)
-;;(desktop-read)
-(defun desktop-cd()
-  (interactive)
-  (desktop-change-dir "~/.emacs.d/desktop"))
-(defun desktop-sv()
-  (interactive)
-  (desktop-save "~/.emacs.d/desktop")
-  (message "desktop saved"))
-(global-set-key (kbd "s-s") 'desktop-sv)
-;;(global-set-key (kbd "s-o") 'desktop-cd)
+(desktop-save-mode t)
 
 (defun current-major-mode-name ()
   (interactive)

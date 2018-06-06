@@ -82,7 +82,8 @@ re-downloaded in order to locate PACKAGE."
 
 
 ;;; Fire up package.el
-(package-initialize)
+(if (string< emacs-version "26")
+    (package-initialize))
 
 
 (provide 'init-elpa)

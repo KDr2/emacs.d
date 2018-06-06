@@ -79,15 +79,12 @@ unwanted space when exporting org-mode to html."
 ;; load basic languages support
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((awk . t)
-   (dot . t)
-   (emacs-lisp . t)
-   (makefile . t)
-   (org . t)
+ '((org . t)
    (perl . t)
    (python . t)
-   (R . t)
-   (sh . t)))
+   (dot . t)
+   (emacs-lisp . t)
+   (makefile . t)))
 
 ;; load extra languages support
 (if (vars-get 'org-babel-lang-extra)

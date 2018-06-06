@@ -46,6 +46,9 @@
 (require-package 'htmlize)
 
 ;; linum-mode
-(global-linum-mode t)
+(if (string< emacs-version "26")
+    (global-linum-mode t)
+  (global-display-line-numbers-mode t))
+
 
 (provide 'init-utils)

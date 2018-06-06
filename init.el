@@ -6,7 +6,8 @@
 
 (setq debug-on-error t)
 
-(package-initialize)
+(if (string< emacs-version "26")
+    (package-initialize))
 
 ;; load-path settings
 (defvar non-elpa-load-path
