@@ -45,6 +45,7 @@
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (concatenate 'list
                                     (file-expand-wildcards (concat org-directory "/content/main.org"))
+                                    (file-expand-wildcards (concat org-directory "/content/scrappy.org"))
                                     (file-expand-wildcards (concat org-directory "/content/work/*.org"))))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
