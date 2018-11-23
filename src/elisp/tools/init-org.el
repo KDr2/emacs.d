@@ -53,9 +53,9 @@
 ;;org-capture
 (setq org-default-notes-file (concat org-directory "/content/main.org"))
 (setq org-capture-templates
-      '(("i" "Issue" entry (file+headline (lambda () (concat org-directory "/content/main.org")) "Issues")
+      '(("i" "Issue" entry (file+headline (lambda () (concat org-directory "/content/scrappy.org")) "Issues")
          "* TODO %?\n  %a\n")
-        ("r" "Reading Note" entry (file+datetree (lambda () (concat org-directory "/content/reading/daily-notes.org")))
+        ("n" "Scrappy Note" entry (file+datetree (lambda () (concat org-directory "/content/scrappy.org")))
          "* %?\n")
         ("l" "Work-Log" entry (file+datetree (lambda () (concat org-directory "/content/work/worklog.org")))
          "* %?\n")
