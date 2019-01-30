@@ -24,78 +24,70 @@
 ;; Javascript mode
 (require 'init-javascript)
 
-;; Coffee mode
-(require 'init-coffee)
-
-;; CUDA mode
-(require 'init-cuda)
-
 ;; Python mode
 (require 'init-python)
-
-;; Hy mode
-(require 'init-hy)
-
-;; PHP mode
-(require 'init-php)
-
-;; mmm mode ;; I use web-mode now
-;; (require 'init-mmm)
 
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)
 
-;; Erlang mode
-(require 'init-erlang)
-
 ;; paredit mode
 (require 'init-paredit)
 
-;; clojure mode
-(if-lang 'clojure
-		 (require 'init-clojure))
-
-;; slime mode
-(require 'init-slime)
-
 ;; geiser mode
 (require 'init-geiser)
+
 ;; graphviz
 (require 'init-graphviz)
 
 ;; web-mode
 (require 'init-web)
 
-;;; extra modes
-
-;; Ocaml/Tuareg mode
-(if-lang 'ocaml
-         (require 'init-ocaml))
-
-;; Ruby mode
-(if-lang 'ruby
-         (require 'init-ruby))
-
-(require 'init-rust)
-
-;; Auctex mode
-(if-lang 'auctex
-         (require 'init-auctex))
-
-;; R/ESS Settings
-(if-lang 'ess
-         (require 'init-ess))
+;;;;;;;;;;;;;;;;;;;
+;;; extra modes ;;;
+;;;;;;;;;;;;;;;;;;;
 
 ;; julia-mode
-(if-lang 'julia
-         (require 'init-julia))
-
+(if-lang 'julia (require 'init-julia))
 
 ;; Perl and PDE Mode Settings
 (if-lang 'pde (require 'init-pde))
 
+;; slime mode
+(if-lang 'slime (require 'init-slime))
+
 ;; Go Settings
-(if-lang 'go
-         (require 'init-go))
+(if-lang 'go (require 'init-go))
+
+;; Hy mode
+(if-lang 'hy (require 'init-hy))
+
+;; PHP mode
+(if-lang 'php (require 'init-php))
+
+;; Coffee mode
+(if-lang 'coffee (require 'init-coffee))
+
+;; CUDA mode
+(if-lang 'cuda (require 'init-cuda))
+
+;; Erlang mode
+(if-lang 'erlang (require 'init-erlang))
+
+;; clojure mode
+(if-lang 'clojure (require 'init-clojure))
+
+;; Ocaml/Tuareg mode
+(if-lang 'ocaml (require 'init-ocaml))
+
+;; Ruby mode
+(if-lang 'ruby (require 'init-ruby))
+
+(if-lang 'rust (require 'init-rust))
+
+;; Auctex mode
+(if-lang 'auctex (require 'init-auctex))
+
+;; R/ESS Settings
+(if-lang 'ess (require 'init-ess))
 
 (provide 'init-lang)

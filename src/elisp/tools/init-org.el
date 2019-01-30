@@ -11,19 +11,19 @@
 ;; (when (< emacs-major-version 24)
 ;;   (require-package 'org))
 
-(if (vars-get 'orgmode-src-dir)
+(if (and (vars-get 'orgmode-src-dir)
+         (file-directory-p (vars-get 'orgmode-src-dir)))
     (progn
       (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "lisp"))
       (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "contrib/lisp"))
-      (require 'org)
-      (require 'ox-rss))
+      (require 'org))
     (progn
       (require 'init-elpa)
       (require-package 'org)
-      (require-package 'org-plus-contrib)
-      (require-package 'org-fstree)))
+      (require-package 'org-plus-contrib)))
 
 (require 'ox)
+(require 'ox-rss)
 (require 'org-tempo)
 ;;(require 'ox-publish)
 
@@ -88,6 +88,9 @@ unwanted space when exporting org-mode to html."
    (makefile . t)))
 
 ;; load extra languages support
+(if (cdr (assoc 'julia (vars-get 'org-babel-lang-extra)))
+    (setq inferior-julia-program-name (expand-file-name "~/Work/julia/julia")))
+
 (if (vars-get 'org-babel-lang-extra)
     (org-babel-do-load-languages
      'org-babel-load-languages

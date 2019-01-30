@@ -12,8 +12,7 @@
       '((exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/programs/luajit/bin"))
         (non-elpa . t)
-        (lang-extra-modes . (julia ess auctex
-                                   pde ruby ocaml go php))
+        (lang-extra-modes . (julia auctex pde go slime))
         (xfont . "monospace-11")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -42,7 +41,7 @@
 (setq vars-vm-debian64
       '((exec-path . ("/data0/usr/bin"))
         (non-elpa . t)
-        (lang-extra-modes . (ess auctex pde ruby php))
+        (lang-extra-modes . (pde go php))
         (xfont . "courier new-14")
         (work-dir . "/data0/source")
         (backup-dir . "~/.backup/emacs")
