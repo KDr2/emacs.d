@@ -85,6 +85,7 @@ unwanted space when exporting org-mode to html."
    (python . t)
    (dot . t)
    (emacs-lisp . t)
+   (R . t)
    (makefile . t)))
 
 ;; load extra languages support
