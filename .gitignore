@@ -8,6 +8,7 @@ games/
 url/
 auto-save-list/
 pyim/
+transient/
 abbrev_defs
 tramp
 *.dat

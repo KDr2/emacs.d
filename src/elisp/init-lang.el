@@ -16,7 +16,7 @@
 (require 'init-yaml)
 
 ;; system-tap mode
-(require 'init-stap)
+(if-lang 'stap (require 'init-stap))
 
 ;; Lua mode
 (require 'init-lua)

@@ -80,13 +80,12 @@ unwanted space when exporting org-mode to html."
 ;; load basic languages support
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((org . t)
+ '((R . t)
+   (org . t)
+   (dot . t)
    (perl . t)
    (python . t)
-   (dot . t)
-   (emacs-lisp . t)
-   (R . t)
-   (makefile . t)))
+   (emacs-lisp . t)))
 
 ;; load extra languages support
 (if (cdr (assoc 'julia (vars-get 'org-babel-lang-extra)))
