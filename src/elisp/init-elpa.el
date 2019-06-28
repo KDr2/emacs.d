@@ -13,6 +13,7 @@
     (setq load-path (remove package-el-site-lisp-dir load-path))))
 
 (require 'package)
+(package-initialize)
 
 ;;; Add support to package.el for pre-filtering available packages
 
