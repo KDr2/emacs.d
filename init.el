@@ -6,9 +6,6 @@
 
 (setq debug-on-error t)
 
-(if (string< emacs-version "26")
-    (package-initialize))
-
 ;; load-path settings
 (defvar non-elpa-load-path
   (concat user-emacs-directory "non-elpa")

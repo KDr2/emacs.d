@@ -13,7 +13,6 @@
     (setq load-path (remove package-el-site-lisp-dir load-path))))
 
 (require 'package)
-(package-initialize)
 
 ;;; Add support to package.el for pre-filtering available packages
 
@@ -80,11 +79,8 @@ re-downloaded in order to locate PACKAGE."
         (package-refresh-contents)
         (require-package package min-version t)))))
 
-
-
 ;;; Fire up package.el
 (if (string< emacs-version "26")
     (package-initialize))
-
 
 (provide 'init-elpa)
