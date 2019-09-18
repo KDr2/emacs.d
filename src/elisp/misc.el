@@ -9,16 +9,16 @@
 ;;
 
 
-;;copy当前行
+;; copy current line
 (defun copy-current-line()
   (interactive)
   (kill-ring-save
    (line-beginning-position)
    (line-end-position)))
 
-;;保存当前会话
-(load "desktop")
-(desktop-save-mode t)
+;; save session
+;; (load "desktop")
+;; (desktop-save-mode t)
 
 (defun current-major-mode-name ()
   (interactive)

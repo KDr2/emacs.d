@@ -64,9 +64,6 @@
 ;; PHP mode
 (if-lang 'php (require 'init-php))
 
-;; Coffee mode
-(if-lang 'coffee (require 'init-coffee))
-
 ;; CUDA mode
 (if-lang 'cuda (require 'init-cuda))
 

@@ -40,20 +40,20 @@ ARCHIVE is the string name of the package archive.")
 
 ;;; Standard package repositories
 
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 (when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t))
 
 ;;; Also use Melpa for most packages
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;;(add-to-list 'package-archives
 ;;          '("popkit" . "https://elpa.popkit.org/packages/"))
 

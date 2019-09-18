@@ -16,7 +16,6 @@
 (require-package 'python-mode)
 (require-package 'elpy)
 (require-package 'cython-mode)
-(require-package 'pyenv-mode)
 
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 ;; Python Hook

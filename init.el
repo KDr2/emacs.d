@@ -5,6 +5,7 @@
 (require 'cl)
 
 (setq debug-on-error t)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; load-path settings
 (defvar non-elpa-load-path
@@ -16,6 +17,8 @@
 
 (add-to-list 'load-path non-elpa-load-path)
 (add-to-list 'load-path (concat user-emacs-directory "src/elisp"))
+
+(if noninteractive (package-initialize))
 
 ;; load kdr2's settings
 (require 'init-main)
