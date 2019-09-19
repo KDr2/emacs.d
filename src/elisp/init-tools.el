@@ -36,7 +36,7 @@
 (require 'init-org)
 
 ;; chinese input method
-(ignore-errors (require 'init-pyim))
+;; (require 'init-pyim)
 
 ;; magit mode
 (require 'init-magit)

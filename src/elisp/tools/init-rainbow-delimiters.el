@@ -1,4 +1,4 @@
-;;; init-rainbow-delimiters.el --- atuo-complete mode settings for KDr2's Emacs
+;;; init-rainbow-delimiters.el
 
 ;; Copyright (C) KDr2
 
