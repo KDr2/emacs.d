@@ -11,7 +11,7 @@
 (require 'init-elpa)
 
 (require-package 'geiser)
-(setq geiser-active-implementations '(guile))
+(setq geiser-active-implementations '(guile racket chez))
 (setq geiser-default-implementation 'guile)
 
 (provide 'init-geiser)
