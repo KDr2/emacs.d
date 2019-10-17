@@ -39,30 +39,37 @@
 (setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
 (setq org-html-head-include-default-style nil)
 
+(defun find-org-file (path)
+  (concat org-directory "/content/" path))
+(defun find-org-files (pattern)
+  (file-expand-wildcards (find-org-file pattern)))
+
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (concatenate 'list
-                                    (file-expand-wildcards (concat org-directory "/content/main.org"))
-                                    (file-expand-wildcards (concat org-directory "/content/scrappy.org"))
-                                    (file-expand-wildcards (concat org-directory "/content/work/*.org"))))
+                                    ;; (find-org-files "writing/*.org")
+                                    (find-org-files "main.org")
+                                    (find-org-files "scrappy.org")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 ;;org-capture
-(setq org-default-notes-file (concat org-directory "/content/main.org"))
+(setq org-default-notes-file (find-org-file "scrappy.org"))
 (setq org-capture-templates
-      '(("i" "Issue" entry (file+headline (lambda () (concat org-directory "/content/scrappy.org")) "Issues")
+      '(("i" "Issue" entry
+         (file+headline (lambda () (find-org-file "scrappy.org")) "Issues")
          "* TODO %?\n  %a\n")
-        ("n" "Scrappy Note" entry (file+datetree (lambda () (concat org-directory "/content/scrappy.org")))
+        ("n" "Scrappy Note" entry
+         (file+datetree (lambda () (find-org-file "scrappy.org")))
          "* %?\n")
-        ("l" "Work-Log" entry (file+datetree (lambda () (concat org-directory "/content/work/worklog.org")))
-         "* %?\n")
-        ("j" "Journal" entry (file+datetree+prompt (lambda () (concat org-directory "/content/writing/journal.org")))
-         "* %?\n  Entered on %U\n")
-        ("h" "Health-Note" entry (file+datetree (lambda () (concat org-directory "/content/writing/health.org")))
-         "* %?\n")))
+        ("d" "Dialog" entry
+         (file+headline (lambda () (find-org-file "writing/dialog.org")) "Dialogues")
+         "* DIALOG %U :dialog:\n Topic: **%?**\n")
+        ("j" "Journal" entry
+         (file+datetree+prompt (lambda () (find-org-file "writing/journal.org")))
+         "* %?\n  Entered on %U\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice
