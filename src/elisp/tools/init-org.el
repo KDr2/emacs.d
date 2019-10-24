@@ -50,7 +50,7 @@
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (concatenate 'list
                                     ;; (find-org-files "writing/*.org")
-                                    (find-org-files "main.org")
+                                    (find-org-files "index.org")
                                     (find-org-files "scrappy.org")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -62,11 +62,11 @@
          (file+headline (lambda () (find-org-file "scrappy.org")) "Issues")
          "* TODO %?\n  %a\n")
         ("n" "Scrappy Note" entry
-         (file+datetree (lambda () (find-org-file "scrappy.org")))
-         "* %?\n")
+         (file+headline (lambda () (find-org-file "scrappy.org")) "Notes")
+         "* Note %U\n  %?")
         ("d" "Dialog" entry
          (file+headline (lambda () (find-org-file "writing/dialog.org")) "Dialogues")
-         "* DIALOG %U :dialog:\n Topic: **%?**\n")
+         "* DIALOG %U :dialog:\n  Topic: **%?**\n")
         ("j" "Journal" entry
          (file+datetree+prompt (lambda () (find-org-file "writing/journal.org")))
          "* %?\n  Entered on %U\n")))
