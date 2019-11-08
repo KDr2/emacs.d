@@ -31,6 +31,7 @@
 (setq org-archive-location "archives/%s_archive::")
 (setq org-src-fontify-natively t)
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
+(setq org-src-window-setup 'current-window)
 
 ;; babel library
 (org-babel-lob-ingest (expand-file-name "~/.emacs.d/src/resources/org-babel-lib.org"))
