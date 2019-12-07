@@ -24,5 +24,7 @@
 (defun send-to-terminal ()
   (interactive)
   (let* ((text (buffer-substring-no-properties (region-beginning) (region-end)))
-         (indented-code (string-fix-indentation text)))
+         (text-end-clean (string-trim-right text))
+         ;; (indented-code (string-fix-indentation text))
+         (indented-code (concat text-end-clean "\n")))
     (process-send-string "terminal<1>" indented-code)))

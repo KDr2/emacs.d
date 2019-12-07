@@ -1,4 +1,4 @@
-;;; init-slime.el 
+;;; init-slime.el
 
 ;; Copyright (C) KDr2
 
@@ -38,10 +38,8 @@
          (let ((inferior-lisp-program ,lisp))
            (slime)))))
 
-(def-slime ecl-slime (vars-get 'ecl-path))
-(def-slime ecl-dev-slime (vars-get 'ecl-dev-path))
 (def-slime sbcl-slime (vars-get 'sbcl-path))
-(def-slime ccl-slime (vars-get 'ccl-path))
+(def-slime ecl-slime (vars-get 'ecl-path))
 (def-slime clisp-slime (vars-get 'clisp-path))
 
 (provide 'init-slime)
