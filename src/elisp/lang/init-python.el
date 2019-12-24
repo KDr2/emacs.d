@@ -25,11 +25,13 @@
                             tab-width 4)
                       (setq python-indent-offset 4))))
 
-
-;; pip install rope jedi flake8 importmagic autopep8 yapf
-
-(unless noninteractive
-  (elpy-enable))
-;; (elpy-clean-modeline)
+;; 1. set 'elpy-python in vars.el
+;; 2. in that python env, install the dependencies:
+;;    pip install rope jedi flake8 importmagic autopep8 yapf
+;;
+(if (and (not noninteractive) (vars-get 'elpy-python))
+    (progn
+      (setq elpy-rpc-python-command (vars-get 'elpy-python))
+      (elpy-enable)))
 
 (provide 'init-python)

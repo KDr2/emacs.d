@@ -23,6 +23,7 @@
         (sbcl-path . "/usr/bin/sbcl")
         (clisp-path . "/usr/bin/clisp")
         (cscope-command . "/usr/bin/cscope -b")
+        (elpy-python . "/home/kdr2/.pyenv/versions/cft36/bin/python")
         (org-babel-lang-extra . ((perl . t)
                                  (C . t)
                                  (ditaa . t)
