@@ -28,3 +28,15 @@
          ;; (indented-code (string-fix-indentation text))
          (indented-code (concat text-end-clean "\n")))
     (process-send-string "terminal<1>" indented-code)))
+
+
+(defun kill-ring-save-without-linewraps ()
+  (interactive)
+  (let ((text (buffer-substring (region-beginning) (region-end))))
+    (with-temp-buffer
+      (insert text)
+      (let ((fill-column (+ 1 (point-max))))
+        (fill-region (point-min) (point-max))
+        (kill-ring-save (point-min) (point-max))))))
+
+(global-set-key (kbd "M-W") 'kill-ring-save-without-linewraps)
