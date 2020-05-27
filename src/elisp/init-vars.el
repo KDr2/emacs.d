@@ -13,7 +13,7 @@
         (exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/Work/mine/DS-III/gen-bin"))
         (non-elpa . t)
-        (lang-extra-modes . (julia auctex pde go slime))
+        (lang-extra-modes . (julia auctex pde go slime scala clojure))
         (xfont . "monospace-11")
         (work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -34,31 +34,11 @@
                                  (lisp . t)
                                  (scheme . t)))))
 
-(setq vars-vm-debian64
-      '((os-name . "linux")
-        (exec-path . ("/data0/usr/bin"))
-        (non-elpa . t)
-        (lang-extra-modes . (pde go php))
-        (xfont . "courier new-14")
-        (work-dir . "/data0/source")
-        (backup-dir . "~/.backup/emacs")
-        (cscope-command . "/usr/bin/cscope -b")))
-
-(setq vars-mbp-mc724
-      '((os-name . "darwin")
-        (exec-path . ("~/Programs/bin"))
-        (non-elpa . t)
-        (lang-extra-modes . (ess auctex pde ruby php))
-        (xfont . "monaco-14")
-        (work-dir . "~/Work")
-        (org-dir . "~/Work/mine/sanctum")
-        (backup-dir . "~/.backup/emacs")
-        (cscope-command . "/usr/bin/cscope -b")))
 
 (setq vars-linux-server
       '((os-name . "linux")
         (exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (php pde go))
+        (lang-extra-modes . (julia pde slime pde scala clojure php go))
         (work-dir . "~/")
         (backup-dir . "~/.backup/emacs")
         (cscope-command . "/usr/bin/cscope -b")))
@@ -67,7 +47,7 @@
 (setq vars-wsl-ubuntu
       '((os-name . "linux")
         (exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (php pde))
+        (lang-extra-modes . (pde php))
         (work-dir . "/mnt/d/work")
         (backup-dir . "~/.backup/emacs")
         (cscope-command . "/usr/bin/cscope -b")
@@ -77,8 +57,6 @@
 (setq vars-platforms
       (list
        (cons "linux-pc" vars-debian-x230)
-       (cons "linux-vm" vars-vm-debian64)
-       (cons "mbp-mc724" vars-mbp-mc724)
        (cons "linux-server" vars-linux-server)
        (cons "wsl-ubuntu" vars-wsl-ubuntu)))
 

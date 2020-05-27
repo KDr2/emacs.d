@@ -73,6 +73,9 @@
 ;; clojure mode
 (if-lang 'clojure (require 'init-clojure))
 
+;; scala mode
+(if-lang 'scala (require 'init-scala))
+
 ;; Ocaml/Tuareg mode
 (if-lang 'ocaml (require 'init-ocaml))
 

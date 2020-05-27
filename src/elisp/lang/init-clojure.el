@@ -13,7 +13,6 @@
 (require 'init-elpa)
 
 (require-package 'clojure-mode)
-(require-package 'clojure-test-mode)
 (require-package 'elein)
 (require-package 'cider)
 (require-package 'slamhound)
