@@ -72,8 +72,9 @@ re-downloaded in order to locate PACKAGE."
 (if (string< emacs-version "26")
     (package-initialize))
 
+;; for issues on some version of Emacs
 ;; (package-initialize) ; for the first installation
-(setq package-check-signature nil)
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;; (setq package-check-signature nil)
+;; (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (provide 'init-elpa)

@@ -38,10 +38,21 @@
 (setq vars-linux-server
       '((os-name . "linux")
         (exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (julia pde slime pde scala clojure php go))
         (work-dir . "~/")
+        (org-dir . "~/Work/mine/sanctum")
         (backup-dir . "~/.backup/emacs")
-        (cscope-command . "/usr/bin/cscope -b")))
+        (lang-extra-modes . (julia pde slime pde scala clojure php go))
+        (cscope-command . "/usr/bin/cscope -b")
+        ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
+        (org-babel-lang-extra . ((perl . t)
+                                 (C . t)
+                                 (ditaa . t)
+                                 (clojure . t)
+                                 (js . t)
+                                 (julia . t)
+                                 (latex . t)
+                                 (lisp . t)
+                                 (scheme . t)))))
 
 
 (setq vars-wsl-ubuntu
