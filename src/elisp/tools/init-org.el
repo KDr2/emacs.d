@@ -41,7 +41,7 @@
 (setq org-html-head-include-default-style nil)
 
 (defun find-org-file (path)
-  (concat org-directory "/content/" path))
+  (expand-file-name (concat org-directory "/content/" path)))
 (defun find-org-files (pattern)
   (file-expand-wildcards (find-org-file pattern)))
 
