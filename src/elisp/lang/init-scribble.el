@@ -1,4 +1,4 @@
-;;; init-scala.el
+;;; init-scribble.el
 
 ;; Copyright (C) KDr2
 
@@ -12,6 +12,6 @@
 
 (require 'init-elpa)
 
-(require-package 'scala-mode)
+(require-package 'scribble-mode)
 
-(provide 'init-scala)
+(provide 'init-scribble)

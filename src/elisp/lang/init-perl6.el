@@ -1,4 +1,4 @@
-;;; init-ruby.el
+;;; init-perl6.el
 
 ;; Copyright (C) KDr2
 
