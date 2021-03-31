@@ -1,4 +1,4 @@
-;;; init-utils.el 
+;;; init-utils.el
 
 ;; Copyright (C) KDr2
 
@@ -14,10 +14,6 @@
 
 ;;; hl-line
 (global-hl-line-mode)
-
-;;; vline mode settings
-(require-package 'vline)
-(global-set-key "\C-xt" 'vline-global-mode)
 
 ;;; undo-tree mode settings
 (require-package 'undo-tree)

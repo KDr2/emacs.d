@@ -43,7 +43,7 @@ ARCHIVE is the string name of the package archive.")
 ;;; Non-Standard package repositories
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;; (add-to-list 'package-archives '("popkit" . "https://elpa.popkit.org/packages/") t) ;; broken
 
 ;; But don't take Melpa versions of certain packages
@@ -69,12 +69,16 @@ re-downloaded in order to locate PACKAGE."
         (require-package package min-version t)))))
 
 ;;; Fire up package.el
-(if (string< emacs-version "26")
+(if (string< emacs-version "27")
     (package-initialize))
 
 ;; for issues on some version of Emacs
 ;; (package-initialize) ; for the first installation
 ;; (setq package-check-signature nil)
 ;; (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
+;; cope with bad gpg signature
+(setq package-check-signature nil)
+(require-package 'gnu-elpa-keyring-update)
 
 (provide 'init-elpa)

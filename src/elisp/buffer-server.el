@@ -1,6 +1,6 @@
 ;;; buffer-server.el --- elnode server settings for KDr2's emacs
 
-;; Copyright (C) KDr2 
+;; Copyright (C) KDr2
 
 ;; Author   : KDr2 <zhuo.dev@gmail.com>
 ;; URL      : https://github.com/KDr2/emacs.d
@@ -18,7 +18,7 @@
 
 (defun pathinfo-to-buffer (pathinfo)
   (if (string-match "/buffers/\\(.+\\)$" pathinfo)
-      (progn 
+      (progn
         (setq bn (match-string 1 pathinfo))
         (get-buffer bn))
     nil))
@@ -44,7 +44,7 @@
   "Buffers Handler"
   (let* ((path (elnode-http-pathinfo httpcon)))
     (elnode-http-start httpcon 200 '("Content-type" . "text/html"))
-    (elnode-http-return 
+    (elnode-http-return
      httpcon
      (if (string-match "/buffers/\\(.*\\)\\.\\(org\\|html\\)$" path)
          (let ((basename (match-string 1 path)))
@@ -63,5 +63,3 @@
 ;;
 ;;(elnode-stop 8010)
 ;;
-
-

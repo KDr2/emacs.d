@@ -17,16 +17,8 @@
 (add-to-list 'load-path non-elpa-load-path)
 (add-to-list 'load-path (concat user-emacs-directory "src/elisp"))
 
-(if noninteractive (package-initialize))
+(if (string< emacs-version "27")
+    (package-initialize))
 
 ;; load kdr2's settings
 (require 'init-main)
-
-;; debug code, to find to enables my auto-fill-mode
-;;
-;; (if (not noninteractive)
-;;     (defadvice auto-fill-mode (around backtrace-fill-mode activate)
-;;       (message "------BEFORE-------")
-;;       (backtrace)
-;;       ad-do-it
-;;       (message "------AFTER--------")))

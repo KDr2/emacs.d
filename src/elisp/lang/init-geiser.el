@@ -14,4 +14,6 @@
 (setq geiser-active-implementations '(guile racket chez))
 (setq geiser-default-implementation 'guile)
 
+(setq-default geiser-mode-auto-p nil)
+
 (provide 'init-geiser)

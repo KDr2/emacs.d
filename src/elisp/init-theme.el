@@ -21,24 +21,15 @@
         (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el")
         ;;(do-on-os "gnu/linux"
         (progn
-          ;;(set-frame-font "courier-14")
-          ;;(set-frame-font "courier new-12")
-          ;;(set-frame-font "monospace-11")
-          ;;(set-frame-font "monofur-10")
-          ;;(set-frame-font "Monaco-13")
           (set-frame-font (vars-get 'xfont))
           (setq line-spacing 0)
           (dolist (charset '(kana han symbol cjk-misc bopomofo))
-            (set-fontset-font (frame-parameter nil 'font)
-                              charset
+            (set-fontset-font (frame-parameter nil 'font) charset
                               (font-spec :family "WenQuanYi Micro Hei")))
           (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23)))))
     (progn ;;no x
       (load-theme 'wombat t nil)
-      (load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el")
-      ;; (load-theme 'adwaita t nil)
-      ;; (load-file "~/.emacs.d/src/elisp/themes/adwaita-custom.el")
-      )))
+      (load-file "~/.emacs.d/src/elisp/themes/wombat-custom.el"))))
 
 (color-theme-and-fonts)
 
@@ -53,9 +44,7 @@
           (set-fontset-font (frame-parameter nil 'font)
                             charset
                             (font-spec :family "WenQuanYi Micro Hei")))
-        (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23)))
-        ;;(color-theme-and-fonts)
-        )))
+        (setq face-font-rescale-alist '(("monospace" . 1.0) ("WenQuanYi" . 1.23))))))
 (add-hook 'after-make-frame-functions 'x-new-frame-init)
 
 

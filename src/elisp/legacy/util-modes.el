@@ -18,6 +18,3 @@
       '(try-complete-abbrev
         try-complete-file-name
         try-expand-dabbrev))
-
-
-
