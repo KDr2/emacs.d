@@ -13,12 +13,9 @@
 (require 'init-elpa)
 
 (require-package 'clojure-mode)
-(require-package 'elein)
 (require-package 'cider)
-(require-package 'slamhound)
-(require-package 'ac-nrepl)
+(require-package 'elein)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
-(setq nrepl-hide-special-buffers t)
 
 (provide 'init-clojure)

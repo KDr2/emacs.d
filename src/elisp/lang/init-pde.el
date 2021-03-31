@@ -20,6 +20,10 @@
  "darwin"
  (add-non-elpa-load-path "/emacs-pde/lisp"))
 
+(do-on-os
+ "windows-nt"
+ (add-non-elpa-load-path "/emacs-pde/lisp"))
+
 (load "pde-load")
 
 ;; do not inset a new line when insert a ';'
