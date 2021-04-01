@@ -29,7 +29,6 @@
  '(template-query nil)
  '(term-default-bg-color "#101E2E")
  '(term-default-fg-color "#wheat3")
- '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
  '(gdb-many-windows t)
  '(gdb-use-separate-io-buffer nil))
@@ -61,7 +60,6 @@
  ;;misc-modes:
  '(highlight-symbol-face ((t (:background "#068" :foreground "#0FFFF0" :underline t))))
  '(hl-line ((t (:background "#11392E"))))
- '(vline ((t (:background "#11392E"))))
  ;;linum
  '(linum ((t (:foreground "yellow"))));; :family "courier new"
  ;;IDO

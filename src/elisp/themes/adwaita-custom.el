@@ -24,7 +24,6 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
  '(git-state-modeline-decoration (quote git-state-decoration-letter)))
 

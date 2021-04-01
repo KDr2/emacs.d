@@ -28,9 +28,9 @@
     (if (file-exists-p file-name)
         (w32-shell-execute "open" file-name nil 1))))
 
-(setq dired-listing-switches "-avl"  ;; ls 文件列表参数
-      dired-recursive-copies 'top    ;; 复制目录时，递归复制所有字目录
-      dired-recursive-deletes 'top   ;; 删除目录时，递归删除所有字目录
-      cvs-dired-use-hook 'always) ;; 浏览 CVS 时，自动打开 pcl-cvs 界面
+(setq dired-listing-switches "-avl"  ;; parameters to ls
+      dired-recursive-copies 'top
+      dired-recursive-deletes 'top
+      cvs-dired-use-hook 'always)
 
 (provide 'init-dired)

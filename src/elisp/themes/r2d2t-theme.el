@@ -26,7 +26,6 @@
  '(template-directory-list nil)
  '(template-header-regexp nil)
  '(template-query nil)
- '(vline-global-mode nil)
  '(uniquify-buffer-name-style (quote post-forward))
  '(git-state-modeline-decoration (quote git-state-decoration-letter)))
 
@@ -49,7 +48,6 @@
  '(web-mode-html-tag-face ((t (:foreground "wheat4"))))
  '(web-mode-html-attr-name-face ((t (:foreground "wheat4"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "wheat4"))))
- '(vline ((t (:background "black"))))
  '(font-lock-keyword-face ((t (:foreground "yellow"))))
  '(dired-directory ((t (:foreground "green"))))
  '(font-lock-comment-face ((t (:foreground "cyan"))))

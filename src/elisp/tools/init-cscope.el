@@ -14,8 +14,10 @@
 
 (require-package 'xcscope)
 
-;;cscope标签更新(有project.cscope的目录下);
+
 (setq exec-path (cons "/opt/local/bin" exec-path))
+
+;; run cscope if there's a file named 'project.cscope' under the dir
 (defun update-cscope ()
   (interactive)
   (if (or (file-exists-p "project.cscope") (file-exists-p "cscope.project"))
