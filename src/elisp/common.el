@@ -36,13 +36,20 @@
   (string/trim-left (string/trim-right s)))
 
 (defun file-string (file)
-    "Read the contents of a file and return as a string."
-    (with-temp-buffer
-      (insert-file-contents file)
-      (buffer-string)))
+  "Read the contents of a file and return as a string."
+  (if (file-exists-p file)
+      (with-temp-buffer
+        (insert-file-contents file)
+        (buffer-string))
+    (progn
+      (warn (format"file [%s] doesn't exist." file))
+      nil)))
 
 (defvar box-name
-  (string/trim (file-string (concatenate 'string user-emacs-directory "box-name")))
+  (let ((val (file-string (concatenate 'string user-emacs-directory "box-name"))))
+    (if (and val (not (string= (string/trim val) "")))
+        (string/trim val)
+      "default"))
   "box name for getting customized variables")
 
 (defun xhtml-css-from-file (file)

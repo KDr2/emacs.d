@@ -1,4 +1,4 @@
-;;; init-pde.el 
+;;; init-pde.el
 
 ;; Copyright (C) KDr2
 
@@ -14,17 +14,17 @@
 
 (do-on-os
  "gnu/linux"
- (require-package 'pde))
+ (require-package 'pde)
+ (load "pde-load"))
 
-(do-on-os
- "darwin"
- (add-non-elpa-load-path "/emacs-pde/lisp"))
-
-(do-on-os
- "windows-nt"
- (add-non-elpa-load-path "/emacs-pde/lisp"))
-
-(load "pde-load")
+(when (vars-get 'non-elpa) ; must have non-elpa on macos/win
+  (do-on-os
+   "darwin"
+   (add-non-elpa-load-path "/emacs-pde/lisp"))
+  (do-on-os
+   "windows-nt"
+   (add-non-elpa-load-path "/emacs-pde/lisp"))
+  (load "pde-load"))
 
 ;; do not inset a new line when insert a ';'
 (defun orignal-semicolon ()
