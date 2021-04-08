@@ -15,7 +15,7 @@
         (org-dir . "~/Work/mine/sanctum")
         (backup-dir . "~/.backup/emacs")
         (non-elpa . nil)
-        (lang-extra-modes . (slime clojure pde julia))
+        (lang-extra-modes . (slime clojure julia))
         (cscope-command . "/usr/bin/cscope -b")
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
         (org-babel-lang-extra . ((perl . t)
@@ -74,6 +74,9 @@
   (let ((platform-vars (cdr (assoc box-name vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
+
+(defvar non-elpa-enabled
+  (and (file-exists-p non-elpa-load-path) (vars-get 'non-elpa)))
 
 (defmacro if-lang (feature &rest body)
   `(if (memq ,feature (vars-get 'lang-extra-modes))

@@ -8,9 +8,9 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+(if non-elpa-enabled
+	(require 'find-recursive))
 
-;;(require 'find-recursive)
-;; who need this?
 (defun try-complete-abbrev (old)
   (if (expand-abbrev) t nil))
 

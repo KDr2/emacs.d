@@ -11,7 +11,7 @@
 ;; load gas-mode
 
 ;; There's no gas-mode on ELPA :(
-;;(require-package 'gas-mode)
+;; (require-package 'gas-mode)
 (require 'gas-mode)
 (add-to-list 'auto-mode-alist '("\\.[sS]\\'" . gas-mode))
 

@@ -35,9 +35,6 @@
 ;; org mode
 (require 'init-org)
 
-;; chinese input method
-;; (require 'init-pyim)
-
 ;; magit mode
 (require 'init-magit)
 
@@ -58,10 +55,6 @@
 
 ;; helm
 ;; (require 'init-helm)
-
-;; sdcv
-(do-on-os "gnu/linux"
-          (require 'init-sdcv))
 
 ;; utils
 (require 'init-utils)

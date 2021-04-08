@@ -10,13 +10,13 @@
 
 ;;(setq default-frame-alist `((font . ,(vars-get 'xfont))))
 
-(defvar x-default-font (case system-type
-                         (("gnu/linux") "monospace-11")
-                         (otherwise "Consolas-11")))
-(defvar x-default-font-han (case system-type
-                             (("gnu/linux") "WenQuanYi Micro Hei")
-                             (("windows-nt" "cygwin" "darwin") "Simsun")
-                             (otherwise "Simsun")))
+(defvar x-default-font (pcase system-type
+                         ('gnu/linux "monospace-11")
+                         (_ "Consolas-11")))
+(defvar x-default-font-han (pcase system-type
+                             ('gnu/linux "WenQuanYi Micro Hei")
+                             ((or 'windows-nt 'cygwin 'darwin) "Simsun")
+                             (_ "Simsun")))
 
 (defun setup-x-fonts ()
   (set-frame-font (vars-get 'xfont x-default-font))

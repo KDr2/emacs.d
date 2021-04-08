@@ -49,9 +49,6 @@
 ;; julia-mode
 (if-lang 'julia (require 'init-julia))
 
-;; Perl and PDE Mode Settings
-(if-lang 'pde (require 'init-pde))
-
 ;; slime mode
 (if-lang 'slime (require 'init-slime))
 
