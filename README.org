@@ -10,6 +10,7 @@
   - misc: misc things
 
 * Configuration for different boxes
-  There should be a file called `box-name` with one of the box names
-  defined in =src/elisp/vars.el= as its content in this directory. And
-  the corresponding values in =src/elisp/vars.el= will be setup.
+  There should be a file called `vars-user.el` in this directory. And
+  in that file, a variable named `vars-user` should be defined, like
+  how `vars-default` and `vars-full` are defined in
+  `src/elisp/init-vars.el`.

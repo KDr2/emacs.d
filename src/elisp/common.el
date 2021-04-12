@@ -45,13 +45,6 @@
       (warn (format"file [%s] doesn't exist." file))
       nil)))
 
-(defvar box-name
-  (let ((val (file-string (concatenate 'string user-emacs-directory "box-name"))))
-    (if (and val (not (string= (string/trim val) "")))
-        (string/trim val)
-      "default"))
-  "box name for getting customized variables")
-
 (defun xhtml-css-from-file (file)
   (concatenate
    'string

@@ -9,69 +9,69 @@
 ;;
 
 (setq vars-default
-      '((os-name . "linux")
-        (exec-path . ("~/programs/bin"))
-        (work-dir . "~/")
-        (org-dir . "~/Work/mine/sanctum")
+      '((work-dir . "~/")
         (backup-dir . "~/.backup/emacs")
+        (exec-path . ("~/programs/bin"
+                      "~/Work/mine/DS-III/gen-bin"))
         (non-elpa . nil)
         (lang-extra-modes . (slime clojure julia))
-        (cscope-command . "/usr/bin/cscope -b")
+        ;; orgmode settings
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
+        (org-dir . "~/Work/mine/sanctum")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)
                                  (js . t)
                                  (julia . t)
                                  (latex . t)
                                  (lisp . t)
-                                 (scheme . t)))))
+                                 (scheme . t)))
+        ;; executables
+        (cscope-command . "/usr/bin/cscope -b")))
 
-(setq vars-debian-x230
-      '((os-name . "linux")
+(setq vars-full
+      '((work-dir . "~/Work")
+        (backup-dir . "~/.backup/emacs")
         (exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/Work/mine/DS-III/gen-bin"))
         (non-elpa . t)
         (lang-extra-modes . (julia auctex pde go slime scala clojure))
+        ;; ui settings
         (xfont . "monospace-11")
-        (work-dir . "~/Work")
-        (backup-dir . "~/.backup/emacs")
+        ;; orgmode settings
         (orgmode-src-dir . "~/Work/opensrc/org-mode/")
         (org-dir . "~/Work/mine/sanctum")
-        (ecl-path . "/usr/bin/ecl")
-        (sbcl-path . "/usr/bin/sbcl")
-        (clisp-path . "/usr/bin/clisp")
-        (cscope-command . "/usr/bin/cscope -b")
-        (elpy-python . "/home/kdr2/.pyenv/versions/cft36/bin/python")
         (org-babel-lang-extra . ((perl . t)
-                                 (C . t)
                                  (clojure . t)
                                  (js . t)
                                  (julia . t)
                                  (latex . t)
                                  (lisp . t)
-                                 (scheme . t)))))
+                                 (scheme . t)))
+        ;; executables
+        (ecl-path . "/usr/bin/ecl")
+        (sbcl-path . "/usr/bin/sbcl")
+        (clisp-path . "/usr/bin/clisp")
+        (elpy-python . "/home/kdr2/.pyenv/versions/cft36/bin/python")
+        (cscope-command . "/usr/bin/cscope -b")))
 
 
-(setq vars-wsl-ubuntu
-      '((os-name . "linux")
-        (exec-path . ("~/programs/bin"))
-        (lang-extra-modes . (pde php))
-        (work-dir . "/mnt/d/work")
-        (backup-dir . "~/.backup/emacs")
-        (cscope-command . "/usr/bin/cscope -b")
-        (org-dir . "/mnt/d/work/mine/sanctum")))
-
+(let ((user-vars (concat user-emacs-directory "vars-user.el")))
+  (if (file-exists-p user-vars)
+      (progn
+        (ignore-errors (load-file user-vars))
+        (if (not (boundp 'vars-user))
+            (warn "Variable `vars-user` is not well defined, using the default vars.")))
+    (warn "No `vars-user.el` found, using the default vars.")))
 
 (setq vars-platforms
       (list
        (cons "default" vars-default)
-       (cons "linux-server" vars-default)
-       (cons "linux-pc" vars-debian-x230)
-       (cons "wsl-ubuntu" vars-wsl-ubuntu)))
+       (cons "full" vars-full)
+       (cons "user" (if (boundp 'vars-user) vars-user vars-default))))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
-  (let ((platform-vars (cdr (assoc box-name vars-platforms))))
+  (let ((platform-vars (cdr (assoc "user" vars-platforms))))
     (or (cdr (assoc key platform-vars))
         default)))
 
