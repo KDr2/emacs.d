@@ -1,4 +1,4 @@
-;;; init-scribble.el
+;;; init-racket.el
 
 ;; Copyright (C) KDr2
 
@@ -8,10 +8,12 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;; load modes about clojure
+;; load modes about racket
 
 (require 'init-elpa)
 
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
+
 (require-package 'scribble-mode)
 
-(provide 'init-scribble)
+(provide 'init-racket)

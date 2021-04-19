@@ -8,15 +8,11 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-
 ;; markdown mode
 (require 'init-md)
 
 ;; yaml mode
 (require 'init-yaml)
-
-;; system-tap mode
-(if-lang 'stap (require 'init-stap))
 
 ;; Lua mode
 (require 'init-lua)
@@ -29,6 +25,9 @@
 
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)
+
+;; racket
+(require 'init-racket)
 
 ;; paredit mode
 (require 'init-paredit)
@@ -51,6 +50,9 @@
 
 ;; slime mode
 (if-lang 'slime (require 'init-slime))
+
+;; system-tap mode
+(if-lang 'stap (require 'init-stap))
 
 ;; Go Settings
 (if-lang 'go (require 'init-go))
