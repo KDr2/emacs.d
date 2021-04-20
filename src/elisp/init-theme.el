@@ -8,10 +8,11 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;;(setq default-frame-alist `((font . ,(vars-get 'xfont))))
+;; (setq default-frame-alist `((font . ,(vars-get 'xfont))))
 
 (defvar x-default-font (pcase system-type
                          ('gnu/linux "monospace-11")
+                         ('darwin "monaco-13")
                          (_ "Consolas-11")))
 (defvar x-default-font-han (pcase system-type
                              ('gnu/linux "WenQuanYi Micro Hei")

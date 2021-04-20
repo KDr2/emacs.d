@@ -8,7 +8,7 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;;common settings:
+;; common settings
 (setq-default transient-mark-mode t)
 (setq x-select-enable-clipboard t)
 
@@ -43,19 +43,20 @@
              (setq require-final-newline nil)))
 
 ;; auto-fill
-;;(setq default-fill-column 70)
+;; (setq default-fill-column 70)
 (auto-fill-mode -1)
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'text-mode-hook '(lambda ()
                              (auto-fill-mode -1)))
 
 ;; set tab = 4 spaces
-;;(setq default-tab-width 4)
-;;(setq tab-width 4)
+;; (setq default-tab-width 4)
+;; (setq tab-width 4)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default c-basic-offset 4)
 
-;;narrow
+;; narrow
 (put 'narrow-to-region 'disabled nil)
 
 
@@ -80,15 +81,15 @@
 ;; column number
 (setq column-number-mode t)
 
-;;'y' for 'yes', 'n' for 'no'
+;; 'y' for 'yes', 'n' for 'no'
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; how to show mouse on tab
 (setq x-stretch-cursor t)
 
-;;(server-start)
+;; (server-start)
 
-;;calendar settings
+;; calendar settings
 (setq calendar-week-start-day 1) ;; first weekday
 
 ;; syntax highlight
@@ -106,7 +107,7 @@
 ;; for X11 on MacOSX
 (setq x-alt-keysym 'meta)
 
-;;SET KEY
+;; SET KEY
 (global-set-key "\C-xk" 'kill-this-buffer)
 ;;(global-set-key "\C-xr" 'replace-string)
 

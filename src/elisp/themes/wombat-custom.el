@@ -50,7 +50,7 @@
  '(ac-selection-face ((t (:background "red"))))
  '(show-paren-match-face ((t (:background "gray40"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "gray70"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "brightyellow"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "yellow"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "magenta"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "orange"))))
