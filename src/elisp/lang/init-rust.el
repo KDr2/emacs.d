@@ -12,10 +12,6 @@
 
 (require 'init-elpa)
 
-(condition-case nil
-    (require 'misc)
-  (error (provide 'misc)))
-
 (require-package 'rust-mode)
  
 (provide 'init-rust)

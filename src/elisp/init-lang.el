@@ -26,6 +26,9 @@
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)
 
+;; rust
+(require 'init-rust)
+
 ;; racket
 (require 'init-racket)
 
@@ -80,8 +83,6 @@
 
 ;; Ruby mode
 (if-lang 'ruby (require 'init-ruby))
-
-(if-lang 'rust (require 'init-rust))
 
 ;; Auctex mode
 (if-lang 'auctex (require 'init-auctex))
