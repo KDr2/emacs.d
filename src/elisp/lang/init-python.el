@@ -29,9 +29,17 @@
 ;; 2. in that python env, install the dependencies:
 ;;    pip install rope jedi flake8 importmagic autopep8 yapf
 ;;
-(if (and (not noninteractive) (vars-get 'elpy-python))
-    (progn
-      (setq elpy-rpc-python-command (vars-get 'elpy-python))
-      (elpy-enable)))
+
+(defvar x-can-enable-elpy
+  (pcase system-type
+    ((or 'ms-dos 'windows-nt 'cygwin) (not (not (vars-get 'elpy-python))))
+    (_ t)))
+(setq elpy-rpc-python-command (or (vars-get 'elpy-python) "python3"))
+
+(if (and (not noninteractive) x-can-enable-elpy)
+    (elpy-enable)
+  (progn ;; enable elpy-mode partially
+    (setq elpy-enabled-p t)
+    (add-hook 'python-mode-hook #'elpy-mode)))
 
 (provide 'init-python)
