@@ -32,12 +32,13 @@
 
 (defvar x-can-enable-elpy
   (pcase system-type
-    ((or 'ms-dos 'windows-nt 'cygwin) (not (not (vars-get 'elpy-python))))
+    ((or 'darwin 'ms-dos 'windows-nt 'cygwin) (not (not (vars-get 'elpy-python))))
     (_ t)))
-(setq elpy-rpc-python-command (or (vars-get 'elpy-python) "python3"))
 
 (if (and (not noninteractive) x-can-enable-elpy)
-    (elpy-enable)
+    (progn
+      (setq elpy-rpc-python-command (or (vars-get 'elpy-python) "python3"))
+      (elpy-enable))
   (progn ;; enable elpy-mode partially
     (setq elpy-enabled-p t)
     (add-hook 'python-mode-hook #'elpy-mode)))

@@ -28,6 +28,7 @@
         ;; executables
         (cscope-command . "/usr/bin/cscope -b")))
 
+(setq vars-empty '())
 (setq vars-full
       '((work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
@@ -55,24 +56,26 @@
         (cscope-command . "/usr/bin/cscope -b")))
 
 
-(let ((user-vars (concat user-emacs-directory "vars-user.el")))
-  (if (file-exists-p user-vars)
+(let ((user-file (concat user-emacs-directory "vars-user.el")))
+  (if (file-exists-p user-file)
       (progn
-        (ignore-errors (load-file user-vars))
+        (ignore-errors (load-file user-file))
         (if (not (boundp 'vars-user))
-            (warn "Variable `vars-user` is not well defined, using the default vars.")))
-    (warn "No `vars-user.el` found, using the default vars.")))
+            (message "[WARNING] Variable `vars-user` is not well defined, using the default vars.")))
+    (message "[Warning] No `vars-user.el` found, using the default vars.")))
 
-(setq vars-platforms
+(setq vars-all
       (list
        (cons "default" vars-default)
        (cons "full" vars-full)
-       (cons "user" (if (boundp 'vars-user) vars-user vars-default))))
+       (cons "user" (if (boundp 'vars-user) vars-user vars-empty))))
 
 (defun vars-get (key &optional default)
   "Get a var value for given key"
-  (let ((platform-vars (cdr (assoc "user" vars-platforms))))
-    (or (cdr (assoc key platform-vars))
+  (let ((user-vars (cdr (assoc "user" vars-all)))
+        (defaut-vars (cdr (assoc "default" vars-all))))
+    (or (cdr (assoc key user-vars))
+        (cdr (assoc key defaut-vars))
         default)))
 
 (defvar non-elpa-enabled
