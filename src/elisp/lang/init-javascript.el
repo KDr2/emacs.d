@@ -1,4 +1,4 @@
-;;; init-javascript.el 
+;;; init-javascript.el
 
 ;; Copyright (C) KDr2
 
@@ -12,10 +12,9 @@
 
 (require 'init-elpa)
 
-;;(require-package 'javascript-mode)
-
-;;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
-;;(autoload 'javascript-mode "javascript" nil t)
+;; (require-package 'javascript-mode)
+;; (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+;; (autoload 'javascript-mode "javascript" nil t)
 
 (require-package 'js2-mode)
 

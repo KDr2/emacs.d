@@ -38,6 +38,9 @@
 ;; geiser mode
 (require 'init-geiser)
 
+;; haskell mode
+(require 'init-haskell)
+
 ;; graphviz
 (require 'init-graphviz)
 
