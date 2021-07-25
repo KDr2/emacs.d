@@ -32,7 +32,9 @@
  ;;'(default ((t (:foreground "gray"))))
  '(highlight ((t ())))
  '(region ((t (:background "wheat4"))))
- '(highlight-symbol-face ((t (:background "wheat4" :foreground "red" :underline t))))
+ '(highlight-symbol-face ((t (:background "wheat4"
+                                          :foreground "wheat"
+                                          :underline t))))
  '(ido-only-match ((t (:foreground "green"))))
  '(ido-subdir ((t (:foreground "cyan"))))
  '(ido-first-match ((t (:foreground "green"))))
@@ -56,4 +58,7 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "orange"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "purple"))))
- '(rainbow-delimiters-unmatched-face ((t (:foreground "red")))))
+ '(rainbow-delimiters-unmatched-face ((t (:foreground "red"))))
+ '(cperl-hash-face ((t (:background "darkgreen"
+                                    :foreground "wheat"
+                                    :slant italic :weight bold)))))
