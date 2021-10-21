@@ -52,7 +52,7 @@
         (ecl-path . "/usr/bin/ecl")
         (sbcl-path . "/usr/bin/sbcl")
         (clisp-path . "/usr/bin/clisp")
-        (elpy-python . "/home/kdr2/.pyenv/versions/cft36/bin/python")
+        (elpy-python . (concat user-emacs-directory "elpy/rpc-venv/bin/python"))
         (cscope-command . "/usr/bin/cscope -b")))
 
 
