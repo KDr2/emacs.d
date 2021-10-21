@@ -26,25 +26,24 @@
                       (setq python-indent-offset 4))))
 
 
-;; 1. set 'elpy-python in vars.el
+;;
+;; 1. set 'elpy-python in vars.el;
+;;    or create a venv at ~/.emacs/elpy/rpc-venv;
+;;    or create a venv anywhere and set ENV ELPY_PYTHON to its executable.
 ;; 2. in that python env, install the dependencies:
-;;    pip install rope jedi flake8 importmagic autopep8 yapf
+;;    pip install black rope jedi flake8 importmagic autopep8 yapf
 ;;
 
 (defvar x-default-venv
-  (let ((py-path (concat user-emacs-directory "elpy/rpc-venv/bin/python")))
-    (if (file-exists-p py-path)
-        py-path
-      nil)))
+  (let ((dft-path (concat user-emacs-directory "elpy/rpc-venv/bin/python")))
+    (or (vars-get 'elpy-python)
+        (getenv "ELPY_PYTHON")
+        (if (file-exists-p dft-path) dft-path nil))))
 
 (if (and (not noninteractive) x-default-venv)
     (progn
-      (setq elpy-rpc-python-command
-            (or (vars-get 'elpy-python) x-default-venv))
+      (setq elpy-rpc-python-command x-default-venv)
       (elpy-enable))
-  (progn ;; enable elpy-mode partially
-    ;; (setq elpy-enabled-p t)
-    ;; (add-hook 'python-mode-hook #'elpy-mode)
-    (message "elpy-mode is not fully enabled.")))
+  (message "elpy-mode is not fully enabled."))
 
 (provide 'init-python)
