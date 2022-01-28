@@ -39,14 +39,14 @@
 ;; use text-mode as default mode
 (setq default-major-mode 'text-mode)
 (add-hook 'text-mode-hook
-          '(lambda ()
+          #'(lambda ()
              (setq require-final-newline nil)))
 
 ;; auto-fill
 ;; (setq default-fill-column 70)
 (auto-fill-mode -1)
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook '(lambda ()
+(add-hook 'text-mode-hook #'(lambda ()
                              (auto-fill-mode -1)))
 
 ;; set tab = 4 spaces
@@ -131,10 +131,9 @@
   (remove-hook 'before-save-hook 'delete-trailing-whitespace))
 
 ;; exec-path
-(setq exec-path (concatenate 'list exec-path (vars-get 'exec-path)))
-(setenv "PATH" (concatenate 'string
-                            (getenv "PATH")
-                            ":"
-                            (mapconcat 'identity (vars-get 'exec-path) ":")))
+(setq exec-path (append exec-path (vars-get 'exec-path)))
+(setenv "PATH" (concat (getenv "PATH")
+                       ":"
+                       (mapconcat 'identity (vars-get 'exec-path) ":")))
 
 (provide 'init-basic)

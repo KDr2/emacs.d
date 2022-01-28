@@ -17,10 +17,15 @@
       (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "lisp"))
       (add-to-list 'load-path (concat (vars-get 'orgmode-src-dir) "contrib/lisp"))
       (require 'org))
-    (progn
-      (require 'init-elpa)
-      (require-package 'org)
-      (require-package 'org-plus-contrib)))
+  (progn
+    (require 'init-elpa)
+    (if (> emacs-major-version 26)
+        ;; use builtin org to avoidd refresh
+        (unless (condition-case nil (require 'org)
+                  (error nil))
+          (require-package 'org))
+      (require-package 'org))
+    (require-package 'org-contrib)))
 
 (require 'ox)
 (require 'ox-rss)
@@ -49,10 +54,10 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
-(setq org-agenda-files (concatenate 'list
-                                    ;; (find-org-files "writing/*.org")
-                                    (find-org-files "index.org")
-                                    (find-org-files "scrappy.org")))
+(setq org-agenda-files (append
+                        ;; (find-org-files "writing/*.org")
+                        (find-org-files "index.org")
+                        (find-org-files "scrappy.org")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)

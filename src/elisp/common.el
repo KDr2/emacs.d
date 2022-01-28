@@ -46,8 +46,7 @@
       nil)))
 
 (defun xhtml-css-from-file (file)
-  (concatenate
-   'string
+  (concat
    "<style rel=\"stylesheet\" type=\"text/css\">
 <!--/*--><![CDATA[/*><!--*/
 "

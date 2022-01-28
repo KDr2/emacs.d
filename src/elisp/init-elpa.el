@@ -41,17 +41,14 @@ ARCHIVE is the string name of the package archive.")
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t))
 
 ;;; Non-Standard package repositories
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("nognu" . "https://elpa.nongnu.org/nongnu/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;; (add-to-list 'package-archives '("popkit" . "https://elpa.popkit.org/packages/") t) ;; broken
 
 ;; But don't take Melpa versions of certain packages
 (setq package-filter-function
       (lambda (package version archive)
         (or (not (string-equal archive "melpa"))
             (not (memq package '())))))
-
 
 
 ;;; On-demand installation of packages

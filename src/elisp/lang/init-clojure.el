@@ -13,7 +13,10 @@
 (require 'init-elpa)
 
 (require-package 'clojure-mode)
-(require-package 'cider)
+
+(if (version< "26" emacs-version)
+    (require-package 'cider))
+
 (require-package 'elein)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)

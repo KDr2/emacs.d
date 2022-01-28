@@ -54,7 +54,7 @@
 ;;  (let ((key (read-from-minibuffer "keyword for path: ")))
 ;;    (ibuffer)
 ;;    (ibuffer-limit-disable)
-;;    (ibuffer-limit-by-filename (concatenate 'string ".*" key ".*"))))
+;;    (ibuffer-limit-by-filename (concat ".*" key ".*"))))
 ;;(define-key global-map "\M-p" 'ibuffer-limit-by-path)
 ;;
 
