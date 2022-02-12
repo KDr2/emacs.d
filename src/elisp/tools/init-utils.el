@@ -41,10 +41,10 @@
 ;;; htmlize
 (require-package 'htmlize)
 
-;; linum-mode
-(if (string< emacs-version "26")
-    (global-linum-mode t)
-  (global-display-line-numbers-mode t))
-
+;; show line number
+;; (if (version< emacs-version "26")
+;;     (global-linum-mode t) ; linum-mode
+;;   (global-display-line-numbers-mode t))
+(global-linum-mode t)
 
 (provide 'init-utils)
