@@ -66,16 +66,16 @@
 (setq org-capture-templates
       '(("i" "Issue" entry
          (file+headline (lambda () (find-org-file "scrappy.org")) "Issues")
-         "* TODO %?\n  %a\n")
+         "* TODO %?\n%a\n")
         ("n" "Scrappy Note" entry
          (file+headline (lambda () (find-org-file "scrappy.org")) "Notes")
-         "* Note %U\n  %?")
+         "* Note %U\n%?")
         ("d" "Dialog" entry
          (file+headline (lambda () (find-org-file "writing/dialog.org")) "Dialogues")
-         "* DIALOG %U :dialog:\n  Topic: **%?**\n")
+         "* DIALOG %U :dialog:\nTopic: **%?**\n")
         ("j" "Journal" entry
          (file+datetree+prompt (lambda () (find-org-file "writing/journal.org")))
-         "* %?\n  Entered on %U\n")))
+         "* %?\nEntered on %U\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice
