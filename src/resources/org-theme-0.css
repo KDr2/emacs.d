@@ -1,11 +1,3 @@
-/*******************************************************************************
- * @author: Hsiaw-yih, KDr2
- * @version: 1.0
- * Licence: CC
- * About:
- *  Hsiaw-yih wrote this file for KDr2.
- *
- ******************************************************************************/
 body {
     color: #111; /*#557575;*/
     /*
@@ -16,7 +8,6 @@ body {
     line-height: 1.6em;
     margin: 5% 15% 8%;
     min-width: 600px;
-    background: none repeat scroll 0 0 #EEEEEE;
 }
 
 #org-div-home-and-up {

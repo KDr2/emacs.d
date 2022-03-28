@@ -109,10 +109,10 @@ unwanted space when exporting org-mode to html."
      'org-babel-load-languages
      (vars-get 'org-babel-lang-extra)))
 
-(defun org-export-signle-page ()
+(defun org-export-single-page ()
   (interactive)
   (let ((org-html-head
-         (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-hy.css"))
+         (xhtml-css-from-file "~/.emacs.d/src/resources/org-theme-0.css"))
         (org-export-show-temporary-export-buffer nil))
     (org-html-export-to-html nil nil nil nil '(:publishing-directory "~"))))
 
