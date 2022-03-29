@@ -41,6 +41,9 @@
 ;; haskell mode
 (require 'init-haskell)
 
+;; idris mode
+(require 'init-idris)
+
 ;; graphviz
 (require 'init-graphviz)
 
