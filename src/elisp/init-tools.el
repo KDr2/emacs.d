@@ -32,6 +32,9 @@
 ;; multi-term
 (require 'init-multi-term)
 
+;; vterm
+(require 'init-vterm)
+
 ;; org mode
 (require 'init-org)
 
