@@ -75,7 +75,7 @@
          "* DIALOG %U :dialog:\nTopic: **%?**\n")
         ("j" "Journal" entry
          (file+datetree+prompt (lambda () (find-org-file "writing/journal.org")))
-         "* %?\nEntered on %U\n")))
+         "* %?\n(Entered on %(current-time-string))\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
 (defadvice org-html-paragraph (before org-html-paragraph-advice
