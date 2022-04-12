@@ -17,6 +17,7 @@
 ;; (autoload 'javascript-mode "javascript" nil t)
 
 (require-package 'js2-mode)
+(require-package 'typescript-mode)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
