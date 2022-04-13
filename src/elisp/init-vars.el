@@ -15,6 +15,7 @@
                       "~/Work/mine/DS-III/gen-bin"))
         (non-elpa . nil)
         (lang-extra-modes . (slime clojure julia))
+        (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         ;; orgmode settings
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
         (org-dir . "~/Work/mine/sanctum")
@@ -40,6 +41,7 @@
         (xfont . "monospace-11")
         ;; orgmode settings
         (orgmode-src-dir . "~/Work/opensrc/org-mode/")
+        (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         (org-dir . "~/Work/mine/sanctum")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)

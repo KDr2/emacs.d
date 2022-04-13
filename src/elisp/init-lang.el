@@ -44,6 +44,9 @@
 ;; idris mode
 (require 'init-idris)
 
+;; idris mode
+(require 'init-agda)
+
 ;; graphviz
 (require 'init-graphviz)
 
