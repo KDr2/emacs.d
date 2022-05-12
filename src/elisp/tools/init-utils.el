@@ -18,6 +18,8 @@
 ;;; undo-tree mode settings
 (require-package 'undo-tree)
 (global-undo-tree-mode)
+(setq undo-tree-auto-save-history nil)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
 ;; bm.el
 (require-package 'bm)
