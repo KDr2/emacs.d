@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         emacs_version: [26.3, 28.2, release-snapshot, snapshot]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - run: ln -sf $PWD ~/.emacs.d
     - uses: purcell/setup-emacs@master
       with:
