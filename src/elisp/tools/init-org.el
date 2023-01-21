@@ -28,9 +28,9 @@
     (require-package 'org-contrib)))
 
 (require 'ox)
-(require 'ox-rss)
+;; (require 'ox-rss)
 (require 'org-tempo)
-;;(require 'ox-publish)
+;; (require 'ox-publish)
 
 (setq org-directory (vars-get 'org-dir))
 (setq org-archive-location "archives/%s_archive::")
