@@ -1,0 +1,28 @@
+name: "CI"
+on:
+  pull_request:
+  push:
+    paths-ignore:
+    - '**.org'
+    - '.dir-locals.el'
+    # branches:
+    #  - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        emacs_version: [26.3, 28.2, release-snapshot, snapshot]
+    steps:
+    - uses: actions/checkout@v3
+    - run: ln -sf $PWD ~/.emacs.d
+    - uses: purcell/setup-emacs@master
+      with:
+        version: ${{ matrix.emacs_version }}
+    - name: check emacs version
+      run: emacs --version
+    - name: init
+      run: emacs --batch --eval '(load-file "~/.emacs.d/init.el")'

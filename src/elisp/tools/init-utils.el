@@ -44,9 +44,8 @@
 (require-package 'htmlize)
 
 ;; show line number
-;; (if (version< emacs-version "26")
-;;     (global-linum-mode t) ; linum-mode
-;;   (global-display-line-numbers-mode t))
-(global-linum-mode t)
+(if (version< emacs-version "26")
+    (global-linum-mode t) ; linum-mode
+  (global-display-line-numbers-mode t))
 
 (provide 'init-utils)
