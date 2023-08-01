@@ -59,6 +59,9 @@
 ;; helm
 ;; (require 'init-helm)
 
+;; devil
+(require 'init-devil)
+
 ;; utils
 (require 'init-utils)
 
