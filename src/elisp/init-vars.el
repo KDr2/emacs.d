@@ -14,7 +14,7 @@
         (exec-path . ("~/programs/bin"
                       "~/Work/mine/DS-III/gen-bin"))
         (non-elpa . nil)
-        (lang-extra-modes . (slime clojure julia))
+        (lang-extra-modes . (slime clojure julia ess))
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         ;; orgmode settings
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
