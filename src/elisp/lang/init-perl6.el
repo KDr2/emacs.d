@@ -8,13 +8,11 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
-;; load Ruby Mode
+;; load perl6 Mode
 
 (require 'init-perl6)
 
 (require-package 'perl6-mode)
-;;(when (package-installed-p 'ruby-mode)
-;;  (require 'ruby-electric))
 
 (add-to-list 'auto-mode-alist '("\\.nqp?\\'" . perl6-mode))
 (add-to-list 'auto-mode-alist '("\\.pm6\\'" . perl6-mode))

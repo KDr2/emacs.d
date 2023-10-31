@@ -53,6 +53,9 @@
 ;; web-mode
 (require 'init-web)
 
+;; nix-mode
+(require 'init-nix)
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; extra modes ;;;
 ;;;;;;;;;;;;;;;;;;;
