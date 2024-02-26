@@ -57,18 +57,18 @@
 (setq org-agenda-files (append
                         ;; (find-org-files "writing/*.org")
                         (find-org-files "index.org")
-                        (find-org-files "scrappy.org")))
+                        (find-org-files "workbench.org")))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 ;;org-capture
-(setq org-default-notes-file (find-org-file "scrappy.org"))
+(setq org-default-notes-file (find-org-file "workbench.org"))
 (setq org-capture-templates
       '(("i" "Issue" entry
-         (file+headline (lambda () (find-org-file "scrappy.org")) "Issues")
+         (file+headline (lambda () (find-org-file "workbench.org")) "Issues")
          "* TODO %?\n%a\n")
-        ("n" "Scrappy Note" entry
-         (file+headline (lambda () (find-org-file "scrappy.org")) "Notes")
+        ("n" "Note" entry
+         (file+headline (lambda () (find-org-file "workbench.org")) "Notes")
          "* Note %U\n%?")
         ("d" "Dialog" entry
          (file+headline (lambda () (find-org-file "writing/dialog.org")) "Dialogues")
