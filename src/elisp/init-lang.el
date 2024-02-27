@@ -26,9 +26,6 @@
 ;; c cpp asm makefile ...
 (require 'init-c-cpp)
 
-;; rust
-(require 'init-rust)
-
 ;; racket
 (require 'init-racket)
 
@@ -40,9 +37,6 @@
 
 ;; haskell mode
 (require 'init-haskell)
-
-;; idris mode
-(require 'init-idris)
 
 ;; idris mode
 (require 'init-agda)
@@ -59,6 +53,9 @@
 ;;;;;;;;;;;;;;;;;;;
 ;;; extra modes ;;;
 ;;;;;;;;;;;;;;;;;;;
+
+;; rust
+(if-lang 'rust (require 'init-rust))
 
 ;; julia-mode
 (if-lang 'julia (require 'init-julia))
@@ -89,6 +86,9 @@
 
 ;; scala mode
 (if-lang 'scala (require 'init-scala))
+
+;; idris mode
+(if-lang 'idris (require 'init-idris))
 
 ;; Ocaml/Tuareg mode
 (if-lang 'ocaml (require 'init-ocaml))

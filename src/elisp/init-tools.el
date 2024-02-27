@@ -45,7 +45,8 @@
 (require 'init-yas)
 
 ;; auto-complete
-(require 'init-ac)
+;; TODO: ac doesn't work on Emacs 29, disable it temporarily.
+;; (require 'init-ac)
 
 ;; xcscope
 (require 'init-cscope)

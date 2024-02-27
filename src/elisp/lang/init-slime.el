@@ -20,7 +20,8 @@
 ;; (mapc #'delete-file
 ;;       (file-expand-wildcards (concat user-emacs-directory "elpa/slime-2*/contrib/*.elc")))
 
-(require-package 'ac-slime)
+;; TODO: ac-slime doesn't work on Emacs 29, disable it temporarily.
+;; (require-package 'ac-slime)
 (require-package 'hippie-expand-slime)
 
 (setq inferior-lisp-program "/usr/bin/sbcl")
