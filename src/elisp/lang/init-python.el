@@ -11,7 +11,6 @@
 ;; load python mode
 
 (require 'init-elpa)
-(require 'init-yas)
 
 (require-package 'python-mode)
 (require-package 'elpy)
