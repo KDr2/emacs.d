@@ -14,7 +14,7 @@
         (exec-path . ("~/programs/bin"
                       "~/Work/mine/DS-III/gen-bin"))
         (non-elpa . nil)
-        (lang-extra-modes . (slime clojure julia ess rust))
+        (lang-extra-modes . (rust clojure julia slime))
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         ;; orgmode settings
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
@@ -30,13 +30,14 @@
         (cscope-command . "/usr/bin/cscope -b")))
 
 (setq vars-empty '())
+
 (setq vars-full
       '((work-dir . "~/Work")
         (backup-dir . "~/.backup/emacs")
         (exec-path . ("/home/kdr2/programs/bin"
                       "/home/kdr2/Work/mine/DS-III/gen-bin"))
         (non-elpa . t)
-        (lang-extra-modes . (julia auctex pde go slime scala clojure))
+        (lang-extra-modes . (rust clojure julia slime auctex pde scala go))
         ;; ui settings
         (xfont . "monospace-11")
         ;; orgmode settings

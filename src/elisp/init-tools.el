@@ -41,9 +41,6 @@
 ;; magit mode
 (require 'init-magit)
 
-;; yasnippet
-(require 'init-yas)
-
 ;; auto-complete
 ;; TODO: ac doesn't work on Emacs 29, disable it temporarily.
 ;; (require 'init-ac)
