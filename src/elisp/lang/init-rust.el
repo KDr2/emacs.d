@@ -12,15 +12,13 @@
 
 (require 'init-elpa)
 
-(if (version< emacs-version "29.1")
-    (progn
-      ;; TODO: rust-mode now requries tree-sitter, which can't be
-      ;; loaded in Emacs 28
+;; Workaround to avoid issue-520 of rust-mode:
+;; - https://github.com/rust-lang/rust-mode/issues/520
+;; - https://github.com/rust-lang/rust-mode/pull/521
+(when (version< emacs-version "29.1")
+  (provide 'treesit)
+  (provide 'rust-ts-mode))
 
-      ;; (require-package 'tree-sitter)
-      ;; (require-package 'tree-sitter-langs)
-      (setq rust-mode-treesitter-derive nil))
-  (require-package 'rust-mode))
-
+(require-package 'rust-mode)
 
 (provide 'init-rust)
