@@ -1,4 +1,4 @@
-;;; init-clojure.el 
+;;; init-clojure.el
 
 ;; Copyright (C) KDr2
 
@@ -20,5 +20,7 @@
 (require-package 'elein)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
+
+(setq cider-repl-display-help-banner nil)
 
 (provide 'init-clojure)

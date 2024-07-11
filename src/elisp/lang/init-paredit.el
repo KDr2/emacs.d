@@ -1,4 +1,4 @@
-;;; init-paredit.el 
+;;; init-paredit.el
 
 ;; Copyright (C) KDr2
 
@@ -21,5 +21,6 @@
 (add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'scheme-mode-hook           (lambda () (paredit-mode +1)))
+(add-hook 'racket-mode-hook           (lambda () (paredit-mode +1)))
 
 (provide 'init-paredit)

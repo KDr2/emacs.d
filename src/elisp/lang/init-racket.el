@@ -12,8 +12,10 @@
 
 (require 'init-elpa)
 
-(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
-
+(require-package 'racket-mode)
 (require-package 'scribble-mode)
+
+;; (add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 
 (provide 'init-racket)
