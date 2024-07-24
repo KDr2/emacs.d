@@ -17,6 +17,9 @@
 ;; ibuffer
 (require 'init-ibuffer)
 
+;; visual-line or visual-fill
+(require 'init-visual)
+
 ;; highlight-symbol
 (require 'init-hl-s)
 

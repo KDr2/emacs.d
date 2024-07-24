@@ -18,7 +18,7 @@
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         ;; orgmode settings
         ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
-        (org-dir . "~/Work/mine/sanctum")
+        (org-dir . "~/Work/mine/bok/org")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)
                                  (js . t)
@@ -43,7 +43,7 @@
         ;; orgmode settings
         (orgmode-src-dir . "~/Work/opensrc/org-mode/")
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
-        (org-dir . "~/Work/mine/sanctum")
+        (org-dir . "~/Work/mine/bok/org")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)
                                  (js . t)

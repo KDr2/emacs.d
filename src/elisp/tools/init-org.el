@@ -38,15 +38,8 @@
 (setq org-export-publishing-directory (concat (vars-get 'work-dir) "/tmp/org-export"))
 (setq org-src-window-setup 'current-window)
 
-;; babel library
-(org-babel-lob-ingest (expand-file-name "~/.emacs.d/src/resources/org-babel-lib.org"))
-;; html export settings for V8.*
-;;(setq org-html-validation-link nil)
-(setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
-(setq org-html-head-include-default-style nil)
-
 (defun find-org-file (path)
-  (expand-file-name (concat org-directory "/content/" path)))
+  (expand-file-name (concat org-directory "/" path)))
 (defun find-org-files (pattern)
   (file-expand-wildcards (find-org-file pattern)))
 
@@ -55,29 +48,28 @@
 (setq org-todo-keywords
       '((sequence "TODO" "DELY" "PROC" "WAIT" "|" "DONE" "CNCL")))
 (setq org-agenda-files (append
-                        ;; (find-org-files "writing/*.org")
-                        (find-org-files "index.org")
-                        (find-org-files "workbench.org")))
+                        (find-org-files "org/*.org")
+                        (find-org-files "incoming.org")))
+
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
 ;;org-capture
-(setq org-default-notes-file (find-org-file "workbench.org"))
+(setq org-default-notes-file (find-org-file "incoming.org"))
 (setq org-capture-templates
-      '(("i" "Issue" entry
-         (file+headline (lambda () (find-org-file "workbench.org")) "Issues")
+      '(("t" "Task" entry
+         (file+headline (lambda () (find-org-file "incoming.org")) "Tasks")
          "* TODO %?\n%a\n")
         ("n" "Note" entry
-         (file+headline (lambda () (find-org-file "workbench.org")) "Notes")
+         (file+headline (lambda () (find-org-file "incoming.org")) "Notes")
          "* Note %U\n%?")
-        ("d" "Dialog" entry
-         (file+headline (lambda () (find-org-file "writing/dialog.org")) "Dialogues")
-         "* DIALOG %U :dialog:\nTopic: **%?**\n")
         ("j" "Journal" entry
-         (file+datetree+prompt (lambda () (find-org-file "writing/journal.org")))
+         (file+datetree+prompt (lambda () (find-org-file "incoming.org")))
          "* %?\n(Entered on %(current-time-string))\n")))
 (define-key global-map "\C-cc" 'org-capture)
 
+;; workaround: remove unnecessary spaces in Chinese text
 (defadvice org-html-paragraph (before org-html-paragraph-advice
                                       (paragraph contents info) activate)
   "Join consecutive Chinese lines into a single long line without
@@ -90,25 +82,33 @@ unwanted space when exporting org-mode to html."
                           "\\1\\2" orig-contents)))
     (ad-set-arg 1 fixed-contents)))
 
+;; -- org babel --
+
+;; babel library
+(org-babel-lob-ingest (expand-file-name "~/.emacs.d/src/resources/org-babel-lib.org"))
+
 ;; load basic languages support
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((R . t)
-   (org . t)
-   (dot . t)
+ '((org . t)
    (perl . t)
    (python . t)
    (emacs-lisp . t)))
 
 ;; load extra languages support
-(if (cdr (assoc 'julia (vars-get 'org-babel-lang-extra)))
-    (setq inferior-julia-program-name (expand-file-name "~/Work/julia/julia")))
-
 (if (vars-get 'org-babel-lang-extra)
     (org-babel-do-load-languages
      'org-babel-load-languages
      (vars-get 'org-babel-lang-extra)))
 
+;; -- export --
+
+;; HTML export settings
+;; (setq org-html-validation-link nil)
+;; (setq org-html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />")
+;; (setq org-html-head-include-default-style nil)
+
+;; export to HTML
 (defun org-export-single-page ()
   (interactive)
   (let ((org-html-head
