@@ -12,13 +12,15 @@
       '((work-dir . "~/")
         (backup-dir . "~/.backup/emacs")
         (exec-path . ("~/programs/bin"
-                      "~/Work/mine/DS-III/gen-bin"))
+                      "~/programs/local/bin"
+                      "~/work/mine/DS-III/bin"
+                      "~/work/mine/DS-III/local/bin"))
         (non-elpa . nil)
         (lang-extra-modes . (rust clojure julia slime))
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
         ;; orgmode settings
-        ;; (orgmode-src-dir . "~/Work/hall/org-mode/")
-        (org-dir . "~/Work/mine/bok/org")
+        ;; (orgmode-src-dir . "~/work/hall/org-mode/")
+        (org-dir . "~/work/mine/bok/org")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)
                                  (js . t)
@@ -32,18 +34,20 @@
 (setq vars-empty '())
 
 (setq vars-full
-      '((work-dir . "~/Work")
+      '((work-dir . "~/work")
         (backup-dir . "~/.backup/emacs")
-        (exec-path . ("/home/kdr2/programs/bin"
-                      "/home/kdr2/Work/mine/DS-III/gen-bin"))
+        (exec-path . ("~/programs/bin"
+                      "~/programs/local/bin"
+                      "~/work/mine/DS-III/bin"
+                      "~/work/mine/DS-III/local/bin"))
         (non-elpa . t)
         (lang-extra-modes . (rust clojure julia slime auctex pde scala go))
         ;; ui settings
         (xfont . "monospace-11")
         ;; orgmode settings
-        (orgmode-src-dir . "~/Work/opensrc/org-mode/")
+        (orgmode-src-dir . "~/work/hall/org-mode/")
         (agda-dir . "~/.cabal/bin") ;; where agda-mode is located
-        (org-dir . "~/Work/mine/bok/org")
+        (org-dir . "~/work/mine/bok/org")
         (org-babel-lang-extra . ((perl . t)
                                  (clojure . t)
                                  (js . t)
