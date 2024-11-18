@@ -8,6 +8,10 @@
 ;; This file is not part of GNU Emacs.
 ;;
 
+;; I don't have git on Windows
+(if (eq system-type 'windows-nt)
+    (setq-default vc-handled-backends '()))
+
 ;; common settings
 (setq-default transient-mark-mode t)
 (setq x-select-enable-clipboard t)
@@ -16,7 +20,8 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 
-(setq default-buffer-file-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8-unix) ;; <= 23.2
+(setq-default buffer-file-coding-system 'utf-8-unix) ;; > 23.2
 
 ;; no visible-bell
 (setq visible-bell nil)

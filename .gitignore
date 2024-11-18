@@ -17,6 +17,7 @@ tramp
 *.dat
 *.elc
 .org-id-locations
+org-persist/
 ido.last
 bookmarks
 .emacs.desktop
