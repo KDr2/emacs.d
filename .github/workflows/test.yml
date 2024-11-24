@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        emacs_version: [28.2, release-snapshot, snapshot]
+        emacs_version: [28.2, 29.4, release-snapshot, snapshot]
     steps:
     - uses: actions/checkout@v3
     - run: ln -sf $PWD ~/.emacs.d
