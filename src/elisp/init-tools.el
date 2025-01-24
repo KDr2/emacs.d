@@ -57,6 +57,9 @@
 ;; rainbow-delimiters
 (require 'init-rainbow-delimiters)
 
+;; cnfonts
+(require 'init-cnfonts)
+
 ;; helm
 ;; (require 'init-helm)
 
