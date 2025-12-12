@@ -11,11 +11,11 @@
 ;; load agda mode
 
 (let* ((coding-system-for-read 'utf-8)
-       (agda-mode-dir (or (vars-get 'agda-dir)
-                           (concat (getenv "HOME") "/.cabal/bin")))
-       (agda-mode-exe (or (vars-get 'agda-mode-exe) "agda-mode-2.8.0"))
-       (agda-mode-path (concat agda-mode-dir "/" agda-mode-exe)))
-  (if (file-exists-p agda-mode-path)
-      (load-file (shell-command-to-string (concat agda-mode-path " locate")))))
+       (agda-dir (or (vars-get 'agda-dir)
+                     (concat (getenv "HOME") "/.cabal/bin")))
+       (agda-exe (or (vars-get 'agda-exe) "agda-2.8.0"))
+       (agda-path (concat agda-dir "/" agda-exe)))
+  (if (file-exists-p agda-path)
+      (load-file (shell-command-to-string (concat agda-path " --emacs-mode locate")))))
 
 (provide 'init-agda)
