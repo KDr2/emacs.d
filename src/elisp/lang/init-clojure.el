@@ -17,8 +17,6 @@
 (if (version< "26" emacs-version)
     (require-package 'cider))
 
-(require-package 'elein)
-
 (add-hook 'clojure-mode-hook 'paredit-mode)
 
 (setq cider-repl-display-help-banner nil)
